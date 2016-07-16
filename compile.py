@@ -17,7 +17,7 @@ if sys.platform.startswith('win'):
 protoc_path = {
     "*nix": "protoc",
     "win64": "../packages/Google.Protobuf.Tools.3.0.0-beta3/tools/windows_x64/protoc.exe",
-    "win": "../packages/Google.Protobuf.Tools.3.0.0-beta3/tools/windows_x86/protoc.exe"
+    "win32": "../packages/Google.Protobuf.Tools.3.0.0-beta3/tools/windows_x86/protoc.exe"
 }[op]
 
 # Specify desired language
