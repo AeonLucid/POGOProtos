@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto.Enums.Envelopes;
+
+enum Direction {
+  UNKNOWN = 0;
+  RESPONSE = 1;
+  REQUEST = 2;
+}

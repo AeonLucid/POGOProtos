@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto;
+
+import public "Player/AvatarDetails.proto";
+import public "Player/DailyBonus.proto";
+import public "Player/EquippedBadge.proto";
+import public "Player/ContactSettings.proto";
+import public "Player/Currency.proto";
+
+message LocalPlayer {
+  int64 creation_timestamp_ms  = 1;
+  string username = 2;
+  int32 team = 5;
+  bytes tutorial_complete = 7;
+  POGOLib.Pokemon.Proto.Player.AvatarDetails avatar_details = 8;
+  int32 max_pokemon_storage = 9;
+  int32 max_item_storage = 10;
+  POGOLib.Pokemon.Proto.Player.DailyBonus daily_bonus = 11;
+  POGOLib.Pokemon.Proto.Player.EquippedBadge equipped_badge = 12;
+  POGOLib.Pokemon.Proto.Player.ContactSettings contact_settings = 13;
+  repeated POGOLib.Pokemon.Proto.Player.Currency currencies = 14;
+}

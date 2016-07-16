@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto.Requests.Messages;
+
+message GetInventoryMessage {
+  int64 timestamp_ms = 1;
+	int32 item_been_seen = 2; // TODO: Find out what this is.
+}

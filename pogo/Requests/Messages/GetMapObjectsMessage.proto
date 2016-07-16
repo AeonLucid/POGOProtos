@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto.Requests.Messages;
+
+message GetMapObjectsMessage {
+  repeated uint64 CellId = 1;
+  repeated int64 SinceTimeMs = 2;
+  double latitude = 3;
+  double longitude = 4;
+}

@@ -1,0 +1,64 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto;
+
+import public "Requests/Request.proto";
+import public "Enums/Envelopes/Direction.proto";
+
+message Envelopes {
+  message Unknown6 {
+    int32 unknown1 = 1; //6
+    Unknown2 unknown2 = 2;
+
+    message Unknown2 {
+      bytes unknown1 = 1;
+    }
+  }
+
+  message AuthTicket {
+    bytes start = 1;
+    uint64 expire_timestamp_ms = 2;
+    bytes end = 3;
+  }
+
+  message RequestEnvelope {
+    POGOLib.Pokemon.Proto.Enums.Envelopes.Direction direction = 1;
+    // Missing field 2.
+    uint64 request_id = 3;
+    repeated POGOLib.Pokemon.Proto.Requests.Request requests = 4;
+    // Missing field 5.
+    Unknown6 unknown6 = 6;
+    double latitude = 7;
+    double longitude = 8;
+    double altitude = 9;
+    AuthInfo auth_info = 10;
+    AuthTicket auth_ticket = 11;
+    int64 unknown12 = 12;
+
+    message AuthInfo {
+      string provider = 1;
+      JWT token = 2;
+
+      message JWT {
+        string contents = 1;
+        int32 unknown2  = 2;
+      }
+    }
+  }
+
+  message ResponseEnvelope {
+    POGOLib.Pokemon.Proto.Enums.Envelopes.Direction direction = 1;
+    uint64 response_id = 2;
+    string api_url = 3;
+
+    Unknown6 unknown6 = 6;
+    AuthTicket auth_ticket = 7;
+
+    repeated bytes returns = 100;
+
+    message Unknown7 {
+      bytes unknown71 = 1;
+      int64 unknown72 = 2;
+      bytes unknown73 = 3;
+    }
+  }
+}

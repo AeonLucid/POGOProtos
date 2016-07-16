@@ -1,0 +1,4 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto;
+
+// Basically all enums go here.

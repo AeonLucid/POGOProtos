@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOLib.Pokemon.Proto.Map.Pokemon;
+
+import public "Data/Pokemon.proto";
+
+message WildPokemon {
+  fixed64 encounter_id = 1;
+  int64 last_modified_timestamp_ms = 2;
+	double latitude = 3;
+	double longitude = 4;
+  string spawnpoint_id = 5;
+	POGOLib.Pokemon.Proto.Data.Pokemon pokemon = 7;
+  int32 time_till_hidden_ms = 11;
+}
