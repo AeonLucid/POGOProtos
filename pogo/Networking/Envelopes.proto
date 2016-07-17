@@ -46,7 +46,7 @@ message Envelopes {
 
   message ResponseEnvelope {
     int32 status_code = 1;
-    uint64 response_id = 2;
+    uint64 request_id = 2;
     string api_url = 3;
 
     Unknown6 unknown6 = 6;
