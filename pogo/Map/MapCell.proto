@@ -24,6 +24,6 @@ message MapCell {
   repeated POGOProtos.Map.Pokemon.WildPokemon wild_pokemons = 5;
   // Pokemon within 1 step or none.
   repeated POGOProtos.Map.Pokemon.MapPokemon catchable_pokemons = 10;
-  // Pokemon father away than 2 steps, but still in the area.
+  // Pokemon farther away than 2 steps, but still in the area.
   repeated POGOProtos.Map.Pokemon.NearbyPokemon nearby_pokemons = 11;
 }
