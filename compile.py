@@ -10,11 +10,13 @@ from subprocess import call
 # Add this to your path
 protoc_path = "protoc"
 
-# Specify desired language
+# Specify desired language/ output
 parser = argparse.ArgumentParser()
 parser.add_argument("-l", "--lang", help="Language to produce protoc files")
 parser.add_argument("-o", "--out_path", help="Output path for protoc files")
 args = parser.parse_args()
+
+# Set defaults
 lang = args.lang or "csharp"
 out_path = args.out_path or "out"
 
