@@ -1,0 +1,5 @@
+# Project files
+.idea/
+
+# Protoc files
+out/
