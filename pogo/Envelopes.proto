@@ -2,7 +2,6 @@ syntax = "proto3";
 package POGOProtos;
 
 import public "Requests/Request.proto";
-import public "Enums/Envelopes/Direction.proto";
 
 message Envelopes {
   message Unknown6 {
@@ -21,7 +20,7 @@ message Envelopes {
   }
 
   message RequestEnvelope {
-    POGOProtos.Enums.Envelopes.Direction direction = 1;
+    int32 status_code = 1;
     // Missing field 2.
     uint64 request_id = 3;
     repeated POGOProtos.Requests.Request requests = 4;
@@ -46,7 +45,7 @@ message Envelopes {
   }
 
   message ResponseEnvelope {
-    POGOProtos.Enums.Envelopes.Direction direction = 1;
+    int32 status_code = 1;
     uint64 response_id = 2;
     string api_url = 3;
 
@@ -54,6 +53,7 @@ message Envelopes {
     AuthTicket auth_ticket = 7;
 
     repeated bytes returns = 100;
+    string error = 101;
 
     message Unknown7 {
       bytes unknown71 = 1;
