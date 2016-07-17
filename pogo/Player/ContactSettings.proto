@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Player;
+package POGOProtos.Player;
 
 message ContactSettings {
   bool send_marketing_emails = 1;

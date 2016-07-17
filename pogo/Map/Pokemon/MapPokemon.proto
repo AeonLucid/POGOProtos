@@ -1,12 +1,12 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Map.Pokemon;
+package POGOProtos.Map.Pokemon;
 
 import public "Enums/PokemonType.proto";
 
 message MapPokemon {
   string spawnpoint_id = 1;
 	fixed64 encounter_id = 2;
-	POGOLib.Pokemon.Proto.Enums.PokemonType pokemon_type = 3;
+	POGOProtos.Enums.PokemonType pokemon_type = 3;
   // After this timestamp, the pokemon will be gone.
 	int64 expiration_timestamp_ms = 4;
 	double latitude = 5;

@@ -1,9 +1,9 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Responses;
+package POGOProtos.Responses;
 
 import public "LocalPlayer.proto";
 
 message GetPlayerResponse {
   uint32 unknown1 = 1;
-  POGOLib.Pokemon.Proto.LocalPlayer local_player = 2;
+  POGOProtos.LocalPlayer local_player = 2;
 }

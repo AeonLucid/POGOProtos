@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Player;
+package POGOProtos.Player;
 
 import "Enums/Gender.proto";
 
@@ -11,7 +11,7 @@ message AvatarDetails {
   int32 pants = 5;
   int32 hat = 6;
   int32 shoes = 7;
-  POGOLib.Pokemon.Proto.Enums.Gender gender = 8;
+  POGOProtos.Enums.Gender gender = 8;
   int32 eyes = 9;
   int32 backpack = 10;
 }

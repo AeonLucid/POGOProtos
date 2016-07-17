@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Map.Fort;
+package POGOProtos.Map.Fort;
 
 import public "Enums/PokemonType.proto";
 import public "Enums/TeamColor.proto";
@@ -14,15 +14,15 @@ message FortData {
   double latitude = 3;
   double longitude = 4;
   bool enabled = 8;
-  POGOLib.Pokemon.Proto.Map.Fort.FortType type = 9;
+  POGOProtos.Map.Fort.FortType type = 9;
 
   //// Fields related to gyms only
 
   // Team that owns the gym
-  POGOLib.Pokemon.Proto.Enums.TeamColor owned_by_team = 5;
+  POGOProtos.Enums.TeamColor owned_by_team = 5;
 
   // Highest CP Pokemon at the gym
-  POGOLib.Pokemon.Proto.Enums.PokemonType guard_pokemon_type = 6;
+  POGOProtos.Enums.PokemonType guard_pokemon_type = 6;
   int32 guard_pokemon_level = 7;
 
   // Prestigate / experience of the gym
@@ -36,10 +36,10 @@ message FortData {
   // Timestamp when the pokestop can be activated again to get items / xp
   int64 cooldown_complete_timestamp_ms = 14;
 
-  POGOLib.Pokemon.Proto.Map.Fort.FortSponsor sponsor = 15;
-  POGOLib.Pokemon.Proto.Map.Fort.FortRenderingType rendering_type = 16;
+  POGOProtos.Map.Fort.FortSponsor sponsor = 15;
+  POGOProtos.Map.Fort.FortRenderingType rendering_type = 16;
 
   // Might represent the type of item applied to the pokestop, right now only lures can be applied
   bytes active_fort_modifier = 12;
-  POGOLib.Pokemon.Proto.Map.Fort.FortLureInfo lure_info = 13;
+  POGOProtos.Map.Fort.FortLureInfo lure_info = 13;
 }
