@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Map.Pokemon;
+package POGOProtos.Map.Pokemon;
 
 import public "Data/Pokemon.proto";
 
@@ -9,6 +9,6 @@ message WildPokemon {
 	double latitude = 3;
 	double longitude = 4;
   string spawnpoint_id = 5;
-	POGOLib.Pokemon.Proto.Data.Pokemon pokemon = 7;
+	POGOProtos.Data.Pokemon pokemon = 7;
   int32 time_till_hidden_ms = 11;
 }

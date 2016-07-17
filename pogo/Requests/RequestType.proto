@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Requests;
+package POGOProtos.Requests;
 
 enum RequestType {
   METHOD_UNSET = 0;

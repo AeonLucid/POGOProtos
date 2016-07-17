@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Enums;
+package POGOProtos.Enums;
 
 enum PokemonType {
   MISSINGNO = 0;

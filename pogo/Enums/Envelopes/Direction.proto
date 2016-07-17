@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Enums.Envelopes;
+package POGOProtos.Enums.Envelopes;
 
 enum Direction {
   UNKNOWN = 0;

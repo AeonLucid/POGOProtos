@@ -1,10 +1,10 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto;
+package POGOProtos;
 
 import "Map/MapCell.proto";
 import "Map/MapObjectsStatus.proto";
 
 message MapObjects {
-  repeated POGOLib.Pokemon.Proto.Map.MapCell map_cells = 1;
-  POGOLib.Pokemon.Proto.Map.MapObjectsStatus status = 2;
+  repeated POGOProtos.Map.MapCell map_cells = 1;
+  POGOProtos.Map.MapObjectsStatus status = 2;
 }

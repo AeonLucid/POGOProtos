@@ -1,11 +1,11 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Map.Fort;
+package POGOProtos.Map.Fort;
 
 import public "Enums/PokemonType.proto";
 
 message FortLureInfo {
   string fort_id = 1;
   double unknown2 = 2;
-  POGOLib.Pokemon.Proto.Enums.PokemonType active_pokemon_type = 3;
+  POGOProtos.Enums.PokemonType active_pokemon_type = 3;
   int64 lure_expires_timestamp_ms = 4;
 }

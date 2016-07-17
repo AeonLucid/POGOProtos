@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Map;
+package POGOProtos.Map;
 
 message SpawnPoint {
   double latitude = 2;

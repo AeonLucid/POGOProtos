@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Data;
+package POGOProtos.Data;
 
 message Pokemon {
 	int32 id = 1;

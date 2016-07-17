@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOLib.Pokemon.Proto.Map.Fort;
+package POGOProtos.Map.Fort;
 
 message FortSummary {
   int32 fort_summary_id = 1;
