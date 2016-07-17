@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Requests;
+package POGOProtos.Networking.Requests;
 
 enum RequestType {
   METHOD_UNSET = 0;

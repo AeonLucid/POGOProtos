@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Responses;
+package POGOProtos.Networking.Responses;
 
 import public "Enums/BadgeType.proto";
 
