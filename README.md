@@ -1,4 +1,5 @@
 POGOProtos
+===================
 
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the PokemonGo RPC.
 
