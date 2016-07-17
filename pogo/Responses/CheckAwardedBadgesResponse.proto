@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Responses;
+
+import public "Enums/BadgeType.proto";
+
+// Confirm if this is correct, I think that it should be "repeated AwardedBadge awarded_badges" or something like that.
+message CheckAwardedBadgesResponse {
+  bool success = 1;
+  repeated POGOProtos.Enums.BadgeType awarded_badges = 2;
+  repeated int32 awarded_badge_levels = 3;
+}

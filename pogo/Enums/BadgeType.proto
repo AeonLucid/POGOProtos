@@ -1,7 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Enums;
 
-enum HoloBadgeType {
+enum BadgeType {
 	BADGE_UNSET = 0;
 	BADGE_TRAVEL_KM = 1;
 	BADGE_POKEDEX_ENTRIES = 2;
