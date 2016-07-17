@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import public "Inventory/ItemType.proto";
+
+message Item {
+  POGOProtos.Inventory.ItemType item = 1;
+  int32 count = 2;
+  bool unseen = 3;
+}
