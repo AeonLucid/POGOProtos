@@ -1,7 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Settings;
 
-message Map {
+message MapSettings {
   double pokemon_visible_range = 1;
   double poke_nav_range_meters = 2;
   double encounter_range_meters = 3;
