@@ -5,8 +5,8 @@ package POGOProtos.Networking.Requests;
 // M = Message
 
 enum RequestType {
-  METHOD_UNSET = 0;
-  PLAYER_UPDATE = 1;
+  METHOD_UNSET = 0;                     // No implementation required
+  PLAYER_UPDATE = 1;                    // Implemented [R & M]
   GET_PLAYER = 2;                       // Implemented [R & M]
   GET_INVENTORY = 4;                    // Implemented [R & M]
   DOWNLOAD_SETTINGS = 5;                // Implemented [R & M]
