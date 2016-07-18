@@ -1,4 +1,0 @@
-syntax = "proto3";
-package POGOProtos;
-
-// Basically all enums go here.

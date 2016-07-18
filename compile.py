@@ -34,9 +34,12 @@ for root, dirnames, filenames in os.walk(proto_path):
     for filename in fnmatch.filter(filenames, '*.proto'):
         proto_file = os.path.join(root, filename)
         relative_file_path = proto_file.replace(proto_path, "")
-        relative_path = relative_file_path.replace(ntpath.basename(proto_file), "")
 
-        destination_path = os.path.abspath(out_path + relative_path)
+        if lang == "csharp":
+            relative_path = relative_file_path.replace(ntpath.basename(proto_file), "")
+            destination_path = os.path.abspath(out_path + relative_path)
+        else:
+            destination_path = os.path.abspath(out_path)
 
         if not os.path.exists(destination_path):
             os.makedirs(destination_path)

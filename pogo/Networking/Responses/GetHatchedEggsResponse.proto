@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Responses;
+package POGOProtos.Networking.Responses;
 
 // Confirm if this is correct, I think that it should be "repeated HatchedEgg hatched_eggs" or something like that.
 message GetHatchedEggsResponse {

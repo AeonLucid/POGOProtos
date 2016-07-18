@@ -1,7 +1,7 @@
 syntax = "proto3";
-package POGOProtos;
+package POGOProtos.Networking;
 
-import public "Requests/Request.proto";
+import public "Networking/Requests/Request.proto";
 
 message Envelopes {
   message Unknown6 {
@@ -23,7 +23,7 @@ message Envelopes {
     int32 status_code = 1;
     // Missing field 2.
     uint64 request_id = 3;
-    repeated POGOProtos.Requests.Request requests = 4;
+    repeated POGOProtos.Networking.Requests.Request requests = 4;
     // Missing field 5.
     Unknown6 unknown6 = 6;
     double latitude = 7;
@@ -46,7 +46,7 @@ message Envelopes {
 
   message ResponseEnvelope {
     int32 status_code = 1;
-    uint64 response_id = 2;
+    uint64 request_id = 2;
     string api_url = 3;
 
     Unknown6 unknown6 = 6;
