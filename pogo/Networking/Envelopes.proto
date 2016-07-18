@@ -52,13 +52,18 @@ message Envelopes {
     Unknown6 unknown6 = 6;
     AuthTicket auth_ticket = 7;
 
-    repeated bytes returns = 100;
+    repeated Payload returns = 100;
     string error = 101;
 
     message Unknown7 {
       bytes unknown71 = 1;
       int64 unknown72 = 2;
       bytes unknown73 = 3;
+    }
+
+    message Payload {
+      int32 unknown = 1;
+      bytes data = 2;
     }
   }
 }
