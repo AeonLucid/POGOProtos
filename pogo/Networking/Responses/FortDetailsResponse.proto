@@ -1,7 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import public "Data/Pokemon.proto";
+import public "Data/PokemonData.proto";
 import public "Enums/TeamColor.proto";
 import public "Map/Fort/FortType.proto";
 import public "Map/Fort/FortModifier.proto";
@@ -9,7 +9,7 @@ import public "Map/Fort/FortModifier.proto";
 message FortDetailsResponse {
   string fort_id = 1;
   POGOProtos.Enums.TeamColor team_color = 2;
-  POGOProtos.Data.Pokemon pokemon = 3;
+  POGOProtos.Data.PokemonData pokemon_data = 3;
   string name = 4;
   repeated string image_urls = 5;
   int32 fp = 6;

@@ -10,8 +10,8 @@ enum RequestType {
   GET_PLAYER = 2;                       // Implemented [R & M]
   GET_INVENTORY = 4;                    // Implemented [R & M]
   DOWNLOAD_SETTINGS = 5;                // Implemented [R & M]
-  DOWNLOAD_ITEM_TEMPLATES = 6;
-  DOWNLOAD_REMOTE_CONFIG_VERSION = 7; 
+  DOWNLOAD_ITEM_TEMPLATES = 6;          // Implemented [R & M]
+  DOWNLOAD_REMOTE_CONFIG_VERSION = 7;   // Implemented [R & M]
   FORT_SEARCH = 101;                    // Implemented [R & M]
   ENCOUNTER = 102;
   CATCH_POKEMON = 103;                  // Implemented [R & M]

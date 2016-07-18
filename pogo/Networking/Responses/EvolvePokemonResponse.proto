@@ -1,11 +1,11 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import public "Data/Pokemon.proto";
+import public "Data/PokemonData.proto";
 
 message EvolvePokemonResponse {
   POGOProtos.Networking.Responses.EvolvePokemonResponse.Result result = 1;
-  POGOProtos.Data.Pokemon evolved_pokemon = 2;
+  POGOProtos.Data.PokemonData evolved_pokemon_data = 2;
   int32 experience_awarded = 3;
   int32 candy_awarded = 4;
 

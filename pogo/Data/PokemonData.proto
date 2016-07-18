@@ -1,12 +1,12 @@
 syntax = "proto3";
 package POGOProtos.Data;
 
-import public "Enums/PokemonType.proto";
+import public "Enums/PokemonId.proto";
 import public "Enums/PokemonMove.proto";
 
-message Pokemon {
+message PokemonData {
   int32 id = 1;
-  POGOProtos.Enums.PokemonType pokemon_type = 2;
+  POGOProtos.Enums.PokemonId pokemon_id = 2;
   int32 cp = 3;
   int32 stamina = 4;
   int32 stamina_max = 5;

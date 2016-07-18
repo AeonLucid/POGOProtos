@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Inventory;
+package POGOProtos.Enums;
 
 enum PokemonFamilyId {
   FAMILY_UNSET = 0;

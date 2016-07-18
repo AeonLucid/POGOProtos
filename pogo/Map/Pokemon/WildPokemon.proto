@@ -1,7 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Map.Pokemon;
 
-import public "Data/Pokemon.proto";
+import public "Data/PokemonData.proto";
 
 message WildPokemon {
   fixed64 encounter_id = 1;
@@ -9,6 +9,6 @@ message WildPokemon {
   double latitude = 3;
   double longitude = 4;
   string spawnpoint_id = 5;
-  POGOProtos.Data.Pokemon pokemon = 7;
+  POGOProtos.Data.PokemonData pokemon_data = 7;
   int32 time_till_hidden_ms = 11;
 }

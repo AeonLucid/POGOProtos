@@ -1,12 +1,12 @@
 syntax = "proto3";
 package POGOProtos.Inventory;
 
+import public "Inventory/ItemId.proto";
 import public "Inventory/ItemType.proto";
-import public "Inventory/ItemTypeCategory.proto";
 
 message AppliedItem {
-  POGOProtos.Inventory.ItemType item_type = 1;
-  POGOProtos.Inventory.ItemTypeCategory item_type_category = 2;
+  POGOProtos.Inventory.ItemId item_id = 1;
+  POGOProtos.Inventory.ItemType item_type = 2;
   int64 expire_ms = 3;
   int64 applied_ms = 4;
 }

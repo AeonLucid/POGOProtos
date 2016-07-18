@@ -6,14 +6,14 @@ import public "Inventory/AppliedItems.proto";
 import public "Inventory/EggIncubators.proto";
 import public "Inventory/PokemonFamily.proto";
 import public "Inventory/InventoryUpgrades.proto";
-import public "Data/Pokemon.proto";
+import public "Data/PokemonData.proto";
 import public "Data/PokedexEntry.proto";
 import public "Player/PlayerStats.proto";
 import public "Player/PlayerCurrency.proto";
 import public "Player/PlayerCamera.proto";
 
 message InventoryItemData {
-  POGOProtos.Data.Pokemon pokemon = 1;
+  POGOProtos.Data.PokemonData pokemon_data = 1;
   POGOProtos.Inventory.Item item = 2;
   POGOProtos.Data.PokedexEntry pokedex_entry = 3;
   POGOProtos.Player.PlayerStats player_stats = 4;

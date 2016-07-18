@@ -1,7 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Map.Fort;
 
-import public "Enums/PokemonType.proto";
+import public "Enums/PokemonId.proto";
 import public "Enums/TeamColor.proto";
 import public "Map/Fort/FortType.proto";
 import public "Map/Fort/FortSponsor.proto";
@@ -22,8 +22,8 @@ message FortData {
   POGOProtos.Enums.TeamColor owned_by_team = 5;
 
   // Highest CP Pokemon at the gym
-  POGOProtos.Enums.PokemonType guard_pokemon_type = 6;
-  int32 guard_pokemon_level = 7;
+  POGOProtos.Enums.PokemonId guard_pokemon_id = 6;
+  int32 guard_pokemon_cp = 7;
 
   // Prestigate / experience of the gym
   int64 gym_points = 10;
