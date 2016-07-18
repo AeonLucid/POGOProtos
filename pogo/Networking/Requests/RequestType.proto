@@ -22,7 +22,7 @@ enum RequestType {
 	FORT_RECALL_POKEMON = 111;
 	RELEASE_POKEMON = 112;                // Implemented [R & M]
 	USE_ITEM_POTION = 113;
-	USE_ITEM_CAPTURE = 114;
+	USE_ITEM_CAPTURE = 114;               // Implemented [R & M]
 	USE_ITEM_FLEE = 115;
 	USE_ITEM_REVIVE = 116;
 	TRADE_SEARCH = 117;
