@@ -31,7 +31,7 @@ message Envelopes {
     double altitude = 9;
     AuthInfo auth_info = 10;
     AuthTicket auth_ticket = 11;
-    int64 unknown12 = 12;
+    int64 protocol_version = 12;
 
     message AuthInfo {
       string provider = 1;
@@ -39,7 +39,7 @@ message Envelopes {
 
       message JWT {
         string contents = 1;
-        int32 unknown2  = 2;
+        int32 contents_length  = 2;
       }
     }
   }
