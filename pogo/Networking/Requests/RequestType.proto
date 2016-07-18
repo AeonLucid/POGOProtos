@@ -20,7 +20,7 @@ enum RequestType {
   GET_MAP_OBJECTS = 106;                // Implemented [R & M]
   FORT_DEPLOY_POKEMON = 110;
   FORT_RECALL_POKEMON = 111;
-  RELEASE_POKEMON = 112;
+  RELEASE_POKEMON = 112;                // Implemented [R & M]
   USE_ITEM_POTION = 113;
   USE_ITEM_CAPTURE = 114;
   USE_ITEM_FLEE = 115;
@@ -33,7 +33,7 @@ enum RequestType {
   GET_ITEM_PACK = 122;
   BUY_ITEM_PACK = 123;
   BUY_GEM_PACK = 124;
-  EVOLVE_POKEMON = 125;
+  EVOLVE_POKEMON = 125;                 // Implemented [R & M]
   GET_HATCHED_EGGS = 126;               // Implemented [R & M]
   ENCOUNTER_TUTORIAL_COMPLETE = 127;
   LEVEL_UP_REWARDS = 128;

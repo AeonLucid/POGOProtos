@@ -9,7 +9,7 @@ message FortSearchResponse {
   repeated POGOProtos.Networking.Responses.FortSearchResponse.ItemAward items_awarded = 2;
   int32 gems_awarded = 3;
   POGOProtos.Data.Pokemon pokemon_egg = 4;
-  int32 xp_awarded = 5;
+  int32 experience_awarded = 5;
   int64 cooldown_complete_timestamp_ms = 6;
   int32 chain_hack_sequence_number = 7;
 
