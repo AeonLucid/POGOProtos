@@ -1,20 +1,23 @@
 syntax = "proto3";
 package POGOProtos.Networking.Requests;
 
+// R = Response
+// M = Message
+
 enum RequestType {
   METHOD_UNSET = 0;
   PLAYER_UPDATE = 1;
-  GET_PLAYER = 2;
-  GET_INVENTORY = 4;
-  DOWNLOAD_SETTINGS = 5;
+  GET_PLAYER = 2;                       // Implemented [R & M]
+  GET_INVENTORY = 4;                    // Implemented [R & M]
+  DOWNLOAD_SETTINGS = 5;                // Implemented [R & M]
   DOWNLOAD_ITEM_TEMPLATES = 6;
-  DOWNLOAD_REMOTE_CONFIG_VERSION = 7;
-  FORT_SEARCH = 101;
+  DOWNLOAD_REMOTE_CONFIG_VERSION = 7; 
+  FORT_SEARCH = 101;                    // Implemented [R & M]
   ENCOUNTER = 102;
-  CATCH_POKEMON = 103;
-  FORT_DETAILS = 104;
+  CATCH_POKEMON = 103;                  // Implemented [R & M]
+  FORT_DETAILS = 104;                   // Implemented [R & M]
   ITEM_USE = 105;
-  GET_MAP_OBJECTS = 106;
+  GET_MAP_OBJECTS = 106;                // Implemented [R & M]
   FORT_DEPLOY_POKEMON = 110;
   FORT_RECALL_POKEMON = 111;
   RELEASE_POKEMON = 112;
@@ -31,10 +34,10 @@ enum RequestType {
   BUY_ITEM_PACK = 123;
   BUY_GEM_PACK = 124;
   EVOLVE_POKEMON = 125;
-  GET_HATCHED_EGGS = 126;
+  GET_HATCHED_EGGS = 126;               // Implemented [R & M]
   ENCOUNTER_TUTORIAL_COMPLETE = 127;
   LEVEL_UP_REWARDS = 128;
-  CHECK_AWARDED_BADGES = 129;
+  CHECK_AWARDED_BADGES = 129;           // Implemented [R & M]
   USE_ITEM_GYM = 133;
   GET_GYM_DETAILS = 134;
   START_GYM_BATTLE = 135;

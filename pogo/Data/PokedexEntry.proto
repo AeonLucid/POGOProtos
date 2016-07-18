@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+message PokedexEntry {
+  int32 pokedex_entry_number = 1;
+  int32 times_encountered = 2;
+  int32 times_captured = 3;
+  int32 evolution_stone_pieces = 4;
+  int32 evolution_stones = 5;
+}

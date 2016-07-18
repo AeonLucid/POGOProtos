@@ -1,0 +1,26 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import public "Inventory/Item.proto";
+import public "Inventory/AppliedItems.proto";
+import public "Inventory/EggIncubators.proto";
+import public "Inventory/PokemonFamily.proto";
+import public "Inventory/InventoryUpgrades.proto";
+import public "Data/Pokemon.proto";
+import public "Data/PokedexEntry.proto";
+import public "Player/PlayerStats.proto";
+import public "Player/PlayerCurrency.proto";
+import public "Player/PlayerCamera.proto";
+
+message InventoryItemData {
+  POGOProtos.Data.Pokemon pokemon = 1;
+  POGOProtos.Inventory.Item item = 2;
+  POGOProtos.Data.PokedexEntry pokedex_entry = 3;
+  POGOProtos.Player.PlayerStats player_stats = 4;
+  POGOProtos.Player.PlayerCurrency player_currency = 5;
+  POGOProtos.Player.PlayerCamera player_camera = 6;
+  POGOProtos.Inventory.InventoryUpgrades inventory_upgrades = 7;
+  POGOProtos.Inventory.AppliedItems applied_items = 8;
+  POGOProtos.Inventory.EggIncubators egg_incubators = 9;
+  POGOProtos.Inventory.PokemonFamily pokemon_family = 10;
+}

@@ -1,9 +1,11 @@
 syntax = "proto3";
 package POGOProtos.Data;
 
+import public "Enums/PokemonType.proto";
+
 message Pokemon {
 	int32 id = 1;
-	int32 pokemon_id = 2;
+	POGOProtos.Enums.PokemonType pokemon_type = 2;
 	int32 cp = 3;
 	int32 stamina = 4;
 	int32 stamina_max = 5;
@@ -11,7 +13,7 @@ message Pokemon {
 	int32 move_2 = 7;
 	int32 deployed_fort_id = 8;
 	string owner_name = 9;
-	int32 is_egg = 10;
+	bool is_egg = 10;
 	int32 egg_km_walked_target = 11;
 	int32 egg_km_walked_start = 12;
 	int32 origin = 14;
