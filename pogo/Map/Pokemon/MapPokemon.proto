@@ -5,10 +5,10 @@ import public "Enums/PokemonType.proto";
 
 message MapPokemon {
   string spawnpoint_id = 1;
-	fixed64 encounter_id = 2;
-	POGOProtos.Enums.PokemonType pokemon_type = 3;
+  fixed64 encounter_id = 2;
+  POGOProtos.Enums.PokemonType pokemon_type = 3;
   // After this timestamp, the pokemon will be gone.
-	int64 expiration_timestamp_ms = 4;
-	double latitude = 5;
-	double longitude = 6;
+  int64 expiration_timestamp_ms = 4;
+  double latitude = 5;
+  double longitude = 6;
 }
