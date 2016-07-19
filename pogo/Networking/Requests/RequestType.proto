@@ -60,7 +60,7 @@ enum RequestType {
 	GET_ASSET_DIGEST = 300;	    		  // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;              // Implemented [R & M]
 	GET_SUGGESTED_CODENAMES = 401;        // Implemented [R & M]
-	CHECK_CODENAME_AVAILABLE = 402;
+	CHECK_CODENAME_AVAILABLE = 402;       // Implemented [R & M]
 	CLAIM_CODENAME = 403;
 	SET_AVATAR = 404;
 	SET_PLAYER_TEAM = 405;
