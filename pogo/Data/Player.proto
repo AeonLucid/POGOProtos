@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos;
+package POGOProtos.Data;
 
 import public "Enums/TutorialState.proto";
 import public "Player/AvatarDetails.proto";
@@ -8,7 +8,7 @@ import public "Player/EquippedBadge.proto";
 import public "Player/ContactSettings.proto";
 import public "Player/Currency.proto";
 
-message LocalPlayer {
+message Player {
   int64 creation_timestamp_ms  = 1;
   string username = 2;
   int32 team = 5;

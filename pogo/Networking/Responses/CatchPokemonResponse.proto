@@ -1,13 +1,13 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import public "Data/CaptureScore.proto";
+import public "Data/Capture/CaptureScore.proto";
 
 message CatchPokemonResponse {
   POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus status = 1;
   double miss_percent = 2;
   uint64 captured_pokemon_id = 3;
-  POGOProtos.Data.CaptureScore scores = 4;
+  POGOProtos.Data.Capture.CaptureScore scores = 4;
 
   enum CatchStatus {
     CATCH_ERROR = 0;

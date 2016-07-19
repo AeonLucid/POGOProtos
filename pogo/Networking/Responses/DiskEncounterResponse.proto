@@ -2,12 +2,12 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import public "Data/PokemonData.proto";
-import public "Data/CaptureProbability.proto";
+import public "Data/Capture/CaptureProbability.proto";
 
 message DiskEncounterResponse {
 	Result result = 1;
 	POGOProtos.Data.PokemonData pokemon_data = 2;
-	POGOProtos.Data.CaptureProbability capture_probability = 3;
+	POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
 
 	enum Result {
 		UNKNOWN = 0;

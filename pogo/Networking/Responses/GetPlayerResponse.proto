@@ -1,9 +1,9 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import public "LocalPlayer.proto";
+import public "Data/Player.proto";
 
 message GetPlayerResponse {
   uint32 unknown1 = 1;
-  POGOProtos.LocalPlayer local_player = 2;
+  POGOProtos.Data.Player local_player = 2;
 }
