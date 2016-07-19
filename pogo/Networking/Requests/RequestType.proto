@@ -42,7 +42,7 @@ enum RequestType {
 	GET_GYM_DETAILS = 134;			      // Implemented [R & M]
 	START_GYM_BATTLE = 135;			      // Implemented [R & M]
 	ATTACK_GYM = 136;				      // Implemented [R & M]
-	RECYCLE_INVENTORY_ITEM = 137;
+	RECYCLE_INVENTORY_ITEM = 137;         // Implemented [R & M]
 	COLLECT_DAILY_BONUS = 138;
 	USE_ITEM_XP_BOOST = 139;
 	USE_ITEM_EGG_INCUBATOR = 140;
