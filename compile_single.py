@@ -63,7 +63,7 @@ def walk_files(main_file, path, package, imports=None):
 
     for file_name in os.listdir(path):
         file_name_path = os.path.join(path, file_name)
-        if os.path.isfile(file_name_path):
+        if file_name_path.endswith(".proto") and os.path.isfile(file_name_path):
             with open(file_name_path, 'r') as proto_file:
                 is_header = True
                 for proto_line in proto_file.readlines():
@@ -72,8 +72,15 @@ def walk_files(main_file, path, package, imports=None):
 
                     if is_header:
                         if proto_line.startswith("import"):
-                            import_from_package = re.search('import (public )?"(.*?)(\/)?([a-zA-Z0-9]+\.proto)";',
-                                                            proto_line).group(2).replace("/", ".")
+                            import_from_package_re = re.search('import (public )?"(.*?)(\/)?([a-zA-Z0-9]+\.proto)";', proto_line)
+
+                            if import_from_package_re is None:
+                                print("Can't compile..")
+                                print("File: '%s'" % file_name_path)
+                                print("Bad import line: '%s'" % proto_line)
+                                exit()
+
+                            import_from_package = import_from_package_re.group(2).replace("/", ".")
 
                             if import_from_package == "":
                                 import_from_package = "POGOProtos"

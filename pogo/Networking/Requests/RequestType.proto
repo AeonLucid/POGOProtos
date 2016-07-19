@@ -38,8 +38,8 @@ enum RequestType {
 	ENCOUNTER_TUTORIAL_COMPLETE = 127;    // Implemented [R & M]
 	LEVEL_UP_REWARDS = 128;				  // Implemented [R & M]
 	CHECK_AWARDED_BADGES = 129;           // Implemented [R & M]
-	USE_ITEM_GYM = 133;
-	GET_GYM_DETAILS = 134;
+	USE_ITEM_GYM = 133;				      // Implemented [R & M]
+	GET_GYM_DETAILS = 134;			      // Implemented [R & M]
 	START_GYM_BATTLE = 135;
 	ATTACK_GYM = 136;
 	RECYCLE_INVENTORY_ITEM = 137;
