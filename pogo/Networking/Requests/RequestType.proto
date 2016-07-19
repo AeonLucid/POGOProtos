@@ -60,9 +60,9 @@ enum RequestType {
 	GET_ASSET_DIGEST = 300;	    		  // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;              // Implemented [R & M]
 	GET_SUGGESTED_CODENAMES = 401;        // Implemented [R & M]
-	CHECK_CODENAME_AVAILABLE = 402;       // Implemented [R & M] UNTESTED RESPONSE
-	CLAIM_CODENAME = 403;				  // Implemented [R & M] UNTESTED RESPONSE
-	SET_AVATAR = 404;
+	CHECK_CODENAME_AVAILABLE = 402;       // Implemented [R & M] TEST RESPONSE
+	CLAIM_CODENAME = 403;				  // Implemented [R & M] TEST RESPONSE
+	SET_AVATAR = 404;					  // Implemented [R & M]
 	SET_PLAYER_TEAM = 405;
 	MARK_TUTORIAL_COMPLETE = 406;
 	LOAD_SPAWN_POINTS = 500;
