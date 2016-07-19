@@ -54,7 +54,7 @@ enum RequestType {
 	COLLECT_DAILY_DEFENDER_BONUS = 146;   // Implemented [R & M]
 	UPGRADE_POKEMON = 147;				  // Implemented [R & M]
 	SET_FAVORITE_POKEMON = 148;		      // Implemented [R & M]
-	NICKNAME_POKEMON = 149;
+	NICKNAME_POKEMON = 149;				  // Implemented [R & M]
 	EQUIP_BADGE = 150;
 	SET_CONTACT_SETTINGS = 151;
 	GET_ASSET_DIGEST = 300;
