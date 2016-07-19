@@ -9,8 +9,12 @@ If you want to know which messages are implemented right now, click [here](https
 
 ## Preparation
 
+Current recommended protoc version: "Protocol Buffers v3.0.0-beta-4".
+
+You can find download links [here](https://github.com/google/protobuf/releases).
+
 ### Windows
-Be sure to add te newest version of `protoc` to your environmental path.
+Be sure to add `protoc` to your environmental path.
 
 ### *nix
 Ensure that you have the newest version of `protoc` installed.
