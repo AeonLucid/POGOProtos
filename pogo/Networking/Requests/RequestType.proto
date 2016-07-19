@@ -52,8 +52,8 @@ enum RequestType {
 	ADD_FORT_MODIFIER = 144;	          // Implemented [R & M]
 	DISK_ENCOUNTER = 145;                 // Implemented [R & M]
 	COLLECT_DAILY_DEFENDER_BONUS = 146;   // Implemented [R & M]
-	UPGRADE_POKEMON = 147;
-	SET_FAVORITE_POKEMON = 148;
+	UPGRADE_POKEMON = 147;				  // Implemented [R & M]
+	SET_FAVORITE_POKEMON = 148;		      // Implemented [R & M]
 	NICKNAME_POKEMON = 149;
 	EQUIP_BADGE = 150;
 	SET_CONTACT_SETTINGS = 151;
