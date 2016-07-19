@@ -12,11 +12,13 @@ protoc_path = "protoc"
 parser = argparse.ArgumentParser()
 parser.add_argument("-l", "--lang", help="Language to produce protoc files")
 parser.add_argument("-o", "--out_path", help="Output path for protoc files")
+parser.add_argument("-d", "--desc_file", action='store_true', help="For generating a .desc file only")
 args = parser.parse_args()
 
 # Set defaults
 lang = args.lang or "csharp"
 out_path = args.out_path or "out"
+desc_file = args.desc_file
 default_out_path = out_path == "out"
 
 # Determine where to store
@@ -74,13 +76,21 @@ with open(tmp_file_path, 'a') as tmp_file:
     walk_directory(tmp_file, proto_path)
     walk_files(tmp_file, proto_path)
 
-command = """{0} --proto_path="{1}" --{2}_out="{3}" "{4}\"""".format(
-    protoc_path,
-    tmp_path,
-    lang,
-    out_path,
-    os.path.abspath(tmp_file_path)
-)
+if not desc_file:
+    command = """{0} --proto_path="{1}" --{2}_out="{3}" "{4}\"""".format(
+        protoc_path,
+        tmp_path,
+        lang,
+        out_path,
+        os.path.abspath(tmp_file_path)
+    )
+else:
+    command = """{0} --proto_path="{1}" --descriptor_set_out="{2}" "{3}\"""".format(
+        protoc_path,
+        tmp_path,
+        os.path.abspath(out_path + "/POGOProtos.desc"),
+        os.path.abspath(tmp_file_path)
+    )
 
 call(command, shell=True)
 
