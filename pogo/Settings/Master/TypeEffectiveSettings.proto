@@ -1,8 +1,6 @@
 syntax = "proto3";
 package POGOProtos.Settings.Master;
 
-import "Enums/BadgeType.proto";
-
 import "Enums/PokemonType.proto";
 
 message TypeEffectiveSettings {

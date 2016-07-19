@@ -1,7 +1,6 @@
 syntax = "proto3";
 package POGOProtos.Networking.Envelopes;
 
-import "Networking/Requests/Request.proto";
 import "Networking/Envelopes/AuthTicket.proto";
 import "Networking/Envelopes/Unknown6.proto";
 
