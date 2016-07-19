@@ -46,7 +46,7 @@ enum RequestType {
 	COLLECT_DAILY_BONUS = 138;            // Implemented [R & M]
 	USE_ITEM_XP_BOOST = 139;              // Implemented [R & M]
 	USE_ITEM_EGG_INCUBATOR = 140;         // Implemented [R & M]
-	USE_INCENSE = 141;
+	USE_INCENSE = 141;				      // Implemented [R & M]
 	GET_INCENSE_POKEMON = 142;
 	INCENSE_ENCOUNTER = 143;
 	ADD_FORT_MODIFIER = 144;
