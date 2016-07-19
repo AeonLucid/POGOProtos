@@ -59,7 +59,7 @@ enum RequestType {
 	SET_CONTACT_SETTINGS = 151;	    	  // Implemented [R & M]
 	GET_ASSET_DIGEST = 300;	    		  // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;              // Implemented [R & M]
-	GET_SUGGESTED_CODENAMES = 401;
+	GET_SUGGESTED_CODENAMES = 401;        // Implemented [R & M]
 	CHECK_CODENAME_AVAILABLE = 402;
 	CLAIM_CODENAME = 403;
 	SET_AVATAR = 404;
