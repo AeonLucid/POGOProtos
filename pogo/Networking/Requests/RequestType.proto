@@ -49,7 +49,7 @@ enum RequestType {
 	USE_INCENSE = 141;				      // Implemented [R & M]
 	GET_INCENSE_POKEMON = 142;	          // Implemented [R & M]
 	INCENSE_ENCOUNTER = 143;	          // Implemented [R & M]
-	ADD_FORT_MODIFIER = 144;
+	ADD_FORT_MODIFIER = 144;	          // Implemented [R & M]
 	DISK_ENCOUNTER = 145;                 // Implemented [R & M]
 	COLLECT_DAILY_DEFENDER_BONUS = 146;
 	UPGRADE_POKEMON = 147;
