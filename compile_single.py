@@ -49,6 +49,7 @@ def get_package(path):
                 for proto_line in proto_file.readlines():
                     if proto_line.startswith("package"):
                         return re.search('package (.*?);', proto_line).group(1)
+    return None
 
 
 def walk_files(main_file, path, package, imports=None):
@@ -71,7 +72,7 @@ def walk_files(main_file, path, package, imports=None):
 
                     if is_header:
                         if proto_line.startswith("import"):
-                            import_from_package = re.search('import (public )?"(.*?)(\/)?([a-zA-Z]+\.proto)";',
+                            import_from_package = re.search('import (public )?"(.*?)(\/)?([a-zA-Z0-9]+\.proto)";',
                                                             proto_line).group(2).replace("/", ".")
 
                             if import_from_package == "":
@@ -104,11 +105,12 @@ def walk_directory(path):
         dir_name_path = os.path.join(path, dir_name)
         if os.path.isdir(dir_name_path):
             package = get_package(dir_name_path)
-            package_file_path = os.path.join(tmp_path, package + ".proto")
+            if package is not None:
+                package_file_path = os.path.join(tmp_path, package + ".proto")
 
-            with open(package_file_path, 'a') as package_file:
-                walk_files(package_file, dir_name_path, package)
-                created_packages.append(package)
+                with open(package_file_path, 'a') as package_file:
+                    walk_files(package_file, dir_name_path, package)
+                    created_packages.append(package)
 
             walk_directory(dir_name_path)
 
@@ -141,6 +143,10 @@ else:
             )
 
             call(command, shell=True)
+
+    if lang == 'python':
+        for root, dirnames, filenames in os.walk(os.path.join(out_path, "POGOProtos")):
+            open(os.path.join(root, '__init__.py'), 'w').close()
 
 
 print("Done!")

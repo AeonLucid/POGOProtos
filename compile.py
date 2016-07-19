@@ -41,6 +41,7 @@ def query_yes_no(question, default="yes"):
             sys.stdout.write("Please respond with 'yes' or 'no' "
                              "(or 'y' or 'n').\n")
 
+
 # Add this to your path
 protoc_path = "protoc"
 
@@ -71,15 +72,22 @@ if may_remove and os.path.exists(out_path):
 
 # Find protofiles and compile
 for root, dirnames, filenames in os.walk(proto_path):
-    for filename in fnmatch.filter(filenames, '*.proto'):
+    protos = fnmatch.filter(filenames, '*.proto')
+    relative_out_path = None
+    for filename in protos:
+        relative_out_path = None
+
         proto_file = os.path.join(root, filename)
         relative_file_path = proto_file.replace(proto_path, "")
+        relative_path = relative_file_path.replace(ntpath.basename(proto_file), "")
 
         if lang == "csharp":
-            relative_path = relative_file_path.replace(ntpath.basename(proto_file), "")
             destination_path = os.path.abspath(out_path + relative_path)
         else:
             destination_path = os.path.abspath(out_path)
+
+        if relative_out_path is None:
+            relative_out_path = os.path.abspath(out_path + relative_path)
 
         if not os.path.exists(destination_path):
             os.makedirs(destination_path)
@@ -94,6 +102,12 @@ for root, dirnames, filenames in os.walk(proto_path):
             os.path.abspath(proto_file)
         )
 
+        print destination_path
+
         call(command, shell=True)
+
+if lang == 'python':
+    for root, dirnames, filenames in os.walk(out_path):
+        open(os.path.join(root, '__init__.py'), 'w').close()
 
 print("Done!")
