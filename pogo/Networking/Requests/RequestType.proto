@@ -41,7 +41,7 @@ enum RequestType {
 	USE_ITEM_GYM = 133;				      // Implemented [R & M]
 	GET_GYM_DETAILS = 134;			      // Implemented [R & M]
 	START_GYM_BATTLE = 135;			      // Implemented [R & M]
-	ATTACK_GYM = 136;
+	ATTACK_GYM = 136;				      // Implemented [R & M]
 	RECYCLE_INVENTORY_ITEM = 137;
 	COLLECT_DAILY_BONUS = 138;
 	USE_ITEM_XP_BOOST = 139;
