@@ -102,8 +102,6 @@ for root, dirnames, filenames in os.walk(proto_path):
             os.path.abspath(proto_file)
         )
 
-        print destination_path
-
         call(command, shell=True)
 
 if lang == 'python':
