@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Player;
+package POGOProtos.Data.Player;
 
 message DailyBonus {
 	int64 next_collected_timestamp_ms = 1;

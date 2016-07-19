@@ -8,17 +8,17 @@ import "Inventory/PokemonFamily.proto";
 import "Inventory/InventoryUpgrades.proto";
 import "Data/PokemonData.proto";
 import "Data/PokedexEntry.proto";
-import "Player/PlayerStats.proto";
-import "Player/PlayerCurrency.proto";
-import "Player/PlayerCamera.proto";
+import "Data/Player/PlayerStats.proto";
+import "Data/Player/PlayerCurrency.proto";
+import "Data/Player/PlayerCamera.proto";
 
 message InventoryItemData {
 	.POGOProtos.Data.PokemonData pokemon_data = 1;
 	.POGOProtos.Inventory.Item item = 2;
 	.POGOProtos.Data.PokedexEntry pokedex_entry = 3;
-	.POGOProtos.Player.PlayerStats player_stats = 4;
-	.POGOProtos.Player.PlayerCurrency player_currency = 5;
-	.POGOProtos.Player.PlayerCamera player_camera = 6;
+	.POGOProtos.Data.Player.PlayerStats player_stats = 4;
+	.POGOProtos.Data.Player.PlayerCurrency player_currency = 5;
+	.POGOProtos.Data.Player.PlayerCamera player_camera = 6;
 	.POGOProtos.Inventory.InventoryUpgrades inventory_upgrades = 7;
 	.POGOProtos.Inventory.AppliedItems applied_items = 8;
 	.POGOProtos.Inventory.EggIncubators egg_incubators = 9;

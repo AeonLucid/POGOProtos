@@ -16,9 +16,9 @@ enum RequestType {
 	ENCOUNTER = 102;	                  // Implemented [R & M]
 	CATCH_POKEMON = 103;                  // Implemented [R & M]
 	FORT_DETAILS = 104;                   // Implemented [R & M]
-	ITEM_USE = 105;
+	ITEM_USE = 105;						  // Can't find this one.
 	GET_MAP_OBJECTS = 106;                // Implemented [R & M]
-	FORT_DEPLOY_POKEMON = 110;
+	FORT_DEPLOY_POKEMON = 110;            // Implemented [R & M]
 	FORT_RECALL_POKEMON = 111;
 	RELEASE_POKEMON = 112;                // Implemented [R & M]
 	USE_ITEM_POTION = 113;

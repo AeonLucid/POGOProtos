@@ -1,10 +1,9 @@
 syntax = "proto3";
-package POGOProtos.Player;
+package POGOProtos.Data.Player;
 
 import "Enums/Gender.proto";
 
-message AvatarDetails {
-	// Missing field 1.
+message PlayerAvatar {
 	int32 skin = 2;
 	int32 hair = 3;
 	int32 shirt = 4;
