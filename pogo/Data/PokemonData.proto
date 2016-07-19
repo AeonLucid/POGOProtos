@@ -5,7 +5,7 @@ import public "Enums/PokemonId.proto";
 import public "Enums/PokemonMove.proto";
 
 message PokemonData {
-	int32 id = 1;
+	fixed64 id = 1;
 	POGOProtos.Enums.PokemonId pokemon_id = 2;
 	int32 cp = 3;
 	int32 stamina = 4;
