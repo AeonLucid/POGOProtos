@@ -71,7 +71,8 @@ if may_remove and os.path.exists(out_path):
 
 # Find protofiles and compile
 for root, dirnames, filenames in os.walk(proto_path):
-    for filename in fnmatch.filter(filenames, '*.proto'):
+    protos = fnmatch.filter(filenames, '*.proto')
+    for filename in protos:
         proto_file = os.path.join(root, filename)
         relative_file_path = proto_file.replace(proto_path, "")
 
@@ -95,5 +96,10 @@ for root, dirnames, filenames in os.walk(proto_path):
         )
 
         call(command, shell=True)
+
+    # make everything into packages if using Python
+    if protos and lang == 'python':
+        open(os.path.join(out_path, os.path.join(root, '__init__.py').replace(proto_path + '/', '')), 'w').close()
+
 
 print("Done!")
