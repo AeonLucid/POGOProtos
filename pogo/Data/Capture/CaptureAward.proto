@@ -3,7 +3,7 @@ package POGOProtos.Data.Capture;
 
 import "Enums/ActivityType.proto";
 
-message CaptureScore {
+message CaptureAward {
 	repeated .POGOProtos.Enums.ActivityType activity_type = 1;
 	repeated int32 xp = 2;
 	repeated int32 candy = 3;

@@ -1,8 +1,6 @@
 ﻿syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import "Data/PokemonData.proto";
-import "Data/Gym/GymState.proto";
 import "Networking/Responses/FortDetailsResponse.proto";
 
 message FortRecallPokemonResponse {

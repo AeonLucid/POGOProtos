@@ -30,12 +30,12 @@ enum RequestType {
 	TRADE_RESPONSE = 119;				  // Not yet implemented in the game
 	TRADE_RESULT = 120;					  // Not yet implemented in the game
 	GET_PLAYER_PROFILE = 121;             // Implemented [R & M]
-	GET_ITEM_PACK = 122;
-	BUY_ITEM_PACK = 123;
-	BUY_GEM_PACK = 124;
+	GET_ITEM_PACK = 122;				  // Can't find this one.
+	BUY_ITEM_PACK = 123;				  // Can't find this one.
+	BUY_GEM_PACK = 124;					  // Can't find this one.
 	EVOLVE_POKEMON = 125;                 // Implemented [R & M]
 	GET_HATCHED_EGGS = 126;               // Implemented [R & M]
-	ENCOUNTER_TUTORIAL_COMPLETE = 127;
+	ENCOUNTER_TUTORIAL_COMPLETE = 127;    // Implemented [R & M]
 	LEVEL_UP_REWARDS = 128;
 	CHECK_AWARDED_BADGES = 129;           // Implemented [R & M]
 	USE_ITEM_GYM = 133;
