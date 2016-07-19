@@ -12,7 +12,7 @@ message Player {
   int64 creation_timestamp_ms  = 1;
   string username = 2;
   int32 team = 5;
-  POGOProtos.Enums.TutorialState tutorial_state = 7;
+  repeated POGOProtos.Enums.TutorialState tutorial_state = 7;
   POGOProtos.Player.AvatarDetails avatar_details = 8;
   int32 max_pokemon_storage = 9;
   int32 max_item_storage = 10;
