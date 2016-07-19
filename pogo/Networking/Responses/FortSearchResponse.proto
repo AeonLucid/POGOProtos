@@ -2,21 +2,16 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "Data/PokemonData.proto";
-import "Inventory/ItemId.proto";
+import "Inventory/ItemAward.proto";
 
 message FortSearchResponse {
 	.POGOProtos.Networking.Responses.FortSearchResponse.Result result = 1;
-	repeated POGOProtos.Networking.Responses.FortSearchResponse.ItemAward items_awarded = 2;
+	repeated .POGOProtos.Inventory.ItemAward items_awarded = 2;
 	int32 gems_awarded = 3;
 	.POGOProtos.Data.PokemonData pokemon_data_egg = 4;
 	int32 experience_awarded = 5;
 	int64 cooldown_complete_timestamp_ms = 6;
 	int32 chain_hack_sequence_number = 7;
-
-	message ItemAward {
-		.POGOProtos.Inventory.ItemId item_id = 1;
-		int32 item_count = 2;
-	}
 
 	enum Result {
 		NO_RESULT_SET = 0;

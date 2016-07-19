@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "Inventory/ItemId.proto";
+
+message ItemAward {
+	.POGOProtos.Inventory.ItemId item_id = 1;
+	int32 item_count = 2;
+}

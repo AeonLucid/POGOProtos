@@ -36,7 +36,7 @@ enum RequestType {
 	EVOLVE_POKEMON = 125;                 // Implemented [R & M]
 	GET_HATCHED_EGGS = 126;               // Implemented [R & M]
 	ENCOUNTER_TUTORIAL_COMPLETE = 127;    // Implemented [R & M]
-	LEVEL_UP_REWARDS = 128;
+	LEVEL_UP_REWARDS = 128;				  // Implemented [R & M]
 	CHECK_AWARDED_BADGES = 129;           // Implemented [R & M]
 	USE_ITEM_GYM = 133;
 	GET_GYM_DETAILS = 134;
