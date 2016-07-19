@@ -55,7 +55,7 @@ enum RequestType {
 	UPGRADE_POKEMON = 147;				  // Implemented [R & M]
 	SET_FAVORITE_POKEMON = 148;		      // Implemented [R & M]
 	NICKNAME_POKEMON = 149;				  // Implemented [R & M]
-	EQUIP_BADGE = 150;
+	EQUIP_BADGE = 150;					  // Implemented [R & M]
 	SET_CONTACT_SETTINGS = 151;
 	GET_ASSET_DIGEST = 300;
 	GET_DOWNLOAD_URLS = 301;              // Implemented [R & M]
