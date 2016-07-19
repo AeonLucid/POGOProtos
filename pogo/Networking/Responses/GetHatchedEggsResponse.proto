@@ -1,11 +1,10 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-// Confirm if this is correct, I think that it should be "repeated HatchedEgg hatched_eggs" or something like that.
 message GetHatchedEggsResponse {
-  bool success = 1;
-  repeated uint64 pokemon_id = 2 [packed=true]; // Might be POGOProtos.Enums.Pokemon
-  repeated int32 experience_awarded = 3;
-  repeated int32 candy_awarded = 4;
-  repeated int32 stardust_awarded = 5;
+	bool success = 1;
+	repeated uint64 pokemon_id = 2 [packed=true];
+	repeated int32 experience_awarded = 3;
+	repeated int32 candy_awarded = 4;
+	repeated int32 stardust_awarded = 5;
 }

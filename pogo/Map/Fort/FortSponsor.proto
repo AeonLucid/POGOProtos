@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Map.Fort;
 
 enum FortSponsor {
-  UNSET_SPONSOR = 0;
-  MCDONALDS = 1;
-  POKEMON_STORE = 2;
+	UNSET_SPONSOR = 0;
+	MCDONALDS = 1;
+	POKEMON_STORE = 2;
 }

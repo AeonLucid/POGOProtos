@@ -1,15 +1,15 @@
 syntax = "proto3";
 package POGOProtos.Settings;
 
-import public "Settings/FortSettings.proto";
-import public "Settings/MapSettings.proto";
-import public "Settings/LevelSettings.proto";
-import public "Settings/InventorySettings.proto";
+import "Settings/FortSettings.proto";
+import "Settings/MapSettings.proto";
+import "Settings/LevelSettings.proto";
+import "Settings/InventorySettings.proto";
 
 message GlobalSettings {
-	POGOProtos.Settings.FortSettings fort_settings = 2;
-	POGOProtos.Settings.MapSettings map_settings = 3;
-	POGOProtos.Settings.LevelSettings level_settings = 4;
-	POGOProtos.Settings.InventorySettings inventory_settings = 5;
+	.POGOProtos.Settings.FortSettings fort_settings = 2;
+	.POGOProtos.Settings.MapSettings map_settings = 3;
+	.POGOProtos.Settings.LevelSettings level_settings = 4;
+	.POGOProtos.Settings.InventorySettings inventory_settings = 5;
 	string minimum_client_version = 6;
 }

@@ -1,14 +1,14 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import public "Data/Capture/CaptureProbability.proto";
-import public "Map/Pokemon/WildPokemon.proto";
+import "Data/Capture/CaptureProbability.proto";
+import "Map/Pokemon/WildPokemon.proto";
 
 message EncounterResponse {
-	POGOProtos.Map.Pokemon.WildPokemon wild_pokemon = 1;
+	.POGOProtos.Map.Pokemon.WildPokemon wild_pokemon = 1;
 	Background background = 2;
 	Status status = 3;
-	POGOProtos.Data.Capture.CaptureProbability capture_probability = 4;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 4;
 
 	enum Background {
 		PARK = 0;

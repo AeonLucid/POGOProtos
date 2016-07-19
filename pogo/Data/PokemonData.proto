@@ -1,17 +1,17 @@
 syntax = "proto3";
 package POGOProtos.Data;
 
-import public "Enums/PokemonId.proto";
-import public "Enums/PokemonMove.proto";
+import "Enums/PokemonId.proto";
+import "Enums/PokemonMove.proto";
 
 message PokemonData {
 	fixed64 id = 1;
-	POGOProtos.Enums.PokemonId pokemon_id = 2;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
 	int32 cp = 3;
 	int32 stamina = 4;
 	int32 stamina_max = 5;
-	POGOProtos.Enums.PokemonMove move_1 = 6;
-	POGOProtos.Enums.PokemonMove move_2 = 7;
+	.POGOProtos.Enums.PokemonMove move_1 = 6;
+	.POGOProtos.Enums.PokemonMove move_2 = 7;
 	int32 deployed_fort_id = 8;
 	string owner_name = 9;
 	bool is_egg = 10;

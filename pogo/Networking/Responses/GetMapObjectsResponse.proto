@@ -5,6 +5,6 @@ import "Map/MapCell.proto";
 import "Map/MapObjectsStatus.proto";
 
 message GetMapObjectsResponse {
-  repeated POGOProtos.Map.MapCell map_cells = 1;
-  POGOProtos.Map.MapObjectsStatus status = 2;
+	repeated .POGOProtos.Map.MapCell map_cells = 1;
+	.POGOProtos.Map.MapObjectsStatus status = 2;
 }

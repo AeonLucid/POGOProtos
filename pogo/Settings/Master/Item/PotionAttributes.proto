@@ -2,6 +2,6 @@
 package POGOProtos.Settings.Master.Item;
 
 message PotionAttributes {
-  float sta_percent = 1;
-  int32 sta_amount = 2;
+	float sta_percent = 1;
+	int32 sta_amount = 2;
 }

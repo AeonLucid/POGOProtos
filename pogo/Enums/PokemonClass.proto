@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Enums;
 
 enum PokemonClass {
-  NORMAL = 0;
-  LEGENDARY = 1;
-  MYTHIC = 2;
+	NORMAL = 0;
+	LEGENDARY = 1;
+	MYTHIC = 2;
 }

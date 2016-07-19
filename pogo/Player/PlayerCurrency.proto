@@ -2,5 +2,5 @@ syntax = "proto3";
 package POGOProtos.Player;
 
 message PlayerCurrency {
-  int32 gems = 1;
+	int32 gems = 1;
 }

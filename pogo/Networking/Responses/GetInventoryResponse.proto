@@ -1,9 +1,9 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import public "Inventory/InventoryDelta.proto";
+import "Inventory/InventoryDelta.proto";
 
 message GetInventoryResponse {
-  bool success = 1;
-  POGOProtos.Inventory.InventoryDelta inventory_delta = 2;
+	bool success = 1;
+	.POGOProtos.Inventory.InventoryDelta inventory_delta = 2;
 }

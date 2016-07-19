@@ -1,8 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Inventory;
 
-import public "Inventory/AppliedItem.proto";
+import "Inventory/AppliedItem.proto";
 
 message AppliedItems {
-  POGOProtos.Inventory.AppliedItem item = 4;
+	.POGOProtos.Inventory.AppliedItem item = 4;
 }

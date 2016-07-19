@@ -1,23 +1,23 @@
 syntax = "proto3";
 package POGOProtos.Data;
 
-import public "Enums/TutorialState.proto";
-import public "Player/AvatarDetails.proto";
-import public "Player/DailyBonus.proto";
-import public "Player/EquippedBadge.proto";
-import public "Player/ContactSettings.proto";
-import public "Player/Currency.proto";
+import "Enums/TutorialState.proto";
+import "Player/AvatarDetails.proto";
+import "Player/DailyBonus.proto";
+import "Player/EquippedBadge.proto";
+import "Player/ContactSettings.proto";
+import "Player/Currency.proto";
 
 message Player {
-  int64 creation_timestamp_ms  = 1;
-  string username = 2;
-  int32 team = 5;
-  repeated POGOProtos.Enums.TutorialState tutorial_state = 7;
-  POGOProtos.Player.AvatarDetails avatar_details = 8;
-  int32 max_pokemon_storage = 9;
-  int32 max_item_storage = 10;
-  POGOProtos.Player.DailyBonus daily_bonus = 11;
-  POGOProtos.Player.EquippedBadge equipped_badge = 12;
-  POGOProtos.Player.ContactSettings contact_settings = 13;
-  repeated POGOProtos.Player.Currency currencies = 14;
+	int64 creation_timestamp_ms  = 1;
+	string username = 2;
+	int32 team = 5;
+	repeated .POGOProtos.Enums.TutorialState tutorial_state = 7;
+	.POGOProtos.Player.AvatarDetails avatar_details = 8;
+	int32 max_pokemon_storage = 9;
+	int32 max_item_storage = 10;
+	.POGOProtos.Player.DailyBonus daily_bonus = 11;
+	.POGOProtos.Player.EquippedBadge equipped_badge = 12;
+	.POGOProtos.Player.ContactSettings contact_settings = 13;
+	repeated .POGOProtos.Player.Currency currencies = 14;
 }

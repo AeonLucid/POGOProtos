@@ -2,5 +2,5 @@
 package POGOProtos.Settings.Master.Item;
 
 message BattleAttributes {
-  float sta_percent = 1;
+	float sta_percent = 1;
 }
