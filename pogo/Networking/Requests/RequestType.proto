@@ -57,7 +57,7 @@ enum RequestType {
 	NICKNAME_POKEMON = 149;				  // Implemented [R & M]
 	EQUIP_BADGE = 150;					  // Implemented [R & M]
 	SET_CONTACT_SETTINGS = 151;	    	  // Implemented [R & M]
-	GET_ASSET_DIGEST = 300;
+	GET_ASSET_DIGEST = 300;	    		  // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;              // Implemented [R & M]
 	GET_SUGGESTED_CODENAMES = 401;
 	CHECK_CODENAME_AVAILABLE = 402;
