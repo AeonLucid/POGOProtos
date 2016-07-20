@@ -37,7 +37,9 @@ if default_out_path and os.path.exists(out_path):
 
 # Create necessary directory
 os.makedirs(tmp_path)
-os.makedirs(out_path)
+
+if not os.path.exists(out_path):
+    os.makedirs(out_path)
 
 created_packages = []
 
