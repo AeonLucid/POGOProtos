@@ -57,7 +57,7 @@ def walk_files(main_file, path, package, imports=None):
     if imports is None:
         imports = []
 
-    if package == "POGOProtos":
+    if not desc_file and package == "POGOProtos":
         print("Can't compile..")
         print("File: '%s'" % path)
         print("Please place the file in 'src/POGOProtos/' in a sub-directory.")
