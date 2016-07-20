@@ -4,3 +4,5 @@
 # Protoc files
 out/
 tmp/
+/pogo/assist.py
+*.pyc

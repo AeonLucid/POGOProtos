@@ -4,6 +4,7 @@ import argparse
 import os
 import shutil
 import re
+from helpers import compile_helper
 from subprocess import call
 
 # Add this to your path
@@ -23,7 +24,7 @@ desc_file = args.desc_file
 default_out_path = out_path == "out"
 
 # Determine where to store
-proto_path = os.path.abspath("pogo")
+proto_path = os.path.abspath("src")
 tmp_path = os.path.abspath("tmp")
 out_path = os.path.abspath(out_path)
 
@@ -56,6 +57,12 @@ def walk_files(main_file, path, package, imports=None):
     if imports is None:
         imports = []
 
+    if package == "POGOProtos":
+        print("Can't compile..")
+        print("File: '%s'" % path)
+        print("Please place the file in 'src/POGOProtos/' in a sub-directory.")
+        exit()
+
     main_file.write('syntax = "proto3";\n')
     main_file.write('package %s;\n\n' % package)
 
@@ -81,12 +88,6 @@ def walk_files(main_file, path, package, imports=None):
                                 exit()
 
                             import_from_package = import_from_package_re.group(2).replace("/", ".")
-
-                            if import_from_package == "":
-                                import_from_package = "POGOProtos"
-
-                            if not import_from_package == "POGOProtos":
-                                import_from_package = "POGOProtos." + import_from_package
 
                             if import_from_package not in imports:
                                 imports.append(import_from_package)
@@ -150,10 +151,7 @@ else:
             )
 
             call(command, shell=True)
-
-    if lang == 'python':
-        for root, dirnames, filenames in os.walk(os.path.join(out_path, "POGOProtos")):
-            open(os.path.join(root, '__init__.py'), 'w').close()
+    compile_helper.finish_compile(out_path, lang)
 
 
 print("Done!")

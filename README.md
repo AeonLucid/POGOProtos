@@ -26,6 +26,21 @@ Use `homebrew` to install `protobuf ` with `brew install --devel protobuf`.
 There are two ways to compile **POGOProtos**.
 
 ### Single file compilation (Recommended)
+Single file compilation merges every directory to it's own `.proto` file.
+As an example:
+
+ - Networking/Requests/Messages/*.proto
+ - Networking/Responses/*.proto
+
+Becomes:
+
+ - POGOProtos.**Networking.Requests.Messages.proto**
+ - POGOProtos.**Networking.Responses.proto**
+
+These new files are then compiled by `protoc` and placed in the output directory. This greatly reduces the amount of output files.
+
+#### Command
+
 Run `python compile_single.py` to compile everything to a single file.
 
 #### Flags
@@ -35,6 +50,11 @@ Run `python compile_single.py` to compile everything to a single file.
  - Add the `-d` or `--desc_file` flag to only generate a descriptor file, `POGOProtos.desc` will be written to the specified output directory.
 
 ### Recursive compilation
+
+Recursive compilation loops through all directories and compiles every `.proto` file it finds to the specified output directory.
+
+#### Command
+
 Run `python compile.py` to recursively compile everything.
 
 #### Flags

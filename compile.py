@@ -6,6 +6,7 @@ import ntpath
 import sys
 import os
 import shutil
+from helpers import compile_helper
 from subprocess import call
 
 
@@ -58,17 +59,22 @@ default_out_path = out_path == "out"
 
 # Determine where to store
 proj_root = os.path.abspath("../")
-proto_path = os.path.abspath("pogo/")
+proto_path = os.path.abspath("src/")
 out_path = os.path.abspath(out_path)
+tmp_out_path = out_path
+
+# Output dir is actually different csharp because we modify it before compiling.
+if lang == "csharp":
+    tmp_out_path = os.path.join(tmp_out_path, "POGOProtos")
 
 if not default_out_path:
-    print 'Can we remove "%s"?' % out_path
+    print 'Can we remove "%s"?' % tmp_out_path
     may_remove = query_yes_no("Please answer.", default="no")
 else:
     may_remove = True
 
-if may_remove and os.path.exists(out_path):
-    shutil.rmtree(out_path)
+if may_remove and os.path.exists(tmp_out_path):
+    shutil.rmtree(tmp_out_path)
 
 # Find protofiles and compile
 for root, dirnames, filenames in os.walk(proto_path):
@@ -104,8 +110,6 @@ for root, dirnames, filenames in os.walk(proto_path):
 
         call(command, shell=True)
 
-if lang == 'python':
-    for root, dirnames, filenames in os.walk(out_path):
-        open(os.path.join(root, '__init__.py'), 'w').close()
+compile_helper.finish_compile(out_path, lang)
 
 print("Done!")
