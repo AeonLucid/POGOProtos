@@ -8,5 +8,5 @@ message CatchPokemonMessage {
 	string spawn_point_guid = 4;
 	bool hit_pokemon = 5;
 	double spin_modifier = 6;
-	double NormalizedHitPosition = 7;
+	double normalized_hit_position = 7;
 }
