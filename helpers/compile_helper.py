@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import sys
 
 
 def finish_compile(out_path, lang):
