@@ -2,7 +2,7 @@
 package POGOProtos.Networking.Responses;
 
 message UseItemReviveResponse {
-	.POGOProtos.Networking.Responses.UseRevivePotionResponse.Result result = 1;
+	.POGOProtos.Networking.Responses.UseItemReviveResponse.Result result = 1;
 	int32 stamina = 2;
 
 	enum Result {
