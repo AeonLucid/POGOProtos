@@ -3,7 +3,7 @@ package POGOProtos.Networking.Requests.Messages;
 
 message EncounterMessage {
 	fixed64 encounter_id = 1;
-	string spawnpoint_id = 2;
+	string spawn_point_id = 2;
 	double player_latitude = 3;
 	double player_longitude = 4;
 }

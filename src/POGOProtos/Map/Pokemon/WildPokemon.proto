@@ -8,7 +8,7 @@ message WildPokemon {
 	int64 last_modified_timestamp_ms = 2;
 	double latitude = 3;
 	double longitude = 4;
-	string spawnpoint_id = 5;
+	string spawn_point_id = 5;
 	.POGOProtos.Data.PokemonData pokemon_data = 7;
 	int32 time_till_hidden_ms = 11;
 }

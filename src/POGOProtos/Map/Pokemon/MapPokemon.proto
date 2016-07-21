@@ -4,7 +4,7 @@ package POGOProtos.Map.Pokemon;
 import "POGOProtos/Enums/PokemonId.proto";
 
 message MapPokemon {
-	string spawnpoint_id = 1;
+	string spawn_point_id = 1;
 	fixed64 encounter_id = 2;
 	.POGOProtos.Enums.PokemonId pokemon_id = 3;
 	// After this timestamp, the pokemon will be gone.
