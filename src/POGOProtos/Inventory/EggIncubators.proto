@@ -4,5 +4,5 @@ package POGOProtos.Inventory;
 import "POGOProtos/Inventory/EggIncubator.proto";
 
 message EggIncubators {
-	.POGOProtos.Inventory.EggIncubator egg_incubator = 1;
+	repeated .POGOProtos.Inventory.EggIncubator egg_incubator = 1;
 }
