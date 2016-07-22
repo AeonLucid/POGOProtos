@@ -74,3 +74,4 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | Language     | Source                                                |
 |--------------|-------------------------------------------------------|
 | NodeJS       | https://github.com/rastapasta/node-pokemongo-protobuf |
+| .NET         | https://github.com/johnduhart/POGOProtos-dotnet       |
