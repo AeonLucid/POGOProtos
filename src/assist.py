@@ -33,8 +33,8 @@ def initialize_file(package, message, path):
 
 
 message = underscore_to_camelcase(args.message)
-request_path = os.path.join("Networking\Requests\Messages", "%sMessage.proto" % message)
-response_path = os.path.join("Networking\Responses", "%sResponse.proto" % message)
+request_path = os.path.join("POGOProtos\Networking\Requests\Messages", "%sMessage.proto" % message)
+response_path = os.path.join("POGOProtos\Networking\Responses", "%sResponse.proto" % message)
 
 initialize_file("POGOProtos.Networking.Requests.Messages", "%sMessage" % message, request_path)
 initialize_file("POGOProtos.Networking.Responses", "%sResponse" % message, response_path)

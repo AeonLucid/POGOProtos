@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Settings.Master;
 
 import "POGOProtos/Enums/PokemonId.proto";
-import "POGOProtos/Enums/PokemonClass.proto";
+import "POGOProtos/Enums/PokemonRarity.proto";
 import "POGOProtos/Enums/PokemonType.proto";
 import "POGOProtos/Enums/PokemonMove.proto";
 import "POGOProtos/Enums/PokemonFamilyId.proto";
@@ -23,7 +23,7 @@ message PokemonSettings {
 	repeated float animation_time = 11;
 	repeated .POGOProtos.Enums.PokemonId evolution_ids = 12;
 	int32 evolution_pips = 13;
-	.POGOProtos.Enums.PokemonClass class = 14;
+	.POGOProtos.Enums.PokemonRarity rarity = 14;
 	float pokedex_height_m = 15;
 	float pokedex_weight_kg = 16;
 	.POGOProtos.Enums.PokemonId parent_pokemon_id = 17;
