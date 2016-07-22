@@ -3,7 +3,7 @@ POGOProtos
 
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the PokémonGo RPC.
 
-If you want to know which messages are implemented right now, click [here](https://github.com/AeonLucid/POGOProtos/blob/master/pogo/Networking/Requests/RequestType.proto).
+If you want to know which messages are implemented right now, click [here](https://github.com/AeonLucid/POGOProtos/blob/master/src/POGOProtos/Networking/Requests/RequestType.proto).
 
 # Usage
 
@@ -74,3 +74,4 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | Language     | Source                                                |
 |--------------|-------------------------------------------------------|
 | NodeJS       | https://github.com/rastapasta/node-pokemongo-protobuf |
+| .NET         | https://github.com/johnduhart/POGOProtos-dotnet       |
