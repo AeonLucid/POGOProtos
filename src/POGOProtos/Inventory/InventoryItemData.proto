@@ -1,7 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Inventory;
 
-import "POGOProtos/Inventory/Item.proto";
+import "POGOProtos/Inventory/Item/ItemData.proto";
 import "POGOProtos/Inventory/AppliedItems.proto";
 import "POGOProtos/Inventory/EggIncubators.proto";
 import "POGOProtos/Inventory/PokemonFamily.proto";
@@ -14,7 +14,7 @@ import "POGOProtos/Data/Player/PlayerCamera.proto";
 
 message InventoryItemData {
 	.POGOProtos.Data.PokemonData pokemon_data = 1;
-	.POGOProtos.Inventory.Item item = 2;
+	.POGOProtos.Inventory.Item.ItemData item = 2;
 	.POGOProtos.Data.PokedexEntry pokedex_entry = 3;
 	.POGOProtos.Data.Player.PlayerStats player_stats = 4;
 	.POGOProtos.Data.Player.PlayerCurrency player_currency = 5;

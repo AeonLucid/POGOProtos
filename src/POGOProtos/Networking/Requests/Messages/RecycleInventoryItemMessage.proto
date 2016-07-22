@@ -1,9 +1,9 @@
 syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
-import "POGOProtos/Inventory/ItemId.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message RecycleInventoryItemMessage {
-	.POGOProtos.Inventory.ItemId item_id = 1;
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
 	int32 count = 2;
 }

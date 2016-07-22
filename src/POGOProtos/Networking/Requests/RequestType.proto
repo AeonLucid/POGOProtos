@@ -70,7 +70,7 @@ enum RequestType {
 	DEBUG_UPDATE_INVENTORY = 700;
 	DEBUG_DELETE_PLAYER = 701;
 	SFIDA_REGISTRATION = 800;             // Not yet released.
-	SFIDA_ACTION_LOG = 801;               // Not yet released.
+	SFIDA_ACTION_LOG = 801;               // Implemented [R & M]
 	SFIDA_CERTIFICATION = 802;            // Not yet released.
 	SFIDA_UPDATE = 803;                   // Not yet released.
 	SFIDA_ACTION = 804;                   // Not yet released.

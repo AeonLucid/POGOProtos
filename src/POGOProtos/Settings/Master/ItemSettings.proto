@@ -2,8 +2,8 @@ syntax = "proto3";
 package POGOProtos.Settings.Master;
 
 import "POGOProtos/Enums/ItemCategory.proto";
-import "POGOProtos/Inventory/ItemId.proto";
-import "POGOProtos/Inventory/ItemType.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Inventory/Item/ItemType.proto";
 
 import "POGOProtos/Settings/Master/Item/FoodAttributes.proto";
 import "POGOProtos/Settings/Master/Item/PotionAttributes.proto";
@@ -17,8 +17,8 @@ import "POGOProtos/Settings/Master/Item/ExperienceBoostAttributes.proto";
 import "POGOProtos/Settings/Master/Item/InventoryUpgradeAttributes.proto";
 
 message ItemSettings {
-	.POGOProtos.Inventory.ItemId item_id = 1;
-	.POGOProtos.Inventory.ItemType item_type = 2;
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
+	.POGOProtos.Inventory.Item.ItemType item_type = 2;
 	.POGOProtos.Enums.ItemCategory category = 3;
 	float drop_freq = 4;
 	int32 drop_trainer_level = 5;
