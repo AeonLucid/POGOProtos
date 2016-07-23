@@ -49,6 +49,10 @@ Run `python compile_single.py` to compile everything to a single file.
  - Add the `-o` or `--output` flag to set an output directory, the default is `out`.
  - Add the `-d` or `--desc_file` flag to only generate a descriptor file, `POGOProtos.desc` will be written to the specified output directory.
 
+##### Go
+ - Add the `--go_import_prefix` to prefix all imports in output go files for vendoring all dependencies
+ - Add the `--go_root_package` to specify the root package of the output files as it should be in your `$GOPATH` eg. `github.com/xxx/yyy/pogoprotos`
+
 ### Recursive compilation
 
 Recursive compilation loops through all directories and compiles every `.proto` file it finds to the specified output directory.
