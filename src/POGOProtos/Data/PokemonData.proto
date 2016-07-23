@@ -13,7 +13,7 @@ message PokemonData {
 	int32 stamina_max = 5;
 	.POGOProtos.Enums.PokemonMove move_1 = 6;
 	.POGOProtos.Enums.PokemonMove move_2 = 7;
-	int32 deployed_fort_id = 8;
+	string deployed_fort_id = 8;
 	string owner_name = 9;
 	bool is_egg = 10;
 	double egg_km_walked_target = 11;
