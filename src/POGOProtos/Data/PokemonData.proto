@@ -25,7 +25,7 @@ message PokemonData {
 	int32 individual_defense = 18;
 	int32 individual_stamina = 19;
 	float cp_multiplier = 20;
-	.POGOProtos.Inventory.Item.ItemId pokeball = 21; // ItemId.proto
+	.POGOProtos.Inventory.Item.ItemId pokeball = 21;
 	uint64 captured_cell_id = 22;
 	int32 battles_attacked = 23;
 	int32 battles_defended = 24;
