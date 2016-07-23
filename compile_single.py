@@ -68,7 +68,7 @@ def convert_to_go_package(pkg):
     if pkg == "map":
         pkg = "maps"
 
-    return "%s/%s" % (pkg, pkg)
+    return pkg
 
 def walk_files(main_file, path, package, imports=None):
     if imports is None:
@@ -87,11 +87,9 @@ def walk_files(main_file, path, package, imports=None):
     main_file.write('package %s;\n\n' % package)
 
     if lang == "go":
-        package = convert_to_go_package(package)
-        if short_package_name == "map":
-            short_package_name = "maps"
-        main_file.write('option go_package = "%s";\n' % short_package_name)
-
+        go_pkg = convert_to_go_package(package)
+        package = "%s/%s" % (go_pkg, go_pkg)
+        main_file.write('option go_package = "%s";\n' % go_pkg)
 
     messages = ""
 
@@ -117,7 +115,8 @@ def walk_files(main_file, path, package, imports=None):
                             import_from_package = import_from_package_re.group(2).replace("/", ".")
 
                             if lang == "go":
-                                import_from_package = convert_to_go_package(import_from_package)
+                                go_pkg = convert_to_go_package(import_from_package)
+                                import_from_package = "%s/%s" % (go_pkg, go_pkg)
 
                             if import_from_package not in imports:
                                 imports.append(import_from_package)
@@ -145,10 +144,7 @@ def walk_directory(path):
             package = get_package(dir_name_path)
             if package is not None:
                 if lang == "go":
-                    go_pkg = package.replace("POGOProtos.", "")
-                    go_pkg = go_pkg.replace(".", "_").lower()
-                    if go_pkg == "map":
-                        go_pkg = "maps"
+                    go_pkg = convert_to_go_package(package)
                     file_name = "%s/%s" % (go_pkg, go_pkg)
                     package_mappings.append([go_pkg, (file_name + ".proto")])
                 else:
