@@ -2,11 +2,11 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/PokemonData.proto";
-import "POGOProtos/Inventory/ItemAward.proto";
+import "POGOProtos/Inventory/Item/ItemAward.proto";
 
 message FortSearchResponse {
 	.POGOProtos.Networking.Responses.FortSearchResponse.Result result = 1;
-	repeated .POGOProtos.Inventory.ItemAward items_awarded = 2;
+	repeated .POGOProtos.Inventory.Item.ItemAward items_awarded = 2;
 	int32 gems_awarded = 3;
 	.POGOProtos.Data.PokemonData pokemon_data_egg = 4;
 	int32 experience_awarded = 5;

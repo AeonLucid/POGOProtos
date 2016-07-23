@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Inventory;
+package POGOProtos.Inventory.Item;
 
 enum ItemId {
 	ITEM_UNKNOWN = 0;
