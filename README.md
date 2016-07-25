@@ -61,7 +61,7 @@ Run `python compile_single.py` to compile everything to a single file.
 
 ##### Go
  - Add the `--go_import_prefix` to prefix all imports in output go files for vendoring all dependencies
- - Add the `--go_root_package` to specify the root package of the output files as it should be in your `$GOPATH` eg. `github.com/xxx/yyy/pogoprotos`
+ - Add the `--go_package` to specify the name of the exported go package
 
 ### Recursive compilation
 
