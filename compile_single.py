@@ -17,6 +17,7 @@ parser.add_argument("-o", "--out_path", help="Output path for protoc files")
 parser.add_argument("-d", "--desc_file", action='store_true', help="For generating a .desc file only")
 parser.add_argument("--go_import_prefix", help="Prefix all imports in output go files for vendoring all dependencies")
 parser.add_argument("--go_root_package", help="The root package of the output files as it should be in your `$GOPATH` eg. `github.com/xxx/yyy/pogoprotos`")
+parser.add_argument("--java_multiple_files", action='store_true', help="Write each message to a separate .java file.")
 args = parser.parse_args()
 
 # Set defaults
@@ -26,6 +27,7 @@ desc_file = args.desc_file
 default_out_path = out_path == "out"
 go_import_prefix = args.go_import_prefix
 go_root_package = args.go_root_package
+java_multiple_files = args.java_multiple_files
 
 # Determine where to store
 proto_path = os.path.abspath("src")
@@ -90,6 +92,9 @@ def walk_files(main_file, path, package, imports=None):
         go_pkg = convert_to_go_package(package)
         package = "%s/%s" % (go_pkg, go_pkg)
         main_file.write('option go_package = "%s";\n' % go_pkg)
+
+    if java_multiple_files:
+        main_file.write('option java_multiple_files = true;\n')
 
     messages = ""
 
