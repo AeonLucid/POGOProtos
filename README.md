@@ -7,6 +7,16 @@ If you want to know which messages are implemented right now, click [here](https
 
 # Usage
 
+## Versions
+
+Since this is under such heavy development
+we release a new stable version every so often.
+If you don't want your depending code to break,
+check out Releases.
+The current latest version is `v1.0`
+but if you don't care about breaking changes,
+feel free to use `master`.
+
 ## Preparation
 
 Current recommended protoc version: "Protocol Buffers v3.0.0-beta-4".
