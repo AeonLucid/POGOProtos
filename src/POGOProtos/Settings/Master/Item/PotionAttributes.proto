@@ -1,4 +1,4 @@
-﻿syntax = "proto3";
+syntax = "proto3";
 package POGOProtos.Settings.Master.Item;
 
 message PotionAttributes {
