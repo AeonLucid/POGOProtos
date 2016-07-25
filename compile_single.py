@@ -4,7 +4,10 @@ import argparse
 import os
 import shutil
 import re
+
 from helpers import compile_helper
+from helpers import go_helper
+
 from subprocess import call
 
 # Add this to your path
@@ -63,15 +66,6 @@ def get_package(path):
                         return re.search('package (.*?);', proto_line).group(1)
     return None
 
-
-def convert_to_go_package(pkg):
-    pkg = pkg.replace("POGOProtos.", "")
-    pkg = pkg.replace(".", "_").lower()
-    if pkg == "map":
-        pkg = "maps"
-
-    return pkg
-
 def walk_files(main_file, path, package, imports=None):
     if imports is None:
         imports = []
@@ -89,9 +83,8 @@ def walk_files(main_file, path, package, imports=None):
     main_file.write('package %s;\n\n' % package)
 
     if lang == "go":
-        go_pkg = convert_to_go_package(package)
-        package = "%s/%s" % (go_pkg, go_pkg)
-        main_file.write('option go_package = "%s";\n' % go_pkg)
+        package = go_helper.convert_to_go_package(package)
+        main_file.write('option go_package = "%s";\n' % "protos")
 
     if java_multiple_files:
         main_file.write('option java_multiple_files = true;\n')
@@ -120,8 +113,7 @@ def walk_files(main_file, path, package, imports=None):
                             import_from_package = import_from_package_re.group(2).replace("/", ".")
 
                             if lang == "go":
-                                go_pkg = convert_to_go_package(import_from_package)
-                                import_from_package = "%s/%s" % (go_pkg, go_pkg)
+                                import_from_package = go_helper.convert_to_go_package(import_from_package)
 
                             if import_from_package not in imports:
                                 imports.append(import_from_package)
@@ -149,9 +141,8 @@ def walk_directory(path):
             package = get_package(dir_name_path)
             if package is not None:
                 if lang == "go":
-                    go_pkg = convert_to_go_package(package)
-                    file_name = "%s/%s" % (go_pkg, go_pkg)
-                    package_mappings.append([go_pkg, (file_name + ".proto")])
+                    file_name = go_helper.convert_to_go_package(package)
+                    package_mappings.append([file_name, (file_name + ".proto")])
                 else:
                     file_name = package
                     package_mappings.append([file_name, (file_name + ".proto")])
@@ -160,7 +151,7 @@ def walk_directory(path):
 
                 if lang == "go":
                     package_directory = os.path.dirname(package_file_path)
-                    os.makedirs(package_directory)
+                    compile_helper.mkdir_p(package_directory)
 
                 with open(package_file_path, 'a') as package_file:
                     walk_files(package_file, dir_name_path, package)
@@ -168,25 +159,32 @@ def walk_directory(path):
 
             walk_directory(dir_name_path)
 
+def compile_go_package(path):
+
+    proto_files = compile_helper.abslistdir(path)
+
+    # Compile with the grpc plugin
+    command_out_path = "plugins=grpc"
+
+    # Allow to specify import_prefix for complete vendoring of dependencies
+    if go_import_prefix:
+        command_out_path += ",import_prefix=%s" % go_import_prefix
+
+    # Combine the output with all other output options
+    command_out_path = "%s:%s" % (command_out_path, os.path.abspath(out_path))
+
+    command = """{0} --proto_path="{1}" --go_out={2} {3}""".format(
+        protoc_path,
+        tmp_path,
+        command_out_path,
+        proto_files
+    )
+
+    call(command, shell=True)
+
 def compile_directories(path):
     for proto_file_name in os.listdir(path):
-        if lang == "go":
-            # Compile with the grpc plugin
-            command_out_path = "plugins=grpc"
-
-            # Allow to specify import_prefix for complete vendoring of dependencies
-            if go_import_prefix:
-                command_out_path += ",import_prefix=%s" % go_import_prefix
-
-            # Map the .proto files to go packages
-            if len(go_package_mappings) >= 1:
-                command_out_path += ",%s" % ",".join(go_package_mappings)
-
-            # Combine the output with all other output options
-            command_out_path = "%s:%s" % (command_out_path, os.path.abspath(out_path))
-        else:
-            command_out_path = os.path.abspath(out_path)
-
+        command_out_path = os.path.abspath(out_path)
         item_path = os.path.join(path, proto_file_name)
 
         if os.path.isfile(item_path):
@@ -222,14 +220,10 @@ if desc_file:
     call(command, shell=True)
 else:
     if lang == "go":
-        if go_root_package:
-            mapper = (lambda m: """M{0}={1}""".format(m[1], os.path.join(go_root_package, m[0])))
-        else:
-            mapper = (lambda m: """M{0}={1}""".format(m[1], m[0]))
+        compile_go_package(tmp_path)
+    else:
+        compile_directories(tmp_path)
 
-        go_package_mappings = map(mapper, package_mappings)
-
-    compile_directories(tmp_path)
     compile_helper.finish_compile(out_path, lang)
 
 print("Done!")
