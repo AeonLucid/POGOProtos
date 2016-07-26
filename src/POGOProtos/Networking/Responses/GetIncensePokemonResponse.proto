@@ -3,7 +3,7 @@ package POGOProtos.Networking.Responses;
 
 message GetIncensePokemonResponse {
 	.POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result result = 1;
-	int32 pokemon_type_id = 2; // TODO: PokemonType.proto or PokemonId.proto
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
 	double latitude = 3;
 	double longitude = 4;
 	string encounter_location = 5;
