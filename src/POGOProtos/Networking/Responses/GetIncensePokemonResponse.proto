@@ -7,7 +7,7 @@ message GetIncensePokemonResponse {
 	double latitude = 3;
 	double longitude = 4;
 	string encounter_location = 5;
-	fixed64 encounter_id = 6;
+	int64 encounter_id = 6;
 	int64 disappear_timestamp_ms = 7;
 
 	enum Result {
