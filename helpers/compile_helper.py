@@ -2,7 +2,19 @@
 
 import os
 import sys
+import errno
 
+def abslistdir(path):
+  return " ".join(map((lambda f: os.path.join(os.path.abspath(path), f)), os.listdir(path)))
+
+def mkdir_p(path):
+    try:
+        os.makedirs(path)
+    except OSError as exc:  # Python >2.5
+        if exc.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else:
+            raise
 
 def finish_compile(out_path, lang):
     if lang == 'python':
