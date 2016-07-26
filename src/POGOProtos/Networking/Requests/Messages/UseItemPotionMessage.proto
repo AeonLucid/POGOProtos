@@ -5,5 +5,5 @@ import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message UseItemPotionMessage {
 	.POGOProtos.Inventory.Item.ItemId item_id = 1;
-	uint64 pokemon_id = 2;
+	fixed64 pokemon_id = 2;
 }
