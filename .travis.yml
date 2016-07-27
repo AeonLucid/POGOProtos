@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+install:
+  - pushd /tmp
+  - wget https://github.com/google/protobuf/releases/download/v3.0.0-beta-4/protoc-3.0.0-beta-4-linux-x86_64.zip
+  - unzip protoc-3.0.0-beta-4-linux-x86_64.zip
+  - popd
+  - export PATH=/tmp/bin:$PATH
+script:
+  - ./compile.py
+  - rm -rf out
+  - ./compile.py -l python
