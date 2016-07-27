@@ -1,6 +1,8 @@
 POGOProtos
 ===================
 
+[![Build Status](https://travis-ci.org/AeonLucid/POGOProtos.svg?branch=master)](https://travis-ci.org/AeonLucid/POGOProtos)
+
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the PokémonGo RPC.
 
 If you want to know which messages are implemented right now, click [here](https://github.com/AeonLucid/POGOProtos/blob/master/src/POGOProtos/Networking/Requests/RequestType.proto).
@@ -61,7 +63,7 @@ Run `python compile_single.py` to compile everything to a single file.
 
 ##### Go
  - Add the `--go_import_prefix` to prefix all imports in output go files for vendoring all dependencies
- - Add the `--go_root_package` to specify the root package of the output files as it should be in your `$GOPATH` eg. `github.com/xxx/yyy/pogoprotos`
+ - Add the `--go_package` to specify the name of the exported go package
 
 ### Recursive compilation
 
@@ -91,3 +93,4 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | .NET         | https://github.com/johnduhart/POGOProtos-dotnet       |
 | PHP          | https://github.com/jaspervdm/pogoprotos-php           |
 | Go           | https://github.com/pkmngo-odi/pogo-protos             |
+| Haskell      | https://github.com/relrod/pokemon-go-protobuf-types   |
