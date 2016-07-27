@@ -91,3 +91,4 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | .NET         | https://github.com/johnduhart/POGOProtos-dotnet       |
 | PHP          | https://github.com/jaspervdm/pogoprotos-php           |
 | Go           | https://github.com/pkmngo-odi/pogo-protos             |
+| Haskell      | https://github.com/relrod/pokemon-go-protobuf-types   |
