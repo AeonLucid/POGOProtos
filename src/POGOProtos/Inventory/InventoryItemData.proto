@@ -22,5 +22,5 @@ message InventoryItemData {
 	.POGOProtos.Inventory.InventoryUpgrades inventory_upgrades = 7;
 	.POGOProtos.Inventory.AppliedItems applied_items = 8;
 	.POGOProtos.Inventory.EggIncubators egg_incubators = 9;
-	.POGOProtos.Inventory.Candy candy = 10;
+	.POGOProtos.Inventory.PokemonFamily pokemon_family = 10;
 }
