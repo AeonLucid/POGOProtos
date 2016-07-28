@@ -1,11 +1,30 @@
 syntax = "proto3";
 package POGOProtos.Networking.Envelopes;
 
+import "POGOProtos/Data/Player/Currency.proto";
+import "POGOProtos/Inventory/Item.proto";
+
 message Unknown6Response {
-	int32 unknown1 = 1; //6
+	int32 response_type = 1; // Still don't know what 6 is, but 5 lists items available via IAPs. 
 	Unknown2 unknown2 = 2;
 
 	message Unknown2 {
 		uint64 unknown1 = 1;
+		repeated IAPItem items = 2;
+		
+		message IAPItem {
+			int32 iap_id = 1;
+			bool real_currency = 2; // If true, this item is bought with real currency (USD, etc.) instead of Pokecoins
+			.POGOProtos.Data.Player.Currency currency_to_buy = 3; // This defines how much the item costs
+			.POGOProtos.Data.Player.Currency yields_currency = 4; // When bought, this IAP will yield this much currency
+			.POGOProtos.Inventory.Item yields_item = 5; // The item and count of such item that this IAP will yield
+			repeated KeyValue tags = 6; // Stuff like SORT:12, CATEGORY:ITEMS
+			int32 unknown7 = 7;
+			
+			message KeyValue {
+				string key = 1;
+				string value = 2;
+			}
+		}
 	}
 }
