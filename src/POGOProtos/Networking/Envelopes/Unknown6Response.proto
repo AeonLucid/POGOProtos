@@ -11,7 +11,7 @@ message Unknown6Response {
 	message Unknown2 {
 		uint64 unknown1 = 1;
 		repeated IAPItem items = 2;
-		repeated .POGOProtos.Data.Player.Currency player_currency = 3; // currencies that player has at the moment
+		repeated .POGOProtos.Data.Player.Currency player_currencies = 3; // currencies that player has at the moment
 		string unknown4 = 4; // Some base64 encoded stuff...
 		
 		message IAPItem {
