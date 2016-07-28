@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Envelopes;
 
 import "POGOProtos/Data/Player/Currency.proto";
-import "POGOProtos/Inventory/Item.proto";
+import "POGOProtos/Inventory/Item/ItemData.proto";
 
 message Unknown6Response {
 	int32 response_type = 1; // Still don't know what 6 is, but 5 lists items available via IAPs. 
