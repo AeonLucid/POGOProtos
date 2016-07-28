@@ -6,7 +6,6 @@ import "POGOProtos/Enums/TeamColor.proto";
 import "POGOProtos/Map/Fort/FortType.proto";
 import "POGOProtos/Map/Fort/FortSponsor.proto";
 import "POGOProtos/Map/Fort/FortRenderingType.proto";
-import "POGOProtos/Map/Fort/FortLureInfo.proto";
 import "POGOProtos/Map/Pokemon/MapPokemon.proto";
 
 message FortData {
