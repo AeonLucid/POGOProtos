@@ -7,6 +7,7 @@ import "POGOProtos/Map/Fort/FortType.proto";
 import "POGOProtos/Map/Fort/FortSponsor.proto";
 import "POGOProtos/Map/Fort/FortRenderingType.proto";
 import "POGOProtos/Map/Fort/FortLureInfo.proto";
+import "POGOProtos/Map/Pokemon/MapPokemon.proto";
 
 message FortData {
 	string id = 1;
@@ -41,5 +42,5 @@ message FortData {
 
 	// Might represent the type of item applied to the pokestop, right now only lures can be applied
 	bytes active_fort_modifier = 12;
-	.POGOProtos.Map.Fort.FortLureInfo lure_info = 13;
+	.POGOProtos.Map.Pokemon.MapPokemon map_pokemon = 13;
 }
