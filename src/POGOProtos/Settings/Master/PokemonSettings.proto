@@ -4,7 +4,7 @@ package POGOProtos.Settings.Master;
 import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Enums/PokemonRarity.proto";
 import "POGOProtos/Enums/PokemonType.proto";
-import "POGOProtos/Enums/PokemonMoveType.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
 import "POGOProtos/Enums/PokemonFamilyId.proto";
 import "POGOProtos/Settings/Master/Pokemon/StatsAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/CameraAttributes.proto";
