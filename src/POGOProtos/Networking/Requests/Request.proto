@@ -1,9 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Requests;
-
-import "POGOProtos/Networking/Requests/RequestType.proto";
-
-message Request {
-	.POGOProtos.Networking.Requests.RequestType type = 1;
-	bytes payload = 2;
-}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Networking;
+
+import "POGOProtos/Networking/AuthTicket.proto";
+import "POGOProtos/Networking/Unknown6Response.proto";
+
+message ResponseEnvelope {
+	int32 status = 1;
+	uint64 request_id = 2;
+	string api_url = 3;
+
+	repeated .POGOProtos.Networking.Unknown6Response unknown6 = 6;
+	.POGOProtos.Networking.AuthTicket auth_ticket = 7;
+
+  // Is a union and can be any of .POGOProtos.Networking.Responses
+	repeated bytes responses = 100;
+	string error = 101;
+
+	message Unknown7 {
+		bytes unknown71 = 1;
+		int64 unknown72 = 2;
+		bytes unknown73 = 3;
+	}
+}

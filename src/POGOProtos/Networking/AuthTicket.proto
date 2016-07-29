@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Networking.Envelopes;
+package POGOProtos.Networking;
 
 message AuthTicket {
 	bytes start = 1;
