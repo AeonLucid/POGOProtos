@@ -6,7 +6,7 @@ import "POGOProtos/Networking/Envelopes/AuthTicket.proto";
 import "POGOProtos/Networking/Envelopes/Unknown6.proto";
 
 message RequestEnvelope {
-	int32 status_code = 1;
+	int32 status = 1;
 
 	uint64 request_id = 3;
 	repeated .POGOProtos.Networking.Requests.Request requests = 4;

@@ -4,6 +4,6 @@ package POGOProtos.Networking.Requests;
 import "POGOProtos/Networking/Requests/RequestType.proto";
 
 message Request {
-	.POGOProtos.Networking.Requests.RequestType request_type = 1;
-	bytes request_message = 2;
+	.POGOProtos.Networking.Requests.RequestType type = 1;
+	bytes payload = 2;
 }

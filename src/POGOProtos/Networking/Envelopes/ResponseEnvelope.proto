@@ -5,7 +5,7 @@ import "POGOProtos/Networking/Envelopes/AuthTicket.proto";
 import "POGOProtos/Networking/Envelopes/Unknown6Response.proto";
 
 message ResponseEnvelope {
-	int32 status_code = 1;
+	int32 status = 1;
 	uint64 request_id = 2;
 	string api_url = 3;
 
