@@ -11,7 +11,7 @@ message Request {
 	uint64 request_id = 3;
 	repeated .POGOProtos.Networking.Requests.MessageWrapper messages = 4;
 
-	repeated .POGOProtos.Networking.Unknown6 unknown6 = 6;
+	repeated Unknown6 unknown6 = 6;
 	double latitude = 7;
 	double longitude = 8;
 	double altitude = 9;
@@ -23,6 +23,15 @@ message Request {
     .POGOProtos.Networking.MessageType type = 1;
     // Is a union and can be any of .POGOProtos.Networking.Requests
     bytes message = 2;
+  }
+
+  message Unknown6 {
+    int32 request_type = 1; // 5 for IAPs, 6 is unknown still
+    Unknown2 unknown2 = 2;
+
+    message Unknown2 {
+      bytes unknown1 = 1;
+    }
   }
 
 	message AuthInfo {
