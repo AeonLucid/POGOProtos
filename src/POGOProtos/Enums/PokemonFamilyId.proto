@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Enums;
 
 enum PokemonFamilyId {
-	FAMILY_UNSET = 0;
+	UNSET = 0;
 	FAMILY_BULBASAUR = 1;
 	FAMILY_CHARMANDER = 4;
 	FAMILY_SQUIRTLE = 7;

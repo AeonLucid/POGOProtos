@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Enums;
 
 enum PokemonMove {
-	MOVE_UNSET = 0;
+	UNSET = 0;
 	THUNDER_SHOCK = 1;
 	QUICK_ATTACK = 2;
 	SCRATCH = 3;

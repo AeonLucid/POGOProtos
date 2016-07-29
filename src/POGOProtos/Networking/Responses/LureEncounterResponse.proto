@@ -4,7 +4,7 @@ package POGOProtos.Networking.Responses;
 import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Data/Capture/CaptureProbability.proto";
 
-message DiskEncounterResponse {
+message LureEncounterResponse {
 	Result result = 1;
 	.POGOProtos.Data.PokemonData pokemon_data = 2;
 	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
