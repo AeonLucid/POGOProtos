@@ -12,7 +12,7 @@ message ResponseEnvelope {
 	repeated .POGOProtos.Networking.Envelopes.Unknown6Response unknown6 = 6;
 	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 7;
 
-	repeated bytes returns = 100;
+	repeated bytes responses = 100;
 	string error = 101;
 
 	message Unknown7 {

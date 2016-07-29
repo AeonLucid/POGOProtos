@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Enums;
 
 enum BadgeType {
-	BADGE_UNSET = 0;
+	UNSET = 0;
 	BADGE_TRAVEL_KM = 1;
 	BADGE_POKEDEX_ENTRIES = 2;
 	BADGE_CAPTURE_TOTAL = 3;
