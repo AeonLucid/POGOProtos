@@ -1,7 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
+import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message UseItemEggIncubatorMessage {
-	string item_id = 1;
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
 	uint64 pokemon_id = 2;
 }
