@@ -4,7 +4,7 @@ package POGOProtos.Networking.Envelopes;
 import "POGOProtos/Data/Player/Currency.proto";
 import "POGOProtos/Inventory/Item/ItemData.proto";
 
-message Unknown6Response {
+message SignatureResponse {
 	int32 response_type = 1; // Still don't know what 6 is, but 5 lists items available via IAPs. 
 	Unknown2 unknown2 = 2; // Response data
 

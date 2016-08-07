@@ -2,14 +2,14 @@ syntax = "proto3";
 package POGOProtos.Networking.Envelopes;
 
 import "POGOProtos/Networking/Envelopes/AuthTicket.proto";
-import "POGOProtos/Networking/Envelopes/Unknown6Response.proto";
+import "POGOProtos/Networking/Envelopes/SignatureResponse.proto";
 
 message ResponseEnvelope {
 	int32 status_code = 1;
 	uint64 request_id = 2;
 	string api_url = 3;
 
-	repeated .POGOProtos.Networking.Envelopes.Unknown6Response unknown6 = 6;
+	repeated .POGOProtos.Networking.Envelopes.SignatureResponse signature = 6;
 	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 7;
 
 	repeated bytes returns = 100;
