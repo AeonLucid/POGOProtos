@@ -35,9 +35,45 @@ Ensure that you have the newest version of `protoc` installed.
 Use `homebrew` to install `protobuf ` with `brew install --devel protobuf`.
 
 ## Compilation
-There are two ways to compile **POGOProtos**.
+There are three ways to compile **POGOProtos**.
 
-### Single file compilation (Recommended)
+### Pretty compilation (Recommended)
+Pretty compilation creates output specifically for the target language, 
+i.e. respecting naming contentions, etc.
+This is an example of how the generated code will be organized:
+
+`python compile_pretty.py cpp`:
+ - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.pb.cpp`
+
+`python compile_pretty.py csharp`:
+ - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.g.cs`
+ 
+`python compile_pretty.py go`:
+ - `POGOProtos/Data/*.proto` -> `github.com/aeonlucid/pogoprotos/data`
+ - `POGOProtos/Data/PlayerData.proto` -> `github.com/aeonlucid/pogoprotos/data/player_data.pb.go`
+
+`python compile_pretty.py java`:
+ - `POGOProtos/Data/*.proto` -> `com/github/aeonlucid/pogoprotos/Data.java`
+ 
+`python compile_pretty.py js`:
+ - `POGOProtos/**/*.proto` -> `pogoprotos.js`
+
+`python compile_pretty.py objc`:
+ - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.pbobjc.m`
+ 
+`python compile_pretty.py python`:
+ - `POGOProtos/Data/*.proto` -> `pogoprotos/data/__init__.py`
+ - `POGOProtos/Data/PlayerData.proto` -> `pogoprotos/data/player_data_pb2.py`
+
+`python compile_pretty.py ruby`:
+ - `POGOProtos/Data/*.proto` -> `pogoprotos/data.rb`
+ - `POGOProtos/Data/PlayerData.proto` -> `pogoprotos/data/player_data.rb`
+
+#### Command
+
+Run `python compile_pretty.py --help` for help.
+
+### Single file compilation
 Single file compilation merges every directory to it's own `.proto` file.
 As an example:
 
