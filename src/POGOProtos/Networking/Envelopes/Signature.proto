@@ -90,7 +90,7 @@ message Signature {
     ActivityStatus activity_status = 9;
     uint32 location_hash1 = 10; // Location1 hashed based on the auth_token - xxHash32
     uint32 location_hash2 = 20; // Location2 hashed based on the auth_token - xxHash32
-    bytes unk22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
+    bytes unknown22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
     uint64 timestamp = 23; // epoch timestamp in ms
     repeated uint64 request_hash = 24; // hashes of each request message in a hashArray - xxhash64
 
