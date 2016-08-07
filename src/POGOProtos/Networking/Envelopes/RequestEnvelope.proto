@@ -11,6 +11,8 @@ message RequestEnvelope {
 	uint64 request_id = 3;
 	repeated .POGOProtos.Networking.Requests.Request requests = 4;
 
+	// Unknown6 is required to get a response.
+	// For an example check https://github.com/keyphact/pgoapi/blob/75eba6b5b630841ee4f7c2ea983f15874fb0862d/pgoapi/rpc_api.py#L192-L212
 	repeated .POGOProtos.Networking.Envelopes.Unknown6 unknown6 = 6;
 	double latitude = 7;
 	double longitude = 8;
