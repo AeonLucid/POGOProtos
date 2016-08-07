@@ -8,6 +8,4 @@ install:
   - popd
   - export PATH=/tmp/bin:$PATH
 script:
-  - ./compile.py
-  - rm -rf out
-  - ./compile.py -l python
+  - ./compile_single.py -d
