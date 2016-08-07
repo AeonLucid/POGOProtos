@@ -157,10 +157,9 @@ def merge_protos(protos):
         new_content = []
         for proto in proto_folder:
             package, imports, content = proto
-            for i in range(len(new_package)):
-                if len(package) <= i or package[i] != new_package[i]:
-                    raise Exception(
-                        'Can only combine proto files in the same package.')
+            if package != new_package:
+              raise Exception(
+                'All .proto files in "' + proto_path + '" must be in the same package.')
             for import_path, import_is_public in imports:
                 if import_path.startswith('POGOProtos'):
                     import_path = '/'.join(import_path.split('/')[:-1])
