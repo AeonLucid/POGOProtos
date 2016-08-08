@@ -126,7 +126,6 @@ def write_proto(path, name, proto):
 
 
 def write_protos(path, protos):
-    path = os.path.join(*path.split('/'))
     proto_files = []
     for proto_path in protos:
         proto_files_folder = []
@@ -158,8 +157,10 @@ def merge_protos(protos):
         for proto in proto_folder:
             package, imports, content = proto
             if package != new_package:
-              raise Exception(
-                'All .proto files in "' + proto_path + '" must be in the same package.')
+                raise Exception(
+                    'All .proto files in "' +
+                    proto_path +
+                    '" must be in the same package.')
             for import_path, import_is_public in imports:
                 if import_path.startswith('POGOProtos'):
                     import_path = '/'.join(import_path.split('/')[:-1])
@@ -408,7 +409,7 @@ if args.include_source_info:
     desc_arguments.append('--include_source_info')
 
 commands.append(
-    """"{0}" --proto_path="{1}" --descriptor_set_out={2} {3} {4}""".format(
+    """"{0}" --proto_path="{1}" --descriptor_set_out="{2}" {3} {4}""".format(
         args.protoc_path,
         out_path,
         desc_path,
@@ -446,7 +447,7 @@ for proto_files in proto_folders:
             '"'))
 
 for command in commands:
-    call(command, shell=False)
+    call(command, shell=(os.name != 'nt'))
 
 if args.language == 'python':
     for path in protos:
