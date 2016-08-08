@@ -3,6 +3,6 @@ package POGOProtos.Data.Battle;
 
 enum BattleType {
 	BATTLE_TYPE_UNSET = 0;
-	NORMAL = 1;
-	TRAINING = 2;
+	BATTLE_TYPE_NORMAL = 1;
+	BATTLE_TYPE_TRAINING = 2;
 }
