@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Networking.Signature;
+package POGOProtos.Networking.Envelopes;
 
 message Signature {
 
