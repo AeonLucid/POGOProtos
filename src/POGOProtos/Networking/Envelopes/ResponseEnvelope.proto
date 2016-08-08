@@ -14,10 +14,4 @@ message ResponseEnvelope {
 
 	repeated bytes returns = 100;
 	string error = 101;
-
-	message Unknown7 {
-		bytes unknown71 = 1;
-		int64 unknown72 = 2;
-		bytes unknown73 = 3;
-	}
 }
