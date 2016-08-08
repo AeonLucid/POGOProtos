@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 message UseItemGymResponse {
-	POGOProtos.Networking.Responses.UseItemGymResponse.Result result = 1;
+	.POGOProtos.Networking.Responses.UseItemGymResponse.Result result = 1;
 	int64 updated_gp = 2; // Gym Points (?)
 
 	enum Result {
