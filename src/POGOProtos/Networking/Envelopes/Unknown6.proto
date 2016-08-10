@@ -7,6 +7,6 @@ message Unknown6 {
 
 	message Unknown2 {
 		bytes encrypted_signature = 1;	// This are the bytes of POGOProtos/Networking/Envelopes/Signature.proto encrypted.
-										// For an example check https://github.com/keyphact/pgoapi/blob/75eba6b5b630841ee4f7c2ea983f15874fb0862d/pgoapi/rpc_api.py#L192-L212
+						// For an example check https://github.com/keyphact/pgoapi/blob/75eba6b5b630841ee4f7c2ea983f15874fb0862d/pgoapi/rpc_api.py#L192-L212
 	}
 }
