@@ -1,14 +1,14 @@
 #!/usr/bin/env python
+from __future__ import print_function
 
 import argparse
 import os
-import shutil
 import re
+import shutil
+from subprocess import call
 
 from helpers import compile_helper
 from helpers import go_helper
-
-from subprocess import call
 
 # Add this to your path
 protoc_path = "protoc"
@@ -56,6 +56,7 @@ package_mappings = []
 # Go specific
 go_package_mappings = []
 
+
 def get_package(path):
     for file_name in os.listdir(path):
         file_name_path = os.path.join(path, file_name)
@@ -65,6 +66,7 @@ def get_package(path):
                     if proto_line.startswith("package"):
                         return re.search('package (.*?);', proto_line).group(1)
     return None
+
 
 def walk_files(main_file, path, package, imports=None):
     if imports is None:
@@ -159,6 +161,7 @@ def walk_directory(path):
 
             walk_directory(dir_name_path)
 
+
 def compile_go_package(path):
 
     proto_files = compile_helper.abslistdir(path)
@@ -181,6 +184,7 @@ def compile_go_package(path):
     )
 
     call(command, shell=True)
+
 
 def compile_directories(path):
     for proto_file_name in os.listdir(path):

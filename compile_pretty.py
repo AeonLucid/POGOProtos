@@ -1,9 +1,7 @@
 #!/usr/bin/env python
-
 import argparse
-import re
-import sys
 import os
+import re
 import shutil
 from subprocess import call
 
