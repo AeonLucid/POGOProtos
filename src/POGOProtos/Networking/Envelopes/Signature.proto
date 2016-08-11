@@ -5,7 +5,7 @@ message Signature {
 
     message LocationFix {
         string provider = 1; // "network", "gps", "fused", possibly others
-        uint64 timestamp_since_start = 2; // in ms
+        uint64 timestamp_snapshot = 2; // in ms since start
         float latitude = 13;
         float longitude = 14;
 
@@ -34,7 +34,7 @@ message Signature {
     }
 
     message SensorInfo {
-        uint64 timestamp_snapshot = 1; // in ms
+        uint64 timestamp_snapshot = 1; // in ms since start
         double magnetometer_x = 3;
         double magnetometer_y = 4;
         double magnetometer_z = 5;
@@ -69,6 +69,7 @@ message Signature {
         string firmware_fingerprint = 14; // Android only, build.fingerprint
     }
 
+    // Only used in iOS - Android just sends an empty version
     message ActivityStatus {
         // all of these had 1 as their value
         uint64 start_time_ms = 1;
@@ -88,14 +89,11 @@ message Signature {
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
     ActivityStatus activity_status = 9;
-    uint32 location_hash1 = 10; // Location1 hashed based on the auth_token - xxHash32
-    uint32 location_hash2 = 20; // Location2 hashed based on the auth_token - xxHash32
-    bytes unknown22 = 22; // possibly replay check. Generation unknown but pointed to by 0001B8614
+    uint64 location_hash1 = 10; // Location1 hashed signed based on the auth_token or auth_info - xxHash32
+    uint64 location_hash2 = 20; // Location2 hashed (unsigned) - xxHash32
+    bytes session_hash = 22; // 16 bytes, unique per session
     uint64 timestamp = 23; // epoch timestamp in ms
-    repeated uint64 request_hash = 24; // hashes of each request message in a hashArray - xxhash64
-
-    // Addresses for the corresponding hash functions:
-    //    xxHash32              00054D28
-    //    xxhash64              000546C8 - Feeds into 00053D40
+    repeated int64 request_hash = 24; // hashes of each request message in a hashArray signed based on the auth_token or auth_info - xxhash64
+    int64 unknown25 = 25; // for 0.33 its static -8537042734809897855 or 0x898654dd2753a481, generated via xxHash64("b8fa9757195897aae92c53dbcf8a60fb3d86d745".ToByteArray(), 0x88533787)
 
 }
