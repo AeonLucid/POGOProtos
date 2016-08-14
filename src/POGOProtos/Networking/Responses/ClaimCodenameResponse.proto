@@ -1,12 +1,14 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-// TODO: Might be incorrect, please test.
+import "POGOProtos/Data/PlayerData.proto";
+
 message ClaimCodenameResponse {
 	string codename = 1;
 	string user_message = 2;
 	bool is_assignable = 3;
 	.POGOProtos.Networking.Responses.ClaimCodenameResponse.Status status = 4;
+	.POGOProtos.Data.PlayerData updated_player = 5;
 
 	enum Status {
 		UNSET = 0;
