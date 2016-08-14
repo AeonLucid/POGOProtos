@@ -7,7 +7,7 @@ message CatchPokemonLogEntry {
 	.POGOProtos.Data.Logs.CatchPokemonLogEntry.Result result = 1;
 	.POGOProtos.Enums.PokemonId pokemon_id = 2;
 	int32 combat_points = 3;
-	uint64 pokemon_data_id = 4;
+	fixed64 pokemon_data_id = 4;
 
 	enum Result {
 		UNSET = 0;
