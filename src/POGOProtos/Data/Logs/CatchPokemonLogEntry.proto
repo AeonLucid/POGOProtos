@@ -13,5 +13,6 @@ message CatchPokemonLogEntry {
 		UNSET = 0;
 		POKEMON_CAPTURED = 1;
 		POKEMON_FLED = 2;
+		POKEMON_HATCHED = 3;
 	}
 }
