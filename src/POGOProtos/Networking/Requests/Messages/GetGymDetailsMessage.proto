@@ -7,4 +7,5 @@ message GetGymDetailsMessage {
 	double player_longitude = 3;
 	double gym_latitude = 4;
 	double gym_longitude = 5;
+	string client_version = 6;
 }
