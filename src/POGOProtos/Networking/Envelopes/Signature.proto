@@ -25,9 +25,9 @@ message Signature {
     message AndroidGpsInfo {
         uint64 time_to_fix = 1;
         repeated int32 satellites_prn = 2;
-        repeated float snr = 3;
-        repeated float azimuth = 4;
-        repeated float elevation = 5;
+        repeated float azimuth = 3;
+        repeated float elevation = 4;
+        repeated float snr = 5;
         repeated bool has_almanac = 6;
         repeated bool has_ephemeris = 7;
         repeated bool used_in_fix = 8;
