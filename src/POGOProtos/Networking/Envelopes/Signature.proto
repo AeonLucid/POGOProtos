@@ -12,8 +12,8 @@ message Signature {
         // ??? shows up in struct, dunno where these go
         // float device_speed;
         // float device_course;
-        float horizontal_accuracy = 20; // iOS only? (range seems to be -1 to +1)
-        float radial_accuracy = 21; // in meters, android only?
+        float unknown20 = 20; // iOS only? (range seems to be -1 to +1)
+        float horizontal_accuracy = 21; // in meters, both on Android and iOS
         float vertical_accuracy = 22; // iOS only? (range seems to be ~10-12)
         uint64 provider_status = 26; // Usually 3 (possibly GPS status: 1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired)
                            // On iOS there are some LocationFixes with unk26=1 and everything else empty
