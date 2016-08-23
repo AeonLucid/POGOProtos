@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message BuddyPokemonLogEntry {
+	.POGOProtos.Data.Logs.BuddyPokemonLogEntry.Result result = 1;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
+	int32 amount = 3;
+
+	enum Result {
+		UNSET = 0;
+		CANDY_FOUND = 1;
+	}
+}

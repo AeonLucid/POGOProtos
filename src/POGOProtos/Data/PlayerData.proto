@@ -7,6 +7,7 @@ import "POGOProtos/Data/Player/DailyBonus.proto";
 import "POGOProtos/Data/Player/EquippedBadge.proto";
 import "POGOProtos/Data/Player/ContactSettings.proto";
 import "POGOProtos/Data/Player/Currency.proto";
+import "POGOProtos/Data/BuddyPokemon.proto";
 import "POGOProtos/Enums/TeamColor.proto";
 
 message PlayerData {
@@ -22,4 +23,5 @@ message PlayerData {
 	.POGOProtos.Data.Player.ContactSettings contact_settings = 13;
 	repeated .POGOProtos.Data.Player.Currency currencies = 14;
 	int32 remaining_codename_claims = 15;
+	.POGOProtos.Data.BuddyPokemon buddy_pokemon = 16;
 }

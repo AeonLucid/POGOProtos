@@ -11,5 +11,6 @@ message ReleasePokemonResponse {
 		POKEMON_DEPLOYED = 2;
 		FAILED = 3;
 		ERROR_POKEMON_IS_EGG = 4;
+		ERROR_POKEMON_IS_BUDDY = 5;
 	}
 }
