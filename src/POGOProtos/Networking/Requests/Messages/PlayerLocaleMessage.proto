@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message PlayerLocaleMessage {
+	string country = 1;
+	string language = 2;
+}
