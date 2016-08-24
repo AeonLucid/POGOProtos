@@ -23,6 +23,6 @@ message PlayerStats {
 	int32 prestige_raised_total = 19;
 	int32 prestige_dropped_total = 20;
 	int32 pokemon_deployed = 21;
-	bytes pokemon_caught_by_type = 22; // TODO: repeated PokemonType ??
+	repeated int32 pokemon_caught_by_type = 22;
 	int32 small_rattata_caught = 23;
 }
