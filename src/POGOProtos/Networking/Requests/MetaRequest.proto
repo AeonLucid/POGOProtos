@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests;
+
+import "POGOProtos/Networking/Requests/MetaRequestType.proto";
+
+message MetaRequest {
+	POGOProtos.Networking.Requests.MetaRequestType request_type = 1;
+	RequestPayload payload = 2; // potentially could be repeated.
+
+	message RequestPayload {
+		// renamed for data as it could be used for payload for other types (1 to 4 maybe)
+		bytes data = 1;	// This are the bytes commonly used for POGOProtos/Networking/Envelopes/Signature.proto encrypted.
+	}
+}
