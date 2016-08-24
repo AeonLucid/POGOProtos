@@ -18,7 +18,7 @@ message RequestEnvelope {
 	double altitude = 9;
 	AuthInfo auth_info = 10;
 	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 11;
-	int64 unknown12 = 12;
+	int64 ms_since_last_locationfix = 12;
 
 	message AuthInfo {
 		string provider = 1;
