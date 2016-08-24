@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.MetaResponses;
+
+
+
+message BuyItem {
+    Status result = 1; // result
+
+    // THESE ARE SOMEWHAT SPECULATED
+    enum Status {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        NOT_ENOUGH_POKECOINS = 3;
+    }
+}
+

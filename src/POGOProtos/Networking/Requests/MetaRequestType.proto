@@ -3,7 +3,9 @@ package POGOProtos.Networking.Requests;
 
 enum MetaRequestType {
 	UNKNOWN = 0;
-	// 1 - 4 debug requests maybe?
+	// 1 unknown
+	BUY_ITEM_POKECOINS = 2;
+	// 3 - 4 purchase with real money?
 	GET_STORE_ITEMS = 5;
 	SEND_SIGNATURE = 6;
 }
