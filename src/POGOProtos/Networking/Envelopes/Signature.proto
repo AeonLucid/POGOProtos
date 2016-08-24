@@ -24,13 +24,13 @@ message Signature {
     // don't really care about this since we're not using it
     message AndroidGpsInfo {
         uint64 time_to_fix = 1;
-        repeated int32 satellites_prn = 2;
-        repeated float azimuth = 3;
-        repeated float elevation = 4;
-        repeated float snr = 5;
-        repeated bool has_almanac = 6;
-        repeated bool has_ephemeris = 7;
-        repeated bool used_in_fix = 8;
+        repeated int32 satellites_prn = 2 [packed=true];
+        repeated float azimuth = 3 [packed=true];
+        repeated float elevation = 4 [packed=true];
+        repeated float snr = 5 [packed=true];
+        repeated bool has_almanac = 6 [packed=true];
+        repeated bool has_ephemeris = 7 [packed=true];
+        repeated bool used_in_fix = 8 [packed=true];
     }
 
     message SensorInfo {
