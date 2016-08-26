@@ -6,6 +6,7 @@ message Signature {
     message LocationFix {
         string provider = 1; // "network", "gps", "fused", possibly others
         uint64 timestamp_snapshot = 2; // in ms since start
+        float altitude = 4; // Confirmed on android, checked with sensor readings.
         float latitude = 13;
         float longitude = 14;
 
