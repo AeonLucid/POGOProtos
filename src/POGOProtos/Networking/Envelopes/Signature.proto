@@ -15,7 +15,7 @@ message Signature {
         // float device_course;
         
         // possibly the two floats above?
-        float unknown18 = 18; // iOS only (-1 for no reading availab,e 
+        float unknown18 = 18; // iOS only (-1 for no reading available 
         float course = 20; // iOS only (range seems to be -1 to 360) confirmed by @marcel
         
         float horizontal_accuracy = 21; // in meters, both on Android and iOS
