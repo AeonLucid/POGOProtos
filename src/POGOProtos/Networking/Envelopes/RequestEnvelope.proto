@@ -11,7 +11,7 @@ message RequestEnvelope {
 	uint64 request_id = 3;
 	repeated .POGOProtos.Networking.Requests.Request requests = 4;
 
-	repeated PlatformRequest platformRequests = 6;
+	repeated PlatformRequest platform_requests = 6;
 	double latitude = 7;
 	double longitude = 8;
 	double accuracy = 9;
