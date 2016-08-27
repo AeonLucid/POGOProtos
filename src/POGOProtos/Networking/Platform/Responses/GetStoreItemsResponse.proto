@@ -23,7 +23,7 @@ message GetStoreItemsResponse {
 
 	enum Status {
 		UNDEFINED = 0;
-		OKAY = 1
+		OKAY = 1;
 	}
 }
 
