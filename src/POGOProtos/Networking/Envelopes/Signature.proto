@@ -89,8 +89,8 @@ message Signature {
     SensorInfo sensor_info = 7;
     DeviceInfo device_info = 8;
     ActivityStatus activity_status = 9;
-    uint64 location_hash1 = 10; // Location1 hashed signed based on the auth_token or auth_info - xxHash32
-    uint64 location_hash2 = 20; // Location2 hashed (unsigned) - xxHash32
+    uint32 location_hash1 = 10; // Location1 hashed signed based on the auth_token or auth_info - xxHash32
+    uint32 location_hash2 = 20; // Location2 hashed (unsigned) - xxHash32
     bytes session_hash = 22; // 16 bytes, unique per session
     uint64 timestamp = 23; // epoch timestamp in ms
     repeated uint64 request_hash = 24; // hashes of each request message in a hashArray signed based on the auth_token or auth_info - xxhash64
