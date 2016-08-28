@@ -38,9 +38,9 @@ message Signature {
         double linear_acceleration_x = 3;
         double linear_acceleration_y = 4;
         double linear_acceleration_z = 5;
-        double magnetic_x = 6;
-        double magnetic_y = 7;
-        double magnetic_z = 8;
+        double magnetic_field_x = 6;
+        double magnetic_field_y = 7;
+        double magnetic_field_z = 8;
         double rotation_vector_x = 10;
         double rotation_vector_y = 11;
         double rotation_vector_z = 12;
