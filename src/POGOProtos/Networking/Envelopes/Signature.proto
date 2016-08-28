@@ -35,21 +35,21 @@ message Signature {
 
     message SensorInfo {
         uint64 timestamp_snapshot = 1; // in ms since start
-        double magnetometer_x = 3;
-        double magnetometer_y = 4;
-        double magnetometer_z = 5;
-        double angle_normalized_x = 6;
-        double angle_normalized_y = 7;
-        double angle_normalized_z = 8;
-        double accel_raw_x = 10;
-        double accel_raw_y = 11;
-        double accel_raw_z = 12;
+        double linear_acceleration_x = 3;
+        double linear_acceleration_y = 4;
+        double linear_acceleration_z = 5;
+        double magnetic_field_x = 6;
+        double magnetic_field_y = 7;
+        double magnetic_field_z = 8;
+        double rotation_vector_x = 10;
+        double rotation_vector_y = 11;
+        double rotation_vector_z = 12;
         double gyroscope_raw_x = 13;
         double gyroscope_raw_y = 14;
         double gyroscope_raw_z = 15;
-        double accel_normalized_x = 16;
-        double accel_normalized_y = 17;
-        double accel_normalized_z = 18;
+        double gravity_x = 16;
+        double gravity_y = 17;
+        double gravity_z = 18;
         uint64 accelerometer_axes = 19; // Always 3
     }
 
