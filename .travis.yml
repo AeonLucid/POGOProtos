@@ -1,11 +1,25 @@
 language: python
+
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.8
+      # Required for libstdc++-4.9, which is required for llvm-3.8.
+      - ubuntu-toolchain-r-test
+    packages:
+      - clang-format-3.8
+
 python:
   - "2.7"
+
 install:
   - pushd /tmp
   - wget https://github.com/google/protobuf/releases/download/v3.0.0-beta-4/protoc-3.0.0-beta-4-linux-x86_64.zip
   - unzip protoc-3.0.0-beta-4-linux-x86_64.zip
   - popd
   - export PATH=/tmp/bin:$PATH
+
 script:
   - ./compile_single.py -d
+  - clang-format-3.8 -i -style file $(find src -name "*.proto")
+  - git diff --exit-code # check that the formatting is correct
