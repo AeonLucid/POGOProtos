@@ -17,8 +17,6 @@ import "POGOProtos/Settings/Master/IapSettings.proto";
 import "POGOProtos/Settings/Master/PokemonUpgradeSettings.proto";
 import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
 
-
-
 message DownloadItemTemplatesResponse {
 	bool success = 1;
 	repeated .POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate item_templates = 2;
@@ -31,7 +29,7 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.MoveSettings move_settings = 4;
 		.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence_settings = 5;
 		.POGOProtos.Settings.Master.TypeEffectiveSettings type_effective = 8;
-		.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10; 
+		.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10;
 		.POGOProtos.Settings.Master.CameraSettings camera = 11;
 		.POGOProtos.Settings.Master.PlayerLevelSettings player_level = 12;
 		.POGOProtos.Settings.Master.GymLevelSettings gym_level = 13;

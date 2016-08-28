@@ -11,10 +11,10 @@ message AttackGymResponse {
 	.POGOProtos.Data.Battle.BattlePokemonInfo active_defender = 4;
 	.POGOProtos.Data.Battle.BattlePokemonInfo active_attacker = 5;
 
-    enum Result {
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR_INVALID_ATTACK_ACTIONS = 2;
 		ERROR_NOT_IN_RANGE = 3;
-    }
+	}
 }

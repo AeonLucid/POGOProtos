@@ -35,8 +35,7 @@ message PokemonSettings {
 	float km_buddy_distance = 23;
 	.POGOProtos.Settings.Master.PokemonSettings.BuddySize buddy_size = 24;
 
-	enum BuddySize
-	{
+	enum BuddySize {
 		BUDDY_MEDIUM = 0;
 		BUDDY_SHOULDER = 1;
 		BUDDY_BIG = 2;

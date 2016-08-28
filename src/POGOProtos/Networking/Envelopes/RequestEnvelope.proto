@@ -27,7 +27,7 @@ message RequestEnvelope {
 
 		message JWT {
 			string contents = 1;
-			int32 unknown2  = 2;
+			int32 unknown2 = 2;
 		}
 	}
 }
