@@ -70,6 +70,7 @@ def write_proto(path, name, proto):
 
     with open(proto_file, 'w') as file:
         file.write('syntax = "proto3";\n\n')
+        file.write('option optimize_for = SPEED;\n') # SPEED, CODE_SIZE, or LITE_RUNTIME, affects the C++ and Java code generators
         file.write('package ')
         file.write(package)
         file.write(';\n\n')
