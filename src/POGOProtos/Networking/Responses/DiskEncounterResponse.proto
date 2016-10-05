@@ -12,9 +12,9 @@ message DiskEncounterResponse {
 	enum Result {
 		UNKNOWN = 0;
 		SUCCESS = 1;
-		NOT_AVAILABLE = 2;
+		NOT_FOUND = 2;
 		NOT_IN_RANGE = 3;
-		ENCOUNTER_ALREADY_FINISHED = 4;
+		ALREADY_HAPPENED = 4;
 		POKEMON_INVENTORY_FULL = 5;
 	}
 }

@@ -23,16 +23,16 @@ message ItemSettings {
 	float drop_freq = 4;
 	int32 drop_trainer_level = 5;
 
-	// One of the below attributes will be set in the response, the others will be null.
-
-	.POGOProtos.Settings.Master.Item.PokeballAttributes pokeball = 6;
-	.POGOProtos.Settings.Master.Item.PotionAttributes potion = 7;
-	.POGOProtos.Settings.Master.Item.ReviveAttributes revive = 8;
-	.POGOProtos.Settings.Master.Item.BattleAttributes battle = 9;
-	.POGOProtos.Settings.Master.Item.FoodAttributes food = 10;
-	.POGOProtos.Settings.Master.Item.InventoryUpgradeAttributes inventory_upgrade = 11;
-	.POGOProtos.Settings.Master.Item.ExperienceBoostAttributes xp_boost = 12;
-	.POGOProtos.Settings.Master.Item.IncenseAttributes incense = 13;
-	.POGOProtos.Settings.Master.Item.EggIncubatorAttributes egg_incubator = 14;
-	.POGOProtos.Settings.Master.Item.FortModifierAttributes fort_modifier = 15;
+	oneof Attributes {
+		.POGOProtos.Settings.Master.Item.PokeballAttributes pokeball = 6;
+		.POGOProtos.Settings.Master.Item.PotionAttributes potion = 7;
+		.POGOProtos.Settings.Master.Item.ReviveAttributes revive = 8;
+		.POGOProtos.Settings.Master.Item.BattleAttributes battle = 9;
+		.POGOProtos.Settings.Master.Item.FoodAttributes food = 10;
+		.POGOProtos.Settings.Master.Item.InventoryUpgradeAttributes inventory_upgrade = 11;
+		.POGOProtos.Settings.Master.Item.ExperienceBoostAttributes xp_boost = 12;
+		.POGOProtos.Settings.Master.Item.IncenseAttributes incense = 13;
+		.POGOProtos.Settings.Master.Item.EggIncubatorAttributes egg_incubator = 14;
+		.POGOProtos.Settings.Master.Item.FortModifierAttributes fort_modifier = 15;
+	}
 }

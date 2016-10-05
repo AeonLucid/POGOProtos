@@ -26,20 +26,23 @@ message DownloadItemTemplatesResponse {
 
 	message ItemTemplate {
 		string template_id = 1;
-		.POGOProtos.Settings.Master.PokemonSettings pokemon_settings = 2;
-		.POGOProtos.Settings.Master.ItemSettings item_settings = 3;
-		.POGOProtos.Settings.Master.MoveSettings move_settings = 4;
-		.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence_settings = 5;
-		.POGOProtos.Settings.Master.TypeEffectiveSettings type_effective = 8;
-		.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10; 
-		.POGOProtos.Settings.Master.CameraSettings camera = 11;
-		.POGOProtos.Settings.Master.PlayerLevelSettings player_level = 12;
-		.POGOProtos.Settings.Master.GymLevelSettings gym_level = 13;
-		.POGOProtos.Settings.Master.GymBattleSettings battle_settings = 14;
-		.POGOProtos.Settings.Master.EncounterSettings encounter_settings = 15;
-		.POGOProtos.Settings.Master.IapItemDisplay iap_item_display = 16;
-		.POGOProtos.Settings.Master.IapSettings iap_settings = 17;
-		.POGOProtos.Settings.Master.PokemonUpgradeSettings pokemon_upgrades = 18;
-		.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
+		
+		oneof Templates {
+			.POGOProtos.Settings.Master.PokemonSettings pokemon_settings = 2;
+			.POGOProtos.Settings.Master.ItemSettings item_settings = 3;
+			.POGOProtos.Settings.Master.MoveSettings move_settings = 4;
+			.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence_settings = 5;
+			.POGOProtos.Settings.Master.TypeEffectiveSettings type_effective = 8;
+			.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10; 
+			.POGOProtos.Settings.Master.CameraSettings camera = 11;
+			.POGOProtos.Settings.Master.PlayerLevelSettings player_level = 12;
+			.POGOProtos.Settings.Master.GymLevelSettings gym_level = 13;
+			.POGOProtos.Settings.Master.GymBattleSettings battle_settings = 14;
+			.POGOProtos.Settings.Master.EncounterSettings encounter_settings = 15;
+			.POGOProtos.Settings.Master.IapItemDisplay iap_item_display = 16;
+			.POGOProtos.Settings.Master.IapSettings iap_settings = 17;
+			.POGOProtos.Settings.Master.PokemonUpgradeSettings pokemon_upgrades = 18;
+			.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
+		}
 	}
 }
