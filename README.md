@@ -21,7 +21,7 @@ feel free to use `master`.
 
 ## Preparation
 
-Current recommended protoc version: "Protocol Buffers v3.0.0-beta-4".
+Current recommended protoc version: "Protocol Buffers v3.1.0".
 
 You can find download links [here](https://github.com/google/protobuf/releases).
 
