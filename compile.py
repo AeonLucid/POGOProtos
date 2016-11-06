@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import argparse
+import glob
 import re
 import sys
 import os
@@ -294,11 +295,13 @@ parser.add_argument(
     '--include_source_info',
     action='store_true',
     help='do not strip source code info from .desc file')
+parser.add_argument(
+    '--keep_proto_files',
+    action='store_true',
+    help='do not remove .proto files after compiling')
 args = parser.parse_args()
 
 protoc_path = args.protoc_path
-out_path = args.out_path
-
 src_path = os.path.abspath('src')
 out_path = os.path.abspath(args.out_path)
 
@@ -463,3 +466,10 @@ elif args.language == 'ruby':
         with open(os.path.join(out_path, *path.split('/')) + '.rb', 'w') as file:
             for name in protos[path]:
                 file.write('require "' + path + '/' + name + '"\n')
+
+# Remove all .proto files
+if not args.keep_proto_files:
+    for folder_path, _, file_names in os.walk(out_path):
+        for file_name in file_names:
+            if file_name.endswith(".proto"):
+                os.unlink(os.path.join(folder_path, file_name))
