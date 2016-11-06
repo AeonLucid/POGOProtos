@@ -14,9 +14,7 @@ message RequestEnvelope {
 	repeated PlatformRequest platform_requests = 6;
 	double latitude = 7;
 	double longitude = 8;
-
-	// Make sure to use this to build your loc hashes 1/2
-	double accuracy = 9;
+	double accuracy = 9; // Make sure to use this to build .POGOProtos.Networking.Envelopes.Signature.location_hash1 and .POGOProtos.Networking.Envelopes.Signature.location_hash2
 
 	AuthInfo auth_info = 10;
 	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 11;

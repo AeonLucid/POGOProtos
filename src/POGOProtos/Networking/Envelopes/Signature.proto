@@ -90,7 +90,7 @@ message Signature {
 	repeated SensorInfo sensor_info = 7;
 	DeviceInfo device_info = 8;
 	ActivityStatus activity_status = 9;
-	int32 location_hash1 = 10;
+	uint32 location_hash1 = 10;
 	bool field11 = 11;
 	bool field12 = 12;
 	int32 field13 = 13;
@@ -100,9 +100,9 @@ message Signature {
 	string field17 = 17;
 	string field18 = 18;
 	bool field19 = 19;
-	int32 location_hash2 = 20;
+	uint32 location_hash2 = 20;
 	bool field21 = 21;
-	bytes session_hash = 22;            // 16 bytes, unique per session
+	bytes session_hash = 22;            // 32 random bytes, unique per session.
 	uint64 timestamp = 23;              // epoch timestamp in ms
 	repeated uint64 request_hash = 24;  // hashes of each request message in a hashArray signed based on the auth_token or auth_info - xxhash64
 	int64 unknown25 = 25;
