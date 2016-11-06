@@ -1,4 +1,11 @@
 language: python
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.8
+      - ubuntu-toolchain-r-test
+    packages:
+      - clang-format-3.8
 python:
   - "2.7"
 install:
@@ -9,3 +16,5 @@ install:
   - export PATH=/tmp/bin:$PATH
 script:
   - ./compile.py python
+  - clang-format-3.8 -i -style file $(find src -name "*.proto")
+  - git diff --exit-code
