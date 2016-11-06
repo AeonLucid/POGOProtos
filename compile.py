@@ -34,7 +34,7 @@ if lang == "csharp":
     tmp_out_path = os.path.join(tmp_out_path, "POGOProtos")
 
 if not default_out_path:
-    print 'Can we remove "%s"?' % tmp_out_path
+    print('Can we remove "%s"?' % tmp_out_path)
     may_remove = compile_helper.query_yes_no("Please answer.", default="no")
 else:
     may_remove = True
