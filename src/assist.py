@@ -1,7 +1,8 @@
 #!/usr/bin/env python
+from __future__ import print_function
 
-import os
 import argparse
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-m", "--message", help="Message to prodecure files for.")
@@ -9,16 +10,11 @@ args = parser.parse_args()
 
 
 def underscore_to_camelcase(value):
-    def camelcase():
-        while True:
-            yield str.capitalize
-
-    c = camelcase()
-    return "".join(c.next()(x) if x else '_' for x in value.split("_"))
+    return "".join(x.title() if x else '_' for x in value.split("_"))
 
 
 if not args.message:
-    print "Specify a message."
+    print("Specify a message.")
 
 
 def initialize_file(package, message, path):
@@ -29,12 +25,12 @@ def initialize_file(package, message, path):
         opened_file.write('\t// Initialized by assist.py\n')
         opened_file.write('}\n')
 
-    print "Created %s" % path
+    print("Created %s" % path)
 
 
 message = underscore_to_camelcase(args.message)
-request_path = os.path.join("POGOProtos\Networking\Requests\Messages", "%sMessage.proto" % message)
-response_path = os.path.join("POGOProtos\Networking\Responses", "%sResponse.proto" % message)
+request_path = os.path.join(r"POGOProtos\Networking\Requests\Messages", "%sMessage.proto" % message)
+response_path = os.path.join(r"POGOProtos\Networking\Responses", "%sResponse.proto" % message)
 
 initialize_file("POGOProtos.Networking.Requests.Messages", "%sMessage" % message, request_path)
 initialize_file("POGOProtos.Networking.Responses", "%sResponse" % message, response_path)

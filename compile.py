@@ -1,13 +1,15 @@
 #!/usr/bin/env python
+from __future__ import print_function
 
 import argparse
 import fnmatch
 import ntpath
-import sys
 import os
 import shutil
-from helpers import compile_helper
+import sys
 from subprocess import call
+
+from helpers import compile_helper
 
 # Add this to your path
 protoc_path = "protoc"
@@ -34,7 +36,7 @@ if lang == "csharp":
     tmp_out_path = os.path.join(tmp_out_path, "POGOProtos")
 
 if not default_out_path:
-    print 'Can we remove "%s"?' % tmp_out_path
+    print('Can we remove "%s"?' % tmp_out_path)
     may_remove = compile_helper.query_yes_no("Please answer.", default="no")
 else:
     may_remove = True
@@ -86,4 +88,4 @@ compile_helper.finish_compile(out_path, lang)
 print("Done!")
 
 if any(c != 0 for c in exit_codes):
-  sys.exit(1)
+    sys.exit(1)

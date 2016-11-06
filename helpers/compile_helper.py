@@ -1,11 +1,18 @@
-#!/usr/bin/env python
-
+import errno
 import os
 import sys
-import errno
+
+PY2 = sys.version_info[0] == 2
+
+if PY2:
+    get_input = raw_input
+else:
+    get_input = input
+
 
 def abslistdir(path):
-  return " ".join(map((lambda f: os.path.join(os.path.abspath(path), f)), os.listdir(path)))
+    return " ".join(map((lambda f: os.path.join(os.path.abspath(path), f)), os.listdir(path)))
+
 
 def mkdir_p(path):
     try:
@@ -15,6 +22,7 @@ def mkdir_p(path):
             pass
         else:
             raise
+
 
 def finish_compile(out_path, lang):
     if lang == 'python':
@@ -51,7 +59,7 @@ def query_yes_no(question, default="yes"):
 
     while True:
         sys.stdout.write(question + prompt)
-        choice = raw_input().lower()
+        choice = get_input().lower()
         if default is not None and choice == '':
             return valid[default]
         elif choice in valid:
