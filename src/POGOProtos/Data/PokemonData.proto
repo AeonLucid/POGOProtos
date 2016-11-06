@@ -37,4 +37,6 @@ message PokemonData {
 	string nickname = 30;
 	int32 from_fort = 31;
 	int32 buddy_candy_awarded = 32;
+	int32 display_pokemon_id = 34;
+	int32 display_cp = 35;
 }

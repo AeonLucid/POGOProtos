@@ -11,6 +11,7 @@ import "POGOProtos/Data/PokedexEntry.proto";
 import "POGOProtos/Data/Player/PlayerStats.proto";
 import "POGOProtos/Data/Player/PlayerCurrency.proto";
 import "POGOProtos/Data/Player/PlayerCamera.proto";
+import "POGOProtos/Data/Quests/Quest.proto";
 
 message InventoryItemData {
 	.POGOProtos.Data.PokemonData pokemon_data = 1;
@@ -23,4 +24,5 @@ message InventoryItemData {
 	.POGOProtos.Inventory.AppliedItems applied_items = 8;
 	.POGOProtos.Inventory.EggIncubators egg_incubators = 9;
 	.POGOProtos.Inventory.Candy candy = 10;
+	.POGOProtos.Data.Quests.Quest quest = 11;
 }

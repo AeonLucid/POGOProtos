@@ -7,4 +7,5 @@ message GetHatchedEggsResponse {
 	repeated int32 experience_awarded = 3;
 	repeated int32 candy_awarded = 4;
 	repeated int32 stardust_awarded = 5;
+	repeated float egg_km_walked = 6;
 }
