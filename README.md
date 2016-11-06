@@ -7,9 +7,13 @@ If you want to know which messages are implemented right now, click [here](https
 
 # Usage
 
-## Versions
+## Versioning
 
-Since this is under such heavy development we release a new stable version every so often. If you don't want your depending code to break, check out Releases. The current latest version is `v1.0` but if you don't care about breaking changes, feel free to use `master`.
+We are following [semantic versioning](http://semver.org/) for POGOProtos.  Every version will be mapped to their current PokémonGo version.
+
+| Version      | Android       | IOS           |
+|--------------|---------------|---------------|
+| 2.0.0        | 0.43.4        | 1.13.4        |
 
 ## Preparation
 
