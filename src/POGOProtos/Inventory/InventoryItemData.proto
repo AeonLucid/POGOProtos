@@ -13,14 +13,16 @@ import "POGOProtos/Data/Player/PlayerCurrency.proto";
 import "POGOProtos/Data/Player/PlayerCamera.proto";
 
 message InventoryItemData {
-	.POGOProtos.Data.PokemonData pokemon_data = 1;
-	.POGOProtos.Inventory.Item.ItemData item = 2;
-	.POGOProtos.Data.PokedexEntry pokedex_entry = 3;
-	.POGOProtos.Data.Player.PlayerStats player_stats = 4;
-	.POGOProtos.Data.Player.PlayerCurrency player_currency = 5;
-	.POGOProtos.Data.Player.PlayerCamera player_camera = 6;
-	.POGOProtos.Inventory.InventoryUpgrades inventory_upgrades = 7;
-	.POGOProtos.Inventory.AppliedItems applied_items = 8;
-	.POGOProtos.Inventory.EggIncubators egg_incubators = 9;
-	.POGOProtos.Inventory.Candy candy = 10;
+	oneof Item {
+		.POGOProtos.Data.PokemonData pokemon_data = 1;
+		.POGOProtos.Inventory.Item.ItemData item = 2;
+		.POGOProtos.Data.PokedexEntry pokedex_entry = 3;
+		.POGOProtos.Data.Player.PlayerStats player_stats = 4;
+		.POGOProtos.Data.Player.PlayerCurrency player_currency = 5;
+		.POGOProtos.Data.Player.PlayerCamera player_camera = 6;
+		.POGOProtos.Inventory.InventoryUpgrades inventory_upgrades = 7;
+		.POGOProtos.Inventory.AppliedItems applied_items = 8;
+		.POGOProtos.Inventory.EggIncubators egg_incubators = 9;
+		.POGOProtos.Inventory.Candy candy = 10;
+	}
 }

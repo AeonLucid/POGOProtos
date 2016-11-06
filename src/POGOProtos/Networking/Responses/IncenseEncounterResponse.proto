@@ -10,9 +10,9 @@ message IncenseEncounterResponse {
 	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
 
 	enum Result {
-		INCENSE_ENCOUNTER_UNKNOWN = 0;
-		INCENSE_ENCOUNTER_SUCCESS = 1;
-		INCENSE_ENCOUNTER_NOT_AVAILABLE = 2;
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		NOT_AVAILABLE = 2;
 		POKEMON_INVENTORY_FULL = 3;
 	}
 }

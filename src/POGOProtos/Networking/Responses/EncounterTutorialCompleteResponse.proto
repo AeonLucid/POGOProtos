@@ -12,6 +12,6 @@ message EncounterTutorialCompleteResponse {
 	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
-		ERROR_INVALID_POKEMON = 2;
+		INVALID_POKEMON = 2;
 	}
 }

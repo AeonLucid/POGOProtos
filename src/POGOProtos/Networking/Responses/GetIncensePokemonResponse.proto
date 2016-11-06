@@ -13,8 +13,8 @@ message GetIncensePokemonResponse {
 	int64 disappear_timestamp_ms = 7;
 
 	enum Result {
-		INCENSE_ENCOUNTER_UNKNOWN = 0;
-		INCENSE_ENCOUNTER_AVAILABLE = 1;
-		INCENSE_ENCOUNTER_NOT_AVAILABLE = 2;
+		UNKNOWN = 0;
+		AVAILABLE = 1;
+		NOT_AVAILABLE = 2;
 	}
 }
