@@ -22,13 +22,13 @@ message ResponseEnvelope {
 
 	enum StatusCode {
 		UNKNOWN = 0;
-		OK = 1; // valid response with no api url
-		OK_RPC_URL_IN_RESPONSE = 2; // the response envelope has api_url set and this response is valid
-		BAD_REQUEST = 3; // bad request
-		INVALID_REQUEST = 51; // using unimplemented request or corrupt request
-		INVALID_PLATFORM_REQUEST = 52; // invalid platform request or corrupt platform request
-		REDIRECT = 53; // a new rpc endpoint is available and you should redirect to there
-		SESSION_INVALIDATED = 100; // occurs when you send blank authinfo, or sending nonsense timings (ie LocationFix.timestampSnapshot == Signature.timestampSinceStart)
-		INVALID_AUTH_TOKEN = 102; // occurs when the login token is invalid
-    }
+		OK = 1;                         // valid response with no api url
+		OK_RPC_URL_IN_RESPONSE = 2;     // the response envelope has api_url set and this response is valid
+		BAD_REQUEST = 3;                // bad request
+		INVALID_REQUEST = 51;           // using unimplemented request or corrupt request
+		INVALID_PLATFORM_REQUEST = 52;  // invalid platform request or corrupt platform request
+		REDIRECT = 53;                  // a new rpc endpoint is available and you should redirect to there
+		SESSION_INVALIDATED = 100;      // occurs when you send blank authinfo, or sending nonsense timings (ie LocationFix.timestampSnapshot == Signature.timestampSinceStart)
+		INVALID_AUTH_TOKEN = 102;       // occurs when the login token is invalid
+	}
 }

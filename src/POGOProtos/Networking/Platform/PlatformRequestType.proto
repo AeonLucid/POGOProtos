@@ -1,7 +1,6 @@
 syntax = "proto3";
 package POGOProtos.Networking.Platform;
 
-
 enum PlatformRequestType {
 	METHOD_UNSET = 0;
 	BUY_ITEM_POKECOINS = 2;

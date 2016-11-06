@@ -3,8 +3,7 @@ package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/BuddyPokemon.proto";
 
-message SetBuddyPokemonResponse
-{
+message SetBuddyPokemonResponse {
 	.POGOProtos.Networking.Responses.SetBuddyPokemonResponse.Result result = 1;
 	.POGOProtos.Data.BuddyPokemon updated_buddy = 2;
 

@@ -3,7 +3,7 @@ package POGOProtos.Networking.Responses;
 
 message UseItemGymResponse {
 	.POGOProtos.Networking.Responses.UseItemGymResponse.Result result = 1;
-	int64 updated_gp = 2; // Gym Points (?)
+	int64 updated_gp = 2;  // Gym Points (?)
 
 	enum Result {
 		UNSET = 0;
