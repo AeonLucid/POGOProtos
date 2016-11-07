@@ -12,6 +12,7 @@ enum RequestType {
 	DOWNLOAD_SETTINGS = 5;               // Implemented [R & M]
 	DOWNLOAD_ITEM_TEMPLATES = 6;         // Implemented [R & M]
 	DOWNLOAD_REMOTE_CONFIG_VERSION = 7;  // Implemented [R & M]
+	REGISTER_BACKGROUND_DEVICE = 8;      // Implemented [R & M]
 	FORT_SEARCH = 101;                   // Implemented [R & M]
 	ENCOUNTER = 102;                     // Implemented [R & M]
 	CATCH_POKEMON = 103;                 // Implemented [R & M]

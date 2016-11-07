@@ -11,6 +11,7 @@ message StartGymBattleResponse {
 	string battle_id = 4;
 	.POGOProtos.Data.Battle.BattleParticipant defender = 5;
 	.POGOProtos.Data.Battle.BattleLog battle_log = 6;
+	.POGOProtos.Data.Battle.BattleParticipant attacker = 7;
 
 	enum Result {
 		UNSET = 0;

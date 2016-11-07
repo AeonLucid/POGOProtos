@@ -7,5 +7,6 @@ message GetPlayerMessage {
 	message PlayerLocale {
 		string country = 1;
 		string language = 2;
+		string timezone = 3;
 	}
 }
