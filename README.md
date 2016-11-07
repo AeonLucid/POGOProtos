@@ -15,6 +15,12 @@ We are following [semantic versioning](http://semver.org/) for POGOProtos.  Ever
 |--------------|---------------|---------------|
 | 2.0.0        | 0.43.4        | 1.13.4        |
 
+If you want to figure out the current version in an automated system, use this file.
+
+https://raw.githubusercontent.com/AeonLucid/POGOProtos/master/.current-version
+
+*Note: This file will contain pre-release versions too.*
+
 ## Preparation
 
 Current recommended protoc version: "Protocol Buffers v3.1.0".
