@@ -302,7 +302,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 protoc_path = args.protoc_path
-src_path = os.path.abspath('src')
+src_path = os.path.join(os.path.dirname(__file__), 'src')
 out_path = os.path.abspath(args.out_path)
 
 if out_path == os.path.abspath('out') and os.path.exists(out_path):
