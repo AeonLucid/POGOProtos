@@ -277,8 +277,10 @@ parser.add_argument(
     '-p', '--protoc_path',
     default='protoc',
     help='path to protoc')
-parser.add_argument('-o', '--out_path', default='out',
-                    help='output path for protoc')
+parser.add_argument(
+    '-o', '--out_path',
+    default='out',
+    help='output path for protoc')
 parser.add_argument(
     '--java_generate_equals_and_hash',
     action='store_true',
@@ -287,6 +289,10 @@ parser.add_argument(
     '--cc_enable_arenas',
     action='store_true',
     help='enable C++ arena allocation')
+parser.add_argument(
+    '--generate_desc',
+    action='store_true',
+    help='generate a .desc file')
 parser.add_argument(
     '--include_imports',
     action='store_true',
@@ -404,22 +410,23 @@ proto_files = sum(proto_folders, [])
 
 commands = []
 
-desc_path = os.path.join(out_path, *path.split('/')) + '.desc'
-desc_arguments = []
-if args.include_imports:
-    desc_arguments.append('--include_imports')
-if args.include_source_info:
-    desc_arguments.append('--include_source_info')
+if args.generate_desc:
+    desc_path = os.path.join(out_path, *path.split('/')) + '.desc'
+    desc_arguments = []
+    if args.include_imports:
+        desc_arguments.append('--include_imports')
+    if args.include_source_info:
+        desc_arguments.append('--include_source_info')
 
-commands.append(
-    """"{0}" --proto_path="{1}" --descriptor_set_out="{2}" {3} {4}""".format(
-        args.protoc_path,
-        out_path,
-        desc_path,
-        ' '.join(desc_arguments),
-        '"' +
-        '" "'.join(proto_files) +
-        '"'))
+    commands.append(
+        """"{0}" --proto_path="{1}" --descriptor_set_out="{2}" {3} {4}""".format(
+            args.protoc_path,
+            out_path,
+            desc_path,
+            ' '.join(desc_arguments),
+            '"' +
+            '" "'.join(proto_files) +
+            '"'))
 
 arguments = ''
 options = ''
@@ -437,17 +444,16 @@ if all_at_once:
     proto_folders = [proto_files]
 
 for proto_files in proto_folders:
-    commands.append(
-        """"{0}" --proto_path="{1}" --{2}_out={3}:"{4}" {5} {6}""".format(
-            args.protoc_path,
-            out_path,
-            args.language,
-            options,
-            out_path,
-            arguments,
-            '"' +
-            '" "'.join(proto_files) +
-            '"'))
+    for proto_file in proto_files:
+        commands.append(
+            """"{0}" --proto_path="{1}" --{2}_out={3}:"{4}" {5} {6}""".format(
+                args.protoc_path,
+                out_path,
+                args.language,
+                options,
+                out_path,
+                arguments,
+                '"' + proto_file + '"'))
 
 for command in commands:
     call(command, shell=(os.name != 'nt'))
