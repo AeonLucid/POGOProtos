@@ -16,6 +16,7 @@ import "POGOProtos/Settings/Master/IapItemDisplay.proto";
 import "POGOProtos/Settings/Master/IapSettings.proto";
 import "POGOProtos/Settings/Master/PokemonUpgradeSettings.proto";
 import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
+import "POGOProtos/Settings/Master/QuestSettings.proto";
 
 message DownloadItemTemplatesResponse {
 	bool success = 1;
@@ -39,5 +40,6 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.IapSettings iap_settings = 17;
 		.POGOProtos.Settings.Master.PokemonUpgradeSettings pokemon_upgrades = 18;
 		.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
+		.POGOProtos.Settings.Master.QuestSettings quest_settings = 20;
 	}
 }

@@ -34,6 +34,7 @@ message PokemonSettings {
 	int32 candy_to_evolve = 22;
 	float km_buddy_distance = 23;
 	.POGOProtos.Settings.Master.PokemonSettings.BuddySize buddy_size = 24;
+	float model_height = 25;
 
 	enum BuddySize {
 		BUDDY_MEDIUM = 0;

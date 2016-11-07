@@ -7,4 +7,5 @@ enum FortSponsor {
 	POKEMON_STORE = 2;
 	TOHO = 3;
 	SOFTBANK = 4;
+	GLOBE = 5;
 }

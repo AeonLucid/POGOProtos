@@ -24,4 +24,5 @@ message PlayerData {
 	repeated .POGOProtos.Data.Player.Currency currencies = 14;
 	int32 remaining_codename_claims = 15;
 	.POGOProtos.Data.BuddyPokemon buddy_pokemon = 16;
+	int64 battle_lockout_end_ms = 17;
 }
