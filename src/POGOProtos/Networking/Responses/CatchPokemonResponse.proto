@@ -8,6 +8,7 @@ message CatchPokemonResponse {
 	double miss_percent = 2;
 	fixed64 captured_pokemon_id = 3;
 	.POGOProtos.Data.Capture.CaptureAward capture_award = 4;
+	.POGOProtos.Networking.Responses.CatchPokemonResponse.CaptureReason capture_reason = 5;
 
 	enum CatchStatus {
 		CATCH_ERROR = 0;
@@ -15,5 +16,12 @@ message CatchPokemonResponse {
 		CATCH_ESCAPE = 2;
 		CATCH_FLEE = 3;
 		CATCH_MISSED = 4;
+	}
+
+	enum CaptureReason
+	{
+		UNSET = 0;
+		DEFAULT = 1;
+		ELEMENTAL_BADGE = 2;
 	}
 }

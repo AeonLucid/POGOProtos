@@ -7,4 +7,5 @@ import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
 message GymMembership {
 	.POGOProtos.Data.PokemonData pokemon_data = 1;
 	.POGOProtos.Data.Player.PlayerPublicProfile trainer_public_profile = 2;
+	.POGOProtos.Data.PokemonData training_pokemon = 3;
 }
