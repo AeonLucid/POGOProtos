@@ -45,30 +45,30 @@ Use `homebrew` to install `protobuf ` with `brew install --devel protobuf`.
 The compilation creates output specifically for the target language, i.e. respecting naming contentions, etc.  
 This is an example of how the generated code will be organized:
 
-`python compile_pretty.py cpp`:
+`python compile.py cpp`:
  - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.pb.cpp`
 
-`python compile_pretty.py csharp`:
+`python compile.py csharp`:
  - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.g.cs`
  
-`python compile_pretty.py go`:
+`python compile.py go`:
  - `POGOProtos/Data/*.proto` -> `github.com/aeonlucid/pogoprotos/data`
  - `POGOProtos/Data/PlayerData.proto` -> `github.com/aeonlucid/pogoprotos/data/player_data.pb.go`
 
-`python compile_pretty.py java`:
+`python compile.py java`:
  - `POGOProtos/Data/*.proto` -> `com/github/aeonlucid/pogoprotos/Data.java`
  
-`python compile_pretty.py js`:
+`python compile.py js`:
  - `POGOProtos/**/*.proto` -> `pogoprotos.js`
 
-`python compile_pretty.py objc`:
+`python compile.py objc`:
  - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.pbobjc.m`
  
-`python compile_pretty.py python`:
+`python compile.py python`:
  - `POGOProtos/Data/*.proto` -> `pogoprotos/data/__init__.py`
  - `POGOProtos/Data/PlayerData.proto` -> `pogoprotos/data/player_data_pb2.py`
 
-`python compile_pretty.py ruby`:
+`python compile.py ruby`:
  - `POGOProtos/Data/*.proto` -> `pogoprotos/data.rb`
  - `POGOProtos/Data/PlayerData.proto` -> `pogoprotos/data/player_data.rb`
 
