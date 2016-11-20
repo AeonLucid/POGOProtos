@@ -8,4 +8,7 @@ enum FortSponsor {
 	TOHO = 3;
 	SOFTBANK = 4;
 	GLOBE = 5;
+	SPATULA = 6;
+	THERMOMETER = 7;
+	KNIFE = 8;
 }
