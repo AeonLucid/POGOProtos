@@ -42,7 +42,7 @@ Ensure that you have the newest version of `protoc` installed.
 Use `homebrew` to install `protobuf ` with `brew install --devel protobuf`.
 
 ## Compilation
-The compilation creates output specifically for the target language, i.e. respecting naming contentions, etc.  
+The compilation creates output specifically for the target language, i.e. respecting naming conventions, etc.  
 This is an example of how the generated code will be organized:
 
 `python compile.py cpp`:
