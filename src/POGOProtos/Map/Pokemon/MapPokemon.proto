@@ -1,6 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Map.Pokemon;
 
+import "POGOProtos/Data/PokemonDisplay.proto";
 import "POGOProtos/Enums/PokemonId.proto";
 
 message MapPokemon {
@@ -11,4 +12,5 @@ message MapPokemon {
 	int64 expiration_timestamp_ms = 4;
 	double latitude = 5;
 	double longitude = 6;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 7;
 }

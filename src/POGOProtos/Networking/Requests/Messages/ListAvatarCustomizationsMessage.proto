@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Enums/PlayerAvatarType.proto";
+
+message ListAvatarCustomizationsMessage {
+	.POGOProtos.Enums.PlayerAvatarType avatar_type = 1;
+	//repeated Slot slot = 2; TODO Slot not in the diff ?
+	//repeated Filter filters = 3; TODO Filter not in the diff ?
+	int32 start = 4;
+	int32 limit = 5;
+}

@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
 
 message GetIncensePokemonResponse {
 	.POGOProtos.Networking.Responses.GetIncensePokemonResponse.Result result = 1;
@@ -11,6 +12,7 @@ message GetIncensePokemonResponse {
 	string encounter_location = 5;
 	fixed64 encounter_id = 6;
 	int64 disappear_timestamp_ms = 7;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 8;
 
 	enum Result {
 		INCENSE_ENCOUNTER_UNKNOWN = 0;

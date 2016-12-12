@@ -25,4 +25,5 @@ message PlayerData {
 	int32 remaining_codename_claims = 15;
 	.POGOProtos.Data.BuddyPokemon buddy_pokemon = 16;
 	int64 battle_lockout_end_ms = 17;
+	.POGOProtos.Data.Player.PlayerAvatar secondary_player_avatar_proto = 18;
 }
