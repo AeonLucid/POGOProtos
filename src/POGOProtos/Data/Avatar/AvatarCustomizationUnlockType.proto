@@ -1,9 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Data.Avatar;
-
-enum AvatarCustomizationUnlockType {
-	UNSET_UNLOCK_TYPE = 0;
-	DEFAULT = 1;
-	MEDAL_REWARD = 2;
-	IAP_CLOTHING = 3;
-}

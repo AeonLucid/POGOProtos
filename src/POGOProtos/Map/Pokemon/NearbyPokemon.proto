@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Map.Pokemon;
 
 import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
 
 message NearbyPokemon {
 	.POGOProtos.Enums.PokemonId pokemon_id = 1;
@@ -9,4 +10,5 @@ message NearbyPokemon {
 	fixed64 encounter_id = 3;
 	string fort_id = 4;
 	string fort_image_url = 5;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 6;
 }

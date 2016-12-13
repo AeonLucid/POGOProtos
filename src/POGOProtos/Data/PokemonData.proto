@@ -1,6 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Data;
 
+import "POGOProtos/Data/PokemonDisplay.proto";
 import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Enums/PokemonMove.proto";
 import "POGOProtos/Inventory/Item/ItemId.proto";
@@ -40,4 +41,5 @@ message PokemonData {
 	float buddy_total_km_walked = 33;
 	int32 display_pokemon_id = 34;
 	int32 display_cp = 35;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 36;
 }

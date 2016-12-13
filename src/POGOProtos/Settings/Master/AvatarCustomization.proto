@@ -1,7 +1,6 @@
 syntax = "proto3";
-package POGOProtos.Data.Avatar;
+package POGOProtos.Settings.Master;
 
-import "POGOProtos/Data/Avatar/AvatarCustomizationUnlockType.proto";
 import "POGOProtos/Enums/BadgeType.proto";
 import "POGOProtos/Enums/PlayerAvatarType.proto";
 
@@ -13,9 +12,16 @@ message AvatarCustomization {
 	string asset_name = 5;
 	string group_name = 6;
 	int32 sort_order = 7;
-	.POGOProtos.Data.Avatar.AvatarCustomizationUnlockType unlock_type = 8;
+	AvatarCustomizationUnlockType unlock_type = 8;
 	//repeated AvatarCustomizationPromoType promo_type = 9; TODO not in the diff ?
 	.POGOProtos.Enums.BadgeType unlock_badge_type = 10;
 	int32 unlock_badge_level = 12;
 	string iap_sku = 11;
+
+	enum AvatarCustomizationUnlockType {
+		UNSET_UNLOCK_TYPE = 0;
+		DEFAULT = 1;
+		MEDAL_REWARD = 2;
+		IAP_CLOTHING = 3;
+	}
 }
