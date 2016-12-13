@@ -62,8 +62,6 @@ enum RequestType {
 	GET_BUDDY_WALKED = 153;              // Implemented [R & M]
 	GET_ASSET_DIGEST = 300;              // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;             // Implemented [R & M]
-	GET_SUGGESTED_CODENAMES = 401;       // Removed
-	CHECK_CODENAME_AVAILABLE = 402;      // Removed
 	CLAIM_CODENAME = 403;                // Implemented [R & M]
 	SET_AVATAR = 404;                    // Implemented [R & M]
 	SET_PLAYER_TEAM = 405;               // Implemented [R & M]
