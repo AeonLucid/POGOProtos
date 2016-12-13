@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Enums;
+package POGOProtos.Data.Player;
 
 enum PlayerAvatarType {
 	PLAYER_AVATAR_MALE = 0;

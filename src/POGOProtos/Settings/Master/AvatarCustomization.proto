@@ -1,12 +1,12 @@
 syntax = "proto3";
 package POGOProtos.Settings.Master;
 
+import "POGOProtos/Data/Player/PlayerAvatarType.proto";
 import "POGOProtos/Enums/BadgeType.proto";
-import "POGOProtos/Enums/PlayerAvatarType.proto";
 
 message AvatarCustomization {
 	bool enabled = 1;
-	.POGOProtos.Enums.PlayerAvatarType avatar_type = 2;
+	.POGOProtos.Data.Player.PlayerAvatarType avatar_type = 2;
 	//repeated Slot slot = 3; // TODO not in the diff ?
 	string bundle_name = 4;
 	string asset_name = 5;
