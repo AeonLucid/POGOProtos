@@ -983,6 +983,7 @@ enum TutorialCompletion
 	GYM_TUTORIAL = 9;
 }
 
+
 message ListAvatarCustomizationsProto
 {
 	PlayerAvatarType avatar_type = 1;
@@ -990,12 +991,51 @@ message ListAvatarCustomizationsProto
 	repeated Filter filters = 3;
 	int32 start = 4;
 	int32 limit = 5;
+
+	enum Slot
+	{
+		UNSET_SLOT = 0;
+		HAIR = 1;
+		SHIRT = 2;
+		PANTS = 3;
+		HAT = 4;
+		SHOES = 5;
+		EYES = 6;
+		BACKPACK = 7;
+	}
+
+	enum Filter
+	{
+		UNSET = 0;
+		ALL = 1;
+		DEFAULT = 2;
+		OWNED = 3;
+		FEATURED = 4;
+	}
 }
 
 message ListAvatarCustomizationsOutProto
 {
 	Result result = 1;
 	repeated AvatarCustomization avatar_customization = 2;
+
+	message AvatarCustomization
+	{
+		string avatar_template_id = 1;
+		repeated Label labels = 2;
+
+		enum Label
+		{
+			UNSET_LABEL = 0;
+			DEFAULT = 1;
+			OWNED = 2;
+			FEATURED = 3;
+			NEW = 4;
+			SALE = 5;
+			PURCHASABLE = 6;
+			UNLOCKABLE = 7;
+		}
+	}
 
 	enum Result
 	{
@@ -1846,6 +1886,13 @@ message AvatarCustomizationProto
 	HoloBadgeType unlock_badge_type = 10;
 	int32 unlock_badge_level = 12;
 	string iap_sku = 11;
+
+	enum AvatarCustomizationPromoType
+	{
+		UNSET_PROMO_TYPE = 0;
+		SALE = 1;
+		FEATURED = 2;
+	}
 
 	enum AvatarCustomizationUnlockType
 	{
