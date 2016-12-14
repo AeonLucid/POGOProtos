@@ -13,4 +13,11 @@ message PlayerAvatar {
 	.POGOProtos.Enums.Gender gender = 8;
 	int32 eyes = 9;
 	int32 backpack = 10;
+	string avatar_hair = 11;
+	string avatar_shirt = 12;
+	string avatar_pants = 13;
+	string avatar_hat = 14;
+	string avatar_shoes = 15;
+	string avatar_eyes = 16;
+	string avatar_backpack = 17;
 }

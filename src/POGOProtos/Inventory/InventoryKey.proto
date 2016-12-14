@@ -19,4 +19,5 @@ message InventoryKey {
 	bool egg_incubators = 9;
 	.POGOProtos.Enums.PokemonFamilyId pokemon_family_id = 10;
 	.POGOProtos.Enums.QuestType quest_type = 11;
+	string avatar_template_id = 12;
 }

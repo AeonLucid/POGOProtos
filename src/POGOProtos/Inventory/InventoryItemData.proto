@@ -6,6 +6,7 @@ import "POGOProtos/Inventory/AppliedItems.proto";
 import "POGOProtos/Inventory/EggIncubators.proto";
 import "POGOProtos/Inventory/Candy.proto";
 import "POGOProtos/Inventory/InventoryUpgrades.proto";
+import "POGOProtos/Data/Avatar/AvatarItem.proto";
 import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Data/PokedexEntry.proto";
 import "POGOProtos/Data/Player/PlayerStats.proto";
@@ -25,4 +26,5 @@ message InventoryItemData {
 	.POGOProtos.Inventory.EggIncubators egg_incubators = 9;
 	.POGOProtos.Inventory.Candy candy = 10;
 	.POGOProtos.Data.Quests.Quest quest = 11;
+	.POGOProtos.Data.Avatar.AvatarItem avatar_item = 12;
 }

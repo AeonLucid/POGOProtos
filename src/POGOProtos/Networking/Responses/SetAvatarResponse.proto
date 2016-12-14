@@ -12,5 +12,8 @@ message SetAvatarResponse {
 		SUCCESS = 1;
 		AVATAR_ALREADY_SET = 2;
 		FAILURE = 3;
+		SLOT_NOT_ALLOWED = 4;
+		ITEM_NOT_OWNED = 5;
+		INVALID_AVATAR_TYPE = 6;
 	}
 }

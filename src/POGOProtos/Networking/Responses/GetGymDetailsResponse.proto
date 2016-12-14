@@ -9,6 +9,7 @@ message GetGymDetailsResponse {
 	repeated string urls = 3;
 	.POGOProtos.Networking.Responses.GetGymDetailsResponse.Result result = 4;
 	string description = 5;
+	repeated string secondary_url = 6;
 
 	enum Result {
 		UNSET = 0;
