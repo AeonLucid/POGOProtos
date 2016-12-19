@@ -14,5 +14,6 @@ message AvatarCustomization {
 		SALE = 5;
 		PURCHASABLE = 6;
 		UNLOCKABLE = 7;
+		VIEWED = 8;
 	}
 }

@@ -20,9 +20,10 @@ import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
 import "POGOProtos/Settings/Master/QuestSettings.proto";
 
 message DownloadItemTemplatesResponse {
-	bool success = 1;
+	Result success = 1;
 	repeated .POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate item_templates = 2;
 	uint64 timestamp_ms = 3;
+	int32 page_offset = 4;
 
 	message ItemTemplate {
 		string template_id = 1;
@@ -43,5 +44,12 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
 		.POGOProtos.Settings.Master.QuestSettings quest_settings = 20;
 		.POGOProtos.Settings.Master.AvatarCustomizationSettings avatar_customization = 21;
+	}
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		PAGE = 2;
+		RETRY = 3;
 	}
 }

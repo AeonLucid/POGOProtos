@@ -7,4 +7,6 @@ enum Filter {
 	DEFAULT = 2;
 	OWNED = 3;
 	FEATURED = 4;
+	PURCHASABLE = 5;
+	UNLOCKABLE = 6;
 }

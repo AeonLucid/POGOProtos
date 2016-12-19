@@ -25,4 +25,6 @@ message PlayerStats {
 	int32 pokemon_deployed = 21;
 	repeated int32 pokemon_caught_by_type = 22;
 	int32 small_rattata_caught = 23;
+	double used_km_pool = 24;
+	int64 last_km_refill_ms = 25;
 }
