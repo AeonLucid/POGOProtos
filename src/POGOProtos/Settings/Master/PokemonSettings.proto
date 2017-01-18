@@ -9,6 +9,7 @@ import "POGOProtos/Enums/PokemonFamilyId.proto";
 import "POGOProtos/Settings/Master/Pokemon/StatsAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/CameraAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/EncounterAttributes.proto";
+import "POGOProtos/Settings/Master/Pokemon/EvolutionBranch.proto";
 
 message PokemonSettings {
 	.POGOProtos.Enums.PokemonId pokemon_id = 1;
@@ -35,6 +36,7 @@ message PokemonSettings {
 	float km_buddy_distance = 23;
 	.POGOProtos.Settings.Master.PokemonSettings.BuddySize buddy_size = 24;
 	float model_height = 25;
+	repeated .POGOProtos.Settings.Master.Pokemon.EvolutionBranch evolution_branch = 26;
 
 	enum BuddySize {
 		BUDDY_MEDIUM = 0;

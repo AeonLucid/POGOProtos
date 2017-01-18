@@ -13,4 +13,7 @@ enum FortSponsor {
 	KNIFE = 8;
 	GRILL = 9;
 	SMOKER = 10;
+	PAN = 11;
+	BBQ = 12;
+	FRYER = 13;
 }
