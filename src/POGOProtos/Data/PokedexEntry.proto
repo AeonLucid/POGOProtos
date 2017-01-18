@@ -16,10 +16,4 @@ message PokedexEntry {
 	repeated .POGOProtos.Enums.Form captured_forms = 7;
 	repeated .POGOProtos.Enums.Gender captured_genders = 8;
 	bool captured_shiny = 9;
-
-	enum Costume
-	{
-		UNSET = 0;
-		HOLIDAY_2016 = 1;
-	}
 }
