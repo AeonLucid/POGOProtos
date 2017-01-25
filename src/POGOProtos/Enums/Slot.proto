@@ -12,4 +12,7 @@ enum Slot {
 	BACKPACK = 7;
 	GLOVES = 8;
 	SOCKS = 9;
+	BELT = 10;
+	GLASSES = 11;
+	NECKLACE = 12;
 }
