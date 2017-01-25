@@ -8,4 +8,5 @@ enum PlatformRequestType {
 	BUY_ITEM_IOS = 4;
 	GET_STORE_ITEMS = 5;
 	SEND_ENCRYPTED_SIGNATURE = 6;
+	UNKNOWN_PTR_8 = 8;
 }
