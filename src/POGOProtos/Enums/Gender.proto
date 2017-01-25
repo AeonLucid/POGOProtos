@@ -2,6 +2,8 @@ syntax = "proto3";
 package POGOProtos.Enums;
 
 enum Gender {
-	MALE = 0;
-	FEMALE = 1;
+	GENDER_UNSET = 0;
+	MALE = 1;
+	FEMALE = 2;
+	GENDERLESS = 3;
 }

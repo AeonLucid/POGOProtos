@@ -1,13 +1,14 @@
 syntax = "proto3";
 package POGOProtos.Settings;
 
-import "POGOProtos/Settings/FortSettings.proto";
-import "POGOProtos/Settings/MapSettings.proto";
-import "POGOProtos/Settings/LevelSettings.proto";
-import "POGOProtos/Settings/InventorySettings.proto";
-import "POGOProtos/Settings/GpsSettings.proto";
-import "POGOProtos/Settings/FestivalSettings.proto";
 import "POGOProtos/Settings/EventSettings.proto";
+import "POGOProtos/Settings/FestivalSettings.proto";
+import "POGOProtos/Settings/FortSettings.proto";
+import "POGOProtos/Settings/GpsSettings.proto";
+import "POGOProtos/Settings/InventorySettings.proto";
+import "POGOProtos/Settings/LevelSettings.proto";
+import "POGOProtos/Settings/MapSettings.proto";
+import "POGOProtos/Settings/NewsSettings.proto";
 import "POGOProtos/Settings/SfidaSettings.proto";
 
 message GlobalSettings {
@@ -21,4 +22,5 @@ message GlobalSettings {
 	.POGOProtos.Settings.EventSettings event_settings = 9;
 	int32 max_pokemon_types = 10;
 	.POGOProtos.Settings.SfidaSettings sfida_settings = 11;
+	.POGOProtos.Settings.NewsSettings news_settings = 12;
 }

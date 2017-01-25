@@ -16,8 +16,9 @@ message AvatarCustomizationSettings {
 	AvatarCustomizationUnlockType unlock_type = 8;
 	repeated AvatarCustomizationPromoType promo_type = 9;
 	.POGOProtos.Enums.BadgeType unlock_badge_type = 10;
-	int32 unlock_badge_level = 12;
 	string iap_sku = 11;
+	int32 unlock_badge_level = 12;
+	string icon_name = 13;
 
 	enum AvatarCustomizationPromoType {
 		UNSET_PROMO_TYPE = 0;

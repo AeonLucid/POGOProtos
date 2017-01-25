@@ -2,22 +2,23 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Settings/Master/AvatarCustomizationSettings.proto";
-import "POGOProtos/Settings/Master/ItemSettings.proto";
-import "POGOProtos/Settings/Master/MoveSettings.proto";
 import "POGOProtos/Settings/Master/BadgeSettings.proto";
-import "POGOProtos/Settings/Master/PokemonSettings.proto";
-import "POGOProtos/Settings/Master/MoveSequenceSettings.proto";
-import "POGOProtos/Settings/Master/TypeEffectiveSettings.proto";
 import "POGOProtos/Settings/Master/CameraSettings.proto";
-import "POGOProtos/Settings/Master/PlayerLevelSettings.proto";
-import "POGOProtos/Settings/Master/GymLevelSettings.proto";
-import "POGOProtos/Settings/Master/GymBattleSettings.proto";
 import "POGOProtos/Settings/Master/EncounterSettings.proto";
+import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
+import "POGOProtos/Settings/Master/FormSettings.proto";
+import "POGOProtos/Settings/Master/GymBattleSettings.proto";
+import "POGOProtos/Settings/Master/GymLevelSettings.proto";
 import "POGOProtos/Settings/Master/IapItemDisplay.proto";
 import "POGOProtos/Settings/Master/IapSettings.proto";
+import "POGOProtos/Settings/Master/ItemSettings.proto";
+import "POGOProtos/Settings/Master/MoveSequenceSettings.proto";
+import "POGOProtos/Settings/Master/MoveSettings.proto";
+import "POGOProtos/Settings/Master/PlayerLevelSettings.proto";
+import "POGOProtos/Settings/Master/PokemonSettings.proto";
 import "POGOProtos/Settings/Master/PokemonUpgradeSettings.proto";
-import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
 import "POGOProtos/Settings/Master/QuestSettings.proto";
+import "POGOProtos/Settings/Master/TypeEffectiveSettings.proto";
 
 message DownloadItemTemplatesResponse {
 	Result result = 1;
@@ -44,6 +45,7 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
 		.POGOProtos.Settings.Master.QuestSettings quest_settings = 20;
 		.POGOProtos.Settings.Master.AvatarCustomizationSettings avatar_customization = 21;
+		.POGOProtos.Settings.Master.FormSettings form_settings = 22;
 	}
 
 	enum Result {

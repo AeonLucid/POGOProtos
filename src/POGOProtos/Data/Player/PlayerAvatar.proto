@@ -1,8 +1,6 @@
 syntax = "proto3";
 package POGOProtos.Data.Player;
 
-import "POGOProtos/Enums/Gender.proto";
-
 message PlayerAvatar {
 	int32 skin = 2;
 	int32 hair = 3;
@@ -10,7 +8,7 @@ message PlayerAvatar {
 	int32 pants = 5;
 	int32 hat = 6;
 	int32 shoes = 7;
-	.POGOProtos.Enums.Gender gender = 8;
+	int32 avatar = 8;
 	int32 eyes = 9;
 	int32 backpack = 10;
 	string avatar_hair = 11;
@@ -22,4 +20,7 @@ message PlayerAvatar {
 	string avatar_backpack = 17;
 	string avatar_gloves = 18;
 	string avatar_socks = 19;
+	string avatar_belt = 20;
+	string avatar_glasses = 21;
+	string avatar_necklace = 22;
 }
