@@ -23,5 +23,6 @@ message CatchPokemonResponse {
 		UNSET = 0;
 		DEFAULT = 1;
 		ELEMENTAL_BADGE = 2;
+		CRITICAL_CATCH = 3;
 	}
 }

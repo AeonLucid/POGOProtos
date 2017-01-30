@@ -16,4 +16,8 @@ message PokedexEntry {
 	repeated .POGOProtos.Enums.Form captured_forms = 7;
 	repeated .POGOProtos.Enums.Gender captured_genders = 8;
 	bool captured_shiny = 9;
+	repeated .POGOProtos.Enums.Costume encountered_costumes = 10;
+	repeated .POGOProtos.Enums.Form encountered_forms = 11;
+	repeated .POGOProtos.Enums.Gender encountered_genders = 12;
+	bool encountered_shiny = 13;
 }
