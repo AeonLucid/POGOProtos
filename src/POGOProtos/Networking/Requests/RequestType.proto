@@ -60,6 +60,7 @@ enum RequestType {
 	SET_CONTACT_SETTINGS = 151;          // Implemented [R & M]
 	SET_BUDDY_POKEMON = 152;             // Implemented [R & M]
 	GET_BUDDY_WALKED = 153;              // Implemented [R & M]
+	USE_ITEM_ENCOUNTER = 154;            // Implemented [R & M]
 	GET_ASSET_DIGEST = 300;              // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;             // Implemented [R & M]
 	CLAIM_CODENAME = 403;                // Implemented [R & M]
