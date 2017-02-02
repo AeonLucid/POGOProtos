@@ -13,6 +13,7 @@ We are following [semantic versioning](http://semver.org/) for POGOProtos.  Ever
 
 | Version      | Android       | IOS           |
 |--------------|---------------|---------------|
+| 2.6.0        | 0.55.0        | 1.25.0        |
 | 2.5.x        | 0.53.1        | 1.23.1        |
 | 2.4.x        | 0.51.0        | 1.21.0        |
 | 2.3.0        | 0.49.1        | 1.19.1        |
@@ -89,7 +90,7 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | NodeJS           | https://github.com/rastapasta/node-pokemongo-protobuf   |
 | NodeJS (pure JS) | https://github.com/cyraxx/node-pogo-protos              |
 | .NET             | https://github.com/AeonLucid/POGOProtos.NetStandard1    |
-| .NET             | https://github.com/Necrobot-Private/POGOProtos                    |
+| .NET             | https://github.com/Necrobot-Private/POGOProtos          |
 | .NET             | https://github.com/johnduhart/POGOProtos-dotnet         |
 | PHP              | https://github.com/jaspervdm/pogoprotos-php             |
 | Go               | https://github.com/pkmngo-odi/pogo-protos               |
