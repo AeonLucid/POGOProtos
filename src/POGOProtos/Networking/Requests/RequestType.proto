@@ -6,7 +6,6 @@ package POGOProtos.Networking.Requests;
 
 enum RequestType {
 	METHOD_UNSET = 0;                    // No implementation required
-	PLAYER_UPDATE = 1;                   // Implemented [R & M]
 	GET_PLAYER = 2;                      // Implemented [R & M]
 	GET_INVENTORY = 4;                   // Implemented [R & M]
 	DOWNLOAD_SETTINGS = 5;               // Implemented [R & M]
@@ -17,7 +16,6 @@ enum RequestType {
 	ENCOUNTER = 102;                     // Implemented [R & M]
 	CATCH_POKEMON = 103;                 // Implemented [R & M]
 	FORT_DETAILS = 104;                  // Implemented [R & M]
-	ITEM_USE = 105;                      // Can't find this one
 	GET_MAP_OBJECTS = 106;               // Implemented [R & M]
 	FORT_DEPLOY_POKEMON = 110;           // Implemented [R & M]
 	FORT_RECALL_POKEMON = 111;           // Implemented [R & M]
@@ -26,14 +24,7 @@ enum RequestType {
 	USE_ITEM_CAPTURE = 114;              // Implemented [R & M]
 	USE_ITEM_FLEE = 115;                 // Can't find this one
 	USE_ITEM_REVIVE = 116;               // Implemented [R & M]
-	TRADE_SEARCH = 117;                  // Not yet implemented in the game
-	TRADE_OFFER = 118;                   // Not yet implemented in the game
-	TRADE_RESPONSE = 119;                // Not yet implemented in the game
-	TRADE_RESULT = 120;                  // Not yet implemented in the game
 	GET_PLAYER_PROFILE = 121;            // Implemented [R & M]
-	GET_ITEM_PACK = 122;                 // Can't find this one
-	BUY_ITEM_PACK = 123;                 // Can't find this one
-	BUY_GEM_PACK = 124;                  // Can't find this one
 	EVOLVE_POKEMON = 125;                // Implemented [R & M]
 	GET_HATCHED_EGGS = 126;              // Implemented [R & M]
 	ENCOUNTER_TUTORIAL_COMPLETE = 127;   // Implemented [R & M]
@@ -67,12 +58,9 @@ enum RequestType {
 	SET_AVATAR = 404;                    // Implemented [R & M]
 	SET_PLAYER_TEAM = 405;               // Implemented [R & M]
 	MARK_TUTORIAL_COMPLETE = 406;        // Implemented [R & M]
-	LOAD_SPAWN_POINTS = 500;             // Can't find this one
 	CHECK_CHALLENGE = 600;               // Implemented [R & M]
 	VERIFY_CHALLENGE = 601;              // Implemented [R & M]
 	ECHO = 666;                          // Implemented [R & M]
-	DEBUG_UPDATE_INVENTORY = 700;
-	DEBUG_DELETE_PLAYER = 701;
 	SFIDA_REGISTRATION = 800;   // Not yet released.
 	SFIDA_ACTION_LOG = 801;     // Implemented [R & M]
 	SFIDA_CERTIFICATION = 802;  // Not yet released.

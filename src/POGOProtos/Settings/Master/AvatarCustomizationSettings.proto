@@ -19,6 +19,7 @@ message AvatarCustomizationSettings {
 	string iap_sku = 11;
 	int32 unlock_badge_level = 12;
 	string icon_name = 13;
+	int32 unlock_player_level = 14;
 
 	enum AvatarCustomizationPromoType {
 		UNSET_PROMO_TYPE = 0;
@@ -31,5 +32,6 @@ message AvatarCustomizationSettings {
 		DEFAULT = 1;
 		MEDAL_REWARD = 2;
 		IAP_CLOTHING = 3;
+		LEVEL_REWARD = 4;
 	}
 }
