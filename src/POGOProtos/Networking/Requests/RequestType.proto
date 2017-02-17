@@ -61,13 +61,13 @@ enum RequestType {
 	CHECK_CHALLENGE = 600;               // Implemented [R & M]
 	VERIFY_CHALLENGE = 601;              // Implemented [R & M]
 	ECHO = 666;                          // Implemented [R & M]
-	SFIDA_REGISTRATION = 800;   // Not yet released.
-	SFIDA_ACTION_LOG = 801;     // Implemented [R & M]
-	SFIDA_CERTIFICATION = 802;  // Not yet released.
-	SFIDA_UPDATE = 803;         // Not yet released.
-	SFIDA_ACTION = 804;         // Not yet released.
-	SFIDA_DOWSER = 805;         // Not yet released.
-	SFIDA_CAPTURE = 806;        // Not yet released.
-	LIST_AVATAR_CUSTOMIZATIONS = 807;
-	SET_AVATAR_ITEM_AS_VIEWED = 808;
+	SFIDA_REGISTRATION = 800;            // Not yet released.
+	SFIDA_ACTION_LOG = 801;              // Implemented [R & M]
+	SFIDA_CERTIFICATION = 802;           // Not yet released.
+	SFIDA_UPDATE = 803;                  // Not yet released.
+	SFIDA_ACTION = 804;                  // Not yet released.
+	SFIDA_DOWSER = 805;                  // Not yet released.
+	SFIDA_CAPTURE = 806;                 // Not yet released.
+	LIST_AVATAR_CUSTOMIZATIONS = 807;    // Implemented [R & M]
+	SET_AVATAR_ITEM_AS_VIEWED = 808;     // Implemented [R & M]
 }
