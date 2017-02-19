@@ -276,7 +276,8 @@ enum HoloBadgeType
 	BADGE_TYPE_FAIRY = 35;
 	BADGE_SMALL_RATTATA = 36;
 	BADGE_PIKACHU = 37;
-	BADGE_UNOWN = 38;	BADGE_POKEDEX_ENTRIES_GEN2 = 39;
+	BADGE_UNOWN = 38;
+	BADGE_POKEDEX_ENTRIES_GEN2 = 39;
 }
 
 enum CameraInterpolation
@@ -527,7 +528,8 @@ enum HoloPokemonMove
 	V0278_MOVE_SNARL_FAST = 278;
 	V0279_MOVE_CRUNCH = 279;
 	V0280_MOVE_FOUL_PLAY = 280;
-	V0281_MOVE_HIDDEN_POWER_FAST = 281;}
+	V0281_MOVE_HIDDEN_POWER_FAST = 281;
+}
 
 enum HoloPokemonId
 {
@@ -1003,7 +1005,8 @@ enum Platform
 	PLATFORM_IOS = 1;
 	PLATFORM_ANDROID = 2;
 	PLATFORM_OSX = 3;
-	PLATFORM_WINDOWS = 4;	PLATFORM_APPLE_WATCH = 5;
+	PLATFORM_WINDOWS = 4;
+	PLATFORM_APPLE_WATCH = 5;
 }
 
 enum TutorialCompletion
@@ -1085,7 +1088,8 @@ message ListAvatarCustomizationsOutProto
 			SALE = 5;
 			PURCHASABLE = 6;
 			UNLOCKABLE = 7;
-			VIEWED = 8;			LOCKED_PURCHASABLE = 9;
+			VIEWED = 8;
+			LOCKED_PURCHASABLE = 9;
 		}
 	}
 }
@@ -1995,7 +1999,8 @@ message AvatarCustomizationProto
 	HoloBadgeType unlock_badge_type = 10;
 	string iap_sku = 11;
 	int32 unlock_badge_level = 12;
-	string icon_name = 13;	int32 unlock_player_level = 14;
+	string icon_name = 13;
+	int32 unlock_player_level = 14;
 
 	enum AvatarCustomizationPromoType
 	{
@@ -2009,7 +2014,8 @@ message AvatarCustomizationProto
 		UNSET_UNLOCK_TYPE = 0;
 		DEFAULT = 1;
 		MEDAL_REWARD = 2;
-		IAP_CLOTHING = 3;		LEVEL_REWARD = 4;
+		IAP_CLOTHING = 3;
+		LEVEL_REWARD = 4;
 	}
 }
 
@@ -2053,9 +2059,24 @@ message FormProto
 		UNOWN_X = 24;
 		UNOWN_Y = 25;
 		UNOWN_Z = 26;
-		UNOWN_EXCLAMATION_POINT = 27;		UNOWN_QUESTION_MARK = 28;
+		UNOWN_EXCLAMATION_POINT = 27;
+		UNOWN_QUESTION_MARK = 28;
 	}
-}message ClientGenderProto{	float male_percent = 1;	float female_percent = 2;	float genderless_percent = 3;}message ClientGenderSettingsProto{	HoloPokemonId pokemon = 1;	ClientGenderProto gender = 2;}
+}
+
+message ClientGenderProto
+{
+	float male_percent = 1;
+	float female_percent = 2;
+	float genderless_percent = 3;
+}
+
+message ClientGenderSettingsProto
+{
+	HoloPokemonId pokemon = 1;
+	ClientGenderProto gender = 2;
+}
+
 message GameMasterClientTemplateProto
 {
 	string template_id = 1;
@@ -2076,7 +2097,8 @@ message GameMasterClientTemplateProto
 	EquippedBadgeSettingsProto equipped_badges = 19;
 	QuestSettingsProto quest_settings = 20;
 	AvatarCustomizationProto avatar_customization = 21;
-	FormSettingsProto form_settings = 22;	ClientGenderSettingsProto gender_settings = 23;
+	FormSettingsProto form_settings = 22;
+	ClientGenderSettingsProto gender_settings = 23;
 }
 
 message GetGameMasterClientTemplatesProto
@@ -2478,7 +2500,8 @@ message PokedexEntryProto
 	enum Costume
 	{
 		UNSET = 0;
-		HOLIDAY_2016 = 1;		ANNIVERSARY = 2;
+		HOLIDAY_2016 = 1;
+		ANNIVERSARY = 2;
 	}
 
 	enum Gender
@@ -2641,7 +2664,8 @@ message CatchPokemonLogEntry
 	Result result = 1;
 	int32 pokedex_number = 2;
 	int32 combat_points = 3;
-	fixed64 pokemon_id = 4;	PokemonDisplayProto pokemon_display = 5;
+	fixed64 pokemon_id = 4;
+	PokemonDisplayProto pokemon_display = 5;
 
 	enum Result
 	{
@@ -2656,7 +2680,9 @@ message BuddyPokemonLogEntry
 {
 	Result result = 1;
 	HoloPokemonId pokemon_type = 2;
-	int32 amount = 3;	PokemonDisplayProto pokemon_display = 4;	fixed64 pokemon_id = 5;
+	int32 amount = 3;
+	PokemonDisplayProto pokemon_display = 4;
+	fixed64 pokemon_id = 5;
 
 	enum Result
 	{
@@ -2742,7 +2768,8 @@ message LevelUpRewardsOutProto
 {
 	Result result = 1;
 	repeated AwardItemProto items = 2;
-	repeated Item items_unlocked = 4;	repeated string avatar_template_ids = 5;
+	repeated Item items_unlocked = 4;
+	repeated string avatar_template_ids = 5;
 
 	enum Result
 	{
@@ -2792,7 +2819,9 @@ message PokemonFortProto
 		STEAMER = 14;
 		HOOD = 15;
 		SLOWCOOKER = 16;
-		MIXER = 17;		SCOOPER = 18;		MUFFINTIN = 19;
+		MIXER = 17;
+		SCOOPER = 18;
+		MUFFINTIN = 19;
 	}
 
 	enum RenderingType
@@ -2973,15 +3002,6 @@ message NicknamePokemonOutProto
 		ERROR_POKEMON_NOT_FOUND = 3;
 		ERROR_POKEMON_IS_EGG = 4;
 	}
-}
-
-message DebugDeletePlayerProto
-{
-}
-
-message DebugDeletePlayerOutProto
-{
-	bool success = 1;
 }
 
 message ClaimCodenameRequestProto
