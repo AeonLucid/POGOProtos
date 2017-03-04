@@ -1,4 +1,4 @@
-POGOProtos [![Build Status](https://travis-ci.org/AeonLucid/POGOProtos.svg?branch=master)](https://travis-ci.org/AeonLucid/POGOProtos) [![Code Climate](https://codeclimate.com/github/AeonLucid/POGOProtos/badges/gpa.svg)](https://codeclimate.com/github/AeonLucid/POGOProtos) [![Issue Count](https://codeclimate.com/github/AeonLucid/POGOProtos/badges/issue_count.svg)](https://codeclimate.com/github/AeonLucid/POGOProtos)
+﻿POGOProtos [![Build Status](https://travis-ci.org/AeonLucid/POGOProtos.svg?branch=master)](https://travis-ci.org/AeonLucid/POGOProtos) [![Code Climate](https://codeclimate.com/github/AeonLucid/POGOProtos/badges/gpa.svg)](https://codeclimate.com/github/AeonLucid/POGOProtos) [![Issue Count](https://codeclimate.com/github/AeonLucid/POGOProtos/badges/issue_count.svg)](https://codeclimate.com/github/AeonLucid/POGOProtos)
 ===================
 
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the PokémonGo RPC.
@@ -97,3 +97,5 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | Go               | https://github.com/pkmngo-odi/pogo-protos               |
 | Haskell          | https://github.com/relrod/pokemon-go-protobuf-types     |
 | Rust             | https://github.com/rockneurotiko/pokemon-go-protobuf-rs |
+| Java             | https://github.com/celandro/pogoprotos-java             |
+| JSON             | https://github.com/celandro/pokemongo-game-master       | 
