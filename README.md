@@ -11,8 +11,9 @@ If you want to know which messages are implemented right now, click [here](https
 
 We are following [semantic versioning](http://semver.org/) for POGOProtos.  Every version will be mapped to their current PokémonGo version.
 
-| Version      | Android       | IOS           |
+| Version      | Android       | iOS           |
 |--------------|---------------|---------------|
+| 2.8.0        | 0.59.1        | 1.29.1        |
 | 2.7.0        | 0.57.2        | 1.27.2        |
 | 2.6.x        | 0.55.0        | 1.25.0        |
 | 2.5.x        | 0.53.1        | 1.23.1        |
