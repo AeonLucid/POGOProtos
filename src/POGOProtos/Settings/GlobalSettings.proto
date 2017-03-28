@@ -9,7 +9,9 @@ import "POGOProtos/Settings/InventorySettings.proto";
 import "POGOProtos/Settings/LevelSettings.proto";
 import "POGOProtos/Settings/MapSettings.proto";
 import "POGOProtos/Settings/NewsSettings.proto";
+import "POGOProtos/Settings/PasscodeSettings.proto";
 import "POGOProtos/Settings/SfidaSettings.proto";
+import "POGOProtos/Settings/TranslationSettings.proto";
 
 message GlobalSettings {
 	.POGOProtos.Settings.FortSettings fort_settings = 2;
@@ -23,4 +25,6 @@ message GlobalSettings {
 	int32 max_pokemon_types = 10;
 	.POGOProtos.Settings.SfidaSettings sfida_settings = 11;
 	.POGOProtos.Settings.NewsSettings news_settings = 12;
+	.POGOProtos.Settings.TranslationSettings translation_settings = 13;
+	.POGOProtos.Settings.PasscodeSettings passcode_settings = 14;
 }

@@ -20,5 +20,6 @@ message FortSearchResponse {
 		IN_COOLDOWN_PERIOD = 3;
 		INVENTORY_FULL = 4;
 		EXCEEDED_DAILY_LIMIT = 5;
+		POI_INACCESSIBLE = 6;
 	}
 }

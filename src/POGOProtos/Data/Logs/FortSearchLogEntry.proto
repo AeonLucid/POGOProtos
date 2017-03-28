@@ -1,6 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Data.Logs;
 
+import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Inventory/Item/ItemData.proto";
 
 message FortSearchLogEntry {
@@ -8,6 +9,7 @@ message FortSearchLogEntry {
 	string fort_id = 2;
 	repeated .POGOProtos.Inventory.Item.ItemData items = 3;
 	int32 eggs = 4;
+	repeated .POGOProtos.Data.PokemonData pokemon_eggs = 5;
 
 	enum Result {
 		UNSET = 0;

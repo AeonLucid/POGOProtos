@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Redeem/PokeCandy.proto";
+import "POGOProtos/Data/Redeem/RedeemedAvatarItem.proto";
+import "POGOProtos/Data/Redeem/RedeemedItem.proto";
+
+message RedeemPasscodeReward {
+	repeated .POGOProtos.Data.Redeem.RedeemedItem items = 1;
+	repeated .POGOProtos.Data.Redeem.RedeemedAvatarItem avatar_items = 2;
+	repeated .POGOProtos.Data.PokemonData egg_pokemon = 3;
+	repeated .POGOProtos.Data.PokemonData pokemon = 4;
+	repeated .POGOProtos.Data.Redeem.PokeCandy poke_candy = 5;
+	int32 stardust = 6;
+	int32 pokecoins = 7;
+}
