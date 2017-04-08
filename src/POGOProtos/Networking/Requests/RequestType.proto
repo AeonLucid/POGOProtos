@@ -70,4 +70,6 @@ enum RequestType {
 	SFIDA_CAPTURE = 806;                 // Not yet released.
 	LIST_AVATAR_CUSTOMIZATIONS = 807;    // Implemented [R & M]
 	SET_AVATAR_ITEM_AS_VIEWED = 808;     // Implemented [R & M]
+	GET_INBOX = 809;                     // Implemented [R & M]
+	UPDATE_NOTIFICATION_STATUS = 810;    // Implemented [R & M]
 }

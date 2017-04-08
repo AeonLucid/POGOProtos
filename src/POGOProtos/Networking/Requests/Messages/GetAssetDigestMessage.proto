@@ -9,4 +9,7 @@ message GetAssetDigestMessage {
 	string device_model = 3;
 	string locale = 4;
 	uint32 app_version = 5;
+	bool paginate = 6;
+	int32 page_offset = 7;
+	uint64 page_timestamp = 8;
 }

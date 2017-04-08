@@ -8,4 +8,5 @@ message FortSettings {
 	double deploy_stamina_multiplier = 4;
 	double deploy_attack_multiplier = 5;
 	double far_interaction_range_meters = 6;
+	bool disable_gyms = 7;
 }

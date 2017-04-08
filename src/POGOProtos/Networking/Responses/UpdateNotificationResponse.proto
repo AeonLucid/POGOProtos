@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/NotificationState.proto";
+
+message UpdateNotificationResponse {
+	repeated string notification_ids = 1;
+	repeated int64 create_timestamp_ms = 2;
+	.POGOProtos.Enums.NotificationState state = 3;
+}

@@ -29,4 +29,5 @@ message FortData {
 	.POGOProtos.Map.Fort.FortRenderingType rendering_type = 16;
 	int64 deploy_lockout_end_ms = 17;
 	.POGOProtos.Data.PokemonDisplay guard_pokemon_display = 18;
+	bool closed = 19;
 }
