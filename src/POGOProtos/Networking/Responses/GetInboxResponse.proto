@@ -5,13 +5,11 @@ message GetInboxResponse {
 	Result result = 1;
 	ClientInbox inbox = 2;
 
-	message ClientInbox
-	{
+	message ClientInbox {
 		repeated Notification notifications = 1;
 		repeated TemplateVariable builtin_variables = 2;
 
-		message Notification
-		{
+		message Notification {
 			string notification_id = 1;
 			string bundle = 2;
 			string asset = 3;
@@ -23,8 +21,7 @@ message GetInboxResponse {
 			repeated TemplateVariable variables = 9;
 			repeated Label labels = 11;
 
-			enum Label
-			{
+			enum Label {
 				UNSET_LABEL = 0;
 				UNREAD = 1;
 				NEW = 2;
@@ -32,8 +29,7 @@ message GetInboxResponse {
 				IMMEDIATE = 4;
 			}
 
-			enum NotificationCategory
-			{
+			enum NotificationCategory {
 				UNSET_CATEGORY = 0;
 				MARKETING = 1;
 				ANNOUNCEMENT = 2;
@@ -42,16 +38,13 @@ message GetInboxResponse {
 			}
 		}
 
-		message TemplateVariable
-		{
+		message TemplateVariable {
 			string name = 1;
 			string value = 2;
 		}
 	}
 
-
-	enum Result
-	{
+	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
 		FAILURE = 2;
