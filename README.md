@@ -33,7 +33,7 @@ https://raw.githubusercontent.com/AeonLucid/POGOProtos/master/.current-version
 
 ## Preparation
 
-Current recommended protoc version: "Protocol Buffers v3.1.0".
+Current recommended protoc version: "Protocol Buffers v3.2.0".
 
 You can find download links [here](https://github.com/google/protobuf/releases).
 
@@ -50,36 +50,44 @@ Use `homebrew` to install `protobuf ` with `brew install --devel protobuf`.
 The compilation creates output specifically for the target language, i.e. respecting naming conventions, etc.  
 This is an example of how the generated code will be organized:
 
-`python compile.py cpp`:
- - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.pb.cpp`
-
-`python compile.py csharp`:
- - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.g.cs`
- 
-`python compile.py go`:
- - `POGOProtos/Data/*.proto` -> `github.com/aeonlucid/pogoprotos/data`
- - `POGOProtos/Data/PlayerData.proto` -> `github.com/aeonlucid/pogoprotos/data/player_data.pb.go`
-
-`python compile.py java`:
- - `POGOProtos/Data/*.proto` -> `com/github/aeonlucid/pogoprotos/Data.java`
- 
-`python compile.py js`:
- - `POGOProtos/**/*.proto` -> `pogoprotos.js`
-
-`python compile.py objc`:
- - `POGOProtos/Data/PlayerData.proto` -> `POGOProtos/Data/PlayerData.pbobjc.m`
- 
-`python compile.py python`:
- - `POGOProtos/Data/*.proto` -> `pogoprotos/data/__init__.py`
- - `POGOProtos/Data/PlayerData.proto` -> `pogoprotos/data/player_data_pb2.py`
-
-`python compile.py ruby`:
- - `POGOProtos/Data/*.proto` -> `pogoprotos/data.rb`
- - `POGOProtos/Data/PlayerData.proto` -> `pogoprotos/data/player_data.rb`
-
+```
+python compile.py cpp:
+ - POGOProtos/Data/PlayerData.proto -> POGOProtos/Data/PlayerData.pb.cpp
+```
+```
+python compile.py csharp:
+ - POGOProtos/Data/PlayerData.proto -> POGOProtos/Data/PlayerData.g.cs
+ ```
+ ```
+python compile.py go:
+ - POGOProtos/Data/*.proto -> github.com/aeonlucid/pogoprotos/data
+ - POGOProtos/Data/PlayerData.proto -> github.com/aeonlucid/pogoprotos/data/player_data.pb.go
+```
+```
+python compile.py java:
+ - POGOProtos/Data/*.proto -> com/github/aeonlucid/pogoprotos/Data.java
+ ```
+ ```
+python compile.py js:
+ - POGOProtos/**/*.proto -> pogoprotos.js
+```
+```
+python compile.py objc:
+ - POGOProtos/Data/PlayerData.proto -> POGOProtos/Data/PlayerData.pbobjc.m
+```
+```
+python compile.py python:
+ - POGOProtos/Data/*.proto -> pogoprotos/data/__init__.py
+ - POGOProtos/Data/PlayerData.proto -> pogoprotos/data/player_data_pb2.py
+```
+```
+python compile.py ruby:
+ - POGOProtos/Data/*.proto -> pogoprotos/data.rb
+ - POGOProtos/Data/PlayerData.proto -> pogoprotos/data/player_data.rb
+```
 #### Command
 
-Run `python compile.py --help` for help.
+Run ```python compile.py --help``` for help.
 
 ### Extra information
 You can find all available languages here [https://github.com/google/protobuf](https://github.com/google/protobuf).
