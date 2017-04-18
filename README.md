@@ -109,4 +109,4 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 | Haskell          | https://github.com/relrod/pokemon-go-protobuf-types     |
 | Rust             | https://github.com/rockneurotiko/pokemon-go-protobuf-rs |
 | Java             | https://github.com/celandro/pogoprotos-java             |
-| JSON             | https://github.com/celandro/pokemongo-game-master       | 
+| JSON             | https://github.com/BrunnerLivio/pokemongo-game-master   | 
