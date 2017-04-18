@@ -26,4 +26,5 @@ message PlayerData {
 	.POGOProtos.Data.BuddyPokemon buddy_pokemon = 16;
 	int64 battle_lockout_end_ms = 17;
 	.POGOProtos.Data.Player.PlayerAvatar secondary_player_avatar = 18;
+	bool name_is_blacklisted = 19;
 }

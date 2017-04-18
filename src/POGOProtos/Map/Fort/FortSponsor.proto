@@ -22,4 +22,6 @@ enum FortSponsor {
 	MIXER = 17;
 	SCOOPER = 18;
 	MUFFINTIN = 19;
+	SALAMANDER = 20;
+	PLANCHA = 21;
 }
