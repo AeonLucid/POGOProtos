@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum StatusCode {
+  // normal status codes
+	UNKNOWN_STATUS = 0;
+	OK = 1;
+	INVALID = 3; // happens when banned and bad parameters
+	// 5x seems to relate to load balance and rate control
+	NOT_YET_IMPLEMENTED = 51;
+	RATE_LIMITED = 52;
+	NEW_RPC_ENDPOINT = 53;
+  	// 10X seems to relate authentication, there is probably a banned status code in this series
+	INVALID_AUTH_TOKEN = 102;
+}
