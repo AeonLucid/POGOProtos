@@ -7,6 +7,6 @@ message PushNotificationRegistryResponse {
 	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
-		FAILURE = 2;
+		NO_CHANGE = 2;
 	}
 }
