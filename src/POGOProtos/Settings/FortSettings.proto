@@ -9,5 +9,5 @@ message FortSettings {
 	double deploy_attack_multiplier = 5;
 	double far_interaction_range_meters = 6;
 	bool disable_gyms = 7;
-    int32 max_same_pokemon_at_fort = 8;
+	int32 max_same_pokemon_at_fort = 8;
 }
