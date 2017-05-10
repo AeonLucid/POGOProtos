@@ -3,7 +3,5 @@ package POGOProtos.Enums;
 
 enum NotificationState {
 	UNSET_STATE = 0;
-	LISTED = 1;
-	VIEWED = 2;
-	DELETED = 3;
+	VIEWED = 1;
 }

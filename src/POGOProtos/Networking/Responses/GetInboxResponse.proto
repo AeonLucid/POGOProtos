@@ -11,36 +11,26 @@ message GetInboxResponse {
 
 		message Notification {
 			string notification_id = 1;
-			string bundle = 2;
-			string asset = 3;
-			string icon = 4;
-			string title_key = 5;
-			NotificationCategory category = 6;
-			int64 create_timestamp_ms = 7;
-			int64 expire_timestamp_ms = 8;
-			repeated TemplateVariable variables = 9;
-			repeated Label labels = 11;
+			string title_key = 2;
+			string category = 3;
+			int64 create_timestamp_ms = 4;
+			repeated TemplateVariable variables = 5;
+			repeated Label labels = 6;
 
 			enum Label {
 				UNSET_LABEL = 0;
 				UNREAD = 1;
 				NEW = 2;
-				EXPIRING_SOON = 3;
-				IMMEDIATE = 4;
-			}
-
-			enum NotificationCategory {
-				UNSET_CATEGORY = 0;
-				MARKETING = 1;
-				ANNOUNCEMENT = 2;
-				ADMIN_NOTE = 3;
-				GAME_EVENT = 4;
+				IMMEDIATE = 3;
 			}
 		}
 
 		message TemplateVariable {
-			string name = 1;
-			string value = 2;
+            string name = 1;
+			string literal = 2;
+			string key = 3;
+			string lookup_table = 4;
+			bytes byte_value = 5;
 		}
 	}
 
