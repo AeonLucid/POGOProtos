@@ -26,7 +26,7 @@ message GetInboxResponse {
 		}
 
 		message TemplateVariable {
-            string name = 1;
+			string name = 1;
 			string literal = 2;
 			string key = 3;
 			string lookup_table = 4;
