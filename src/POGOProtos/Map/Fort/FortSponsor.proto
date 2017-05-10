@@ -24,4 +24,5 @@ enum FortSponsor {
 	MUFFINTIN = 19;
 	SALAMANDER = 20;
 	PLANCHA = 21;
+	NIA_OPS = 22;
 }
