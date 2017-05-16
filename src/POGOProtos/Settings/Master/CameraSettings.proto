@@ -9,7 +9,7 @@ message CameraSettings {
 	repeated .POGOProtos.Enums.CameraInterpolation interpolation = 2;
 	repeated .POGOProtos.Enums.CameraTarget target_type = 3;
 	repeated float ease_in_speed = 4;
-	repeated float east_out_speed = 5;
+	repeated float ease_out_speed = 5;
 	repeated float duration_seconds = 6;
 	repeated float wait_seconds = 7;
 	repeated float transition_seconds = 8;
