@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message SfidaRegistrationResponse {
+	bytes access_token = 1;
+}
