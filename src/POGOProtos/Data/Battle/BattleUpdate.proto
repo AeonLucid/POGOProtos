@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Battle;
+
+import "POGOProtos/Data/Battle/BattleLog.proto";
+import "POGOProtos/Data/Battle/BattlePokemonInfo.proto";
+
+message BattleUpdate {
+	.POGOProtos.Data.Battle.BattleLog battle_log = 1;
+	string battle_id = 2;
+	.POGOProtos.Data.Battle.BattlePokemonInfo active_defender = 3;
+	.POGOProtos.Data.Battle.BattlePokemonInfo active_attacker = 4;
+}

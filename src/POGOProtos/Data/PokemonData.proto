@@ -42,4 +42,5 @@ message PokemonData {
 	int32 display_pokemon_id = 34;
 	int32 display_cp = 35;
 	.POGOProtos.Data.PokemonDisplay pokemon_display = 36;
+	bool is_bad = 37;
 }

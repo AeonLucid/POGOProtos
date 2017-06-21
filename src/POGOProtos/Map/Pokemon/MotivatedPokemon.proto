@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Map.Pokemon;
+
+import "POGOProtos/Data/FoodValue.proto";
+import "POGOProtos/Data/PokemonData.proto";
+
+message MotivatedPokemon {
+	.POGOProtos.Data.PokemonData pokemon = 1;
+	int64 deploy_ms = 2;
+	int32 cp_when_deployed = 3;
+	double motivation_now = 4;
+	int32 cp_now = 5;
+	float berry_value = 6;
+	int64 feed_cooldown_duration_millis = 7;
+	repeated .POGOProtos.Data.FoodValue food_value = 8;
+}

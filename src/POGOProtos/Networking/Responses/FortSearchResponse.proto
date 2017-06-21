@@ -3,6 +3,8 @@ package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Inventory/Item/ItemAward.proto";
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
 
 message FortSearchResponse {
 	.POGOProtos.Networking.Responses.FortSearchResponse.Result result = 1;
@@ -12,6 +14,11 @@ message FortSearchResponse {
 	int32 experience_awarded = 5;
 	int64 cooldown_complete_timestamp_ms = 6;
 	int32 chain_hack_sequence_number = 7;
+	.POGOProtos.Data.Badge.AwardedGymBadge awarded_gym_badge = 8;
+	.POGOProtos.Inventory.Loot loot = 9;
+	.POGOProtos.Inventory.Loot bonus_loot = 10;
+	int32 raid_tickets = 11;
+	.POGOProtos.Inventory.Loot team_bonus_loot = 12;
 
 	enum Result {
 		NO_RESULT_SET = 0;

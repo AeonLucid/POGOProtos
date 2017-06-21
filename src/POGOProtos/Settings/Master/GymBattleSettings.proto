@@ -17,4 +17,5 @@ message GymBattleSettings {
 	int32 minimum_player_level = 13;
 	int32 swap_duration_ms = 14;
 	float dodge_damage_reduction_percent = 15;
+	int32 minimum_raid_player_level = 16;
 }

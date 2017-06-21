@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Data.Badge;
+
+import "POGOProtos/Enums/GymBadgeType.proto";
+import "POGOProtos/Data/Badge/GymBadgeStats.proto";
+import "POGOProtos/Data/Raid/PlayerRaidInfo.proto";
+
+message AwardedGymBadge {
+	string fort_id = 1;
+	.POGOProtos.Enums.GymBadgeType gym_badge_type = 2;
+	uint32 score = 3;
+	.POGOProtos.Data.Badge.GymBadgeStats gym_badge_stats = 4;
+	uint64 last_update_timestamp_ms = 5;
+	uint64 last_check_timestamp_ms = 11;
+	uint32 earned_points = 12;
+	float progress = 13;
+	bool level_up = 14;
+	string name = 6;
+	string image_url = 7;
+	string description = 8;
+	double latitude = 9;
+	double longitude = 10;
+	.POGOProtos.Data.Raid.PlayerRaidInfo raids = 15;
+}

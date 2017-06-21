@@ -7,4 +7,5 @@ message PlayerLevelSettings {
 	repeated float cp_multiplier = 3;
 	int32 max_egg_player_level = 4;
 	int32 max_encounter_player_level = 5;
+	int32 max_raid_encounter_player_level = 6;
 }

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Badge;
+
+message GymBadgeStats {
+	uint64 total_time_defended_ms = 1;
+	uint32 num_battles_won = 2;
+	uint32 num_battles_lost = 5;
+	uint32 num_berries_fed = 3;
+	uint32 num_deploys = 4;
+}

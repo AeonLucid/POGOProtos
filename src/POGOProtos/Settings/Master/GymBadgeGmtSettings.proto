@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message GymBadgeGmtSettings {
+	repeated int32 target = 1;
+	float battle_winning_score_per_defender_cp = 2;
+	float gym_defending_score_per_minute = 3;
+	int32 berry_feeding_score = 4;
+	int32 pokemon_deploy_score = 5;
+	int32 raid_battle_winning_score = 6;
+	int32 lose_all_battles_score = 7;
+}

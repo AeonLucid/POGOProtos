@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Enums/RaidLevel.proto";
+
+message RaidInfo {
+	int64 raid_seed = 1;
+	int64 raid_spawn_ms = 2;
+	int64 raid_battle_ms = 3;
+	int64 raid_end_ms = 4;
+	.POGOProtos.Data.PokemonData raid_pokemon = 5;
+	.POGOProtos.Enums.RaidLevel raid_level = 6;
+	bool complete = 7;
+	bool is_exclusive = 8;
+}

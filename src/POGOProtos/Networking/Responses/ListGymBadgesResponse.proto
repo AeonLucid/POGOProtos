@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
+
+message ListGymBadgesResponse {
+	repeated .POGOProtos.Data.Badge.AwardedGymBadge gym_badge = 1;
+}

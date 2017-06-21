@@ -3,10 +3,15 @@ package POGOProtos.Data.Player;
 
 import "POGOProtos/Data/Player/PlayerAvatar.proto";
 import "POGOProtos/Enums/TeamColor.proto";
+import "POGOProtos/Enums/GymBadgeType.proto";
 
 message PlayerPublicProfile {
 	string name = 1;
 	int32 level = 2;
 	.POGOProtos.Data.Player.PlayerAvatar avatar = 3;
 	.POGOProtos.Enums.TeamColor team_color = 4;
+	int32 battles_won = 5;
+	float km_walked = 6;
+	int32 caught_pokemon = 7;
+	.POGOProtos.Enums.GymBadgeType gym_badge_type = 8;
 }

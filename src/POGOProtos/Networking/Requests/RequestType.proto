@@ -52,6 +52,18 @@ enum RequestType {
 	SET_BUDDY_POKEMON = 152;             // Implemented [R & M]
 	GET_BUDDY_WALKED = 153;              // Implemented [R & M]
 	USE_ITEM_ENCOUNTER = 154;            // Implemented [R & M]
+	GYM_DEPLOY = 155;
+	GYM_GET_INFO = 156;                  // Implemented [R & M]
+	GYM_START_SESSION = 157;
+	GYM_BATTLE_ATTACK = 158;
+	JOIN_LOBBY = 159;
+	LEAVE_LOBBY = 160;
+	SET_LOBBY_VISIBILITY = 161;
+	SET_LOBBY_POKEMON = 162;
+	GET_RAID_DETAILS = 163;              // Implemented [R & M]
+	GYM_FEED_POKEMON = 164;
+	START_RAID_BATTLE = 165;
+	ATTACK_RAID = 166;
 	GET_ASSET_DIGEST = 300;              // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;             // Implemented [R & M]
 	CLAIM_CODENAME = 403;                // Implemented [R & M]
@@ -71,4 +83,8 @@ enum RequestType {
 	LIST_AVATAR_CUSTOMIZATIONS = 807;    // Implemented [R & M]
 	SET_AVATAR_ITEM_AS_VIEWED = 808;     // Implemented [R & M]
 	GET_INBOX = 809;                     // Implemented [R & M]
+	LIST_GYM_BADGES = 811;
+	GET_GYM_BADGE_DETAILS = 812;
+	USE_ITEM_MOVE_REROLL = 813;
+	USE_ITEM_RARE_CANDY = 814;
 }

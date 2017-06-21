@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+message ExclusiveTicketInfo {
+	int64 raid_seed = 1;
+	string fort_id = 2;
+	string description = 3;
+	int64 start_time_ms = 4;
+	int64 end_time_ms = 5;
+}

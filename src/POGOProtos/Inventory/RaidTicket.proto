@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Inventory/ExclusiveTicketInfo.proto";
+
+message RaidTicket {
+	string ticket_id = 1;
+	.POGOProtos.Inventory.Item.ItemId item = 2;
+	.POGOProtos.Inventory.ExclusiveTicketInfo exclusive_info = 4;
+}
