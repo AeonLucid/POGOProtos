@@ -984,7 +984,6 @@ enum TutorialCompletion
 	GYM_TUTORIAL = 9;
 }
 
-
 message BackgroundToken
 {
 	bytes token = 1;
