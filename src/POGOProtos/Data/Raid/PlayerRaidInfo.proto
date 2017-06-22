@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Data/Raid/Raid.proto";
+
+message PlayerRaidInfo {
+	int32 total_completed_raids = 3;
+	int32 total_completed_legendary_raids = 4;
+	repeated .POGOProtos.Data.Raid.Raid raids = 5;
+}

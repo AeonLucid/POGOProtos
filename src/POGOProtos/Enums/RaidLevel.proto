@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum RaidLevel {
+	RAID_LEVEL_UNSET = 0;
+	RAID_LEVEL_1 = 1;
+	RAID_LEVEL_2 = 2;
+	RAID_LEVEL_3 = 3;
+	RAID_LEVEL_4 = 4;
+	RAID_LEVEL_5 = 5;
+}

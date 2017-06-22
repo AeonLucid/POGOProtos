@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+message GymEvent {
+	string trainer = 1;
+	int64 timestamp_ms = 2;
+	.POGOProtos.Map.Fort.GymEvent.Event event = 3;
+	int32 pokedex_id = 4;
+	fixed64 pokemon_id = 5;
+
+	enum Event {
+		UNKNOWN = 0;
+		POKEMON_FED = 1;
+		POKEMON_DEPLOYED = 2;
+		POKEMON_RETURNED = 3;
+		BATTLE_WON = 4;
+		BATTLE_LOSS = 5;
+		RAID_STARTED = 6;
+		RAID_ENDED = 7;
+		GYM_NEUTRALIZED = 8;
+	}
+}

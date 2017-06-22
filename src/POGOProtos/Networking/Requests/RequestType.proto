@@ -52,6 +52,18 @@ enum RequestType {
 	SET_BUDDY_POKEMON = 152;             // Implemented [R & M]
 	GET_BUDDY_WALKED = 153;              // Implemented [R & M]
 	USE_ITEM_ENCOUNTER = 154;            // Implemented [R & M]
+	GYM_DEPLOY = 155;                    // Not yet released.
+	GYM_GET_INFO = 156;                  // Implemented [R & M]
+	GYM_START_SESSION = 157;             // Not yet released.
+	GYM_BATTLE_ATTACK = 158;             // Not yet released.
+	JOIN_LOBBY = 159;                    // Not yet released.
+	LEAVE_LOBBY = 160;                   // Not yet released.
+	SET_LOBBY_VISIBILITY = 161;          // Not yet released.
+	SET_LOBBY_POKEMON = 162;             // Not yet released.
+	GET_RAID_DETAILS = 163;              // Not yet released.
+	GYM_FEED_POKEMON = 164;              // Not yet released.
+	START_RAID_BATTLE = 165;             // Not yet released.
+	ATTACK_RAID = 166;                   // Not yet released.
 	GET_ASSET_DIGEST = 300;              // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;             // Implemented [R & M]
 	CLAIM_CODENAME = 403;                // Implemented [R & M]
@@ -61,7 +73,7 @@ enum RequestType {
 	CHECK_CHALLENGE = 600;               // Implemented [R & M]
 	VERIFY_CHALLENGE = 601;              // Implemented [R & M]
 	ECHO = 666;                          // Implemented [R & M]
-	SFIDA_REGISTRATION = 800;            // Not yet released.
+	SFIDA_REGISTRATION = 800;            // Implemented [R & M]
 	SFIDA_ACTION_LOG = 801;              // Implemented [R & M]
 	SFIDA_CERTIFICATION = 802;           // Not yet released.
 	SFIDA_UPDATE = 803;                  // Not yet released.
@@ -71,4 +83,8 @@ enum RequestType {
 	LIST_AVATAR_CUSTOMIZATIONS = 807;    // Implemented [R & M]
 	SET_AVATAR_ITEM_AS_VIEWED = 808;     // Implemented [R & M]
 	GET_INBOX = 809;                     // Implemented [R & M]
+	LIST_GYM_BADGES = 811;               // Implemented [R & M]
+	GET_GYM_BADGE_DETAILS = 812;         // Implemented [R & M]
+	USE_ITEM_MOVE_REROLL = 813;          // Not yet released.
+	USE_ITEM_RARE_CANDY = 814;           // Not yet released.
 }

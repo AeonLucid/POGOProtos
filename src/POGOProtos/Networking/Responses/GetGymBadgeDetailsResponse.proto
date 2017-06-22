@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
+import "POGOProtos/Data/Gym/GymDefender.proto";
+
+message GetGymBadgeDetailsResponse {
+	.POGOProtos.Data.Badge.AwardedGymBadge gym_badge = 1;
+	.POGOProtos.Data.Gym.GymDefender gym_defender = 2;
+	bool success = 3;
+}

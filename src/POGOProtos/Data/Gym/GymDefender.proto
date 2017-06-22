@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Data.Gym;
+
+import "POGOProtos/Map/Pokemon/MotivatedPokemon.proto";
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+
+message GymDefender {
+	.POGOProtos.Map.Pokemon.MotivatedPokemon motivated_pokemon = 1;
+	.POGOProtos.Data.Gym.GymDefender.DeploymentTotals deployment_totals = 2;
+	.POGOProtos.Data.Player.PlayerPublicProfile trainer_public_profile = 3;
+
+	message DeploymentTotals {
+		int32 times_fed = 1;
+		int32 battles_won = 2;
+		int32 battles_lost = 3;
+		int64 deployment_duration_ms = 4;
+	}
+}

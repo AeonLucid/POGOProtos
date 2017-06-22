@@ -2,9 +2,11 @@ syntax = "proto3";
 package POGOProtos.Map.Fort;
 
 import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Data/Raid/RaidInfo.proto";
 import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Enums/TeamColor.proto";
 import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Map/Fort/GymDisplay.proto";
 import "POGOProtos/Map/Fort/FortType.proto";
 import "POGOProtos/Map/Fort/FortSponsor.proto";
 import "POGOProtos/Map/Fort/FortRenderingType.proto";
@@ -30,4 +32,10 @@ message FortData {
 	int64 deploy_lockout_end_ms = 17;
 	.POGOProtos.Data.PokemonDisplay guard_pokemon_display = 18;
 	bool closed = 19;
+	.POGOProtos.Data.Raid.RaidInfo raid_info = 20;
+	.POGOProtos.Map.Fort.GymDisplay gym_display = 21;
+	bool visited = 22;
+	int64 same_team_deploy_lockout_end_ms = 23;
+	bool allow_checkin = 24;
+	string image_url = 25;
 }

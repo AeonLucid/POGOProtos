@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "POGOProtos/Inventory/RaidTicket.proto";
+
+message RaidTickets {
+	repeated .POGOProtos.Inventory.RaidTicket raid_ticket = 1;
+}

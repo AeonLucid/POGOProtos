@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message Raid {
+	int64 raid_seed = 1;
+	int64 started_ms = 2;
+	int64 completed_ms = 3;
+	.POGOProtos.Enums.PokemonId encounter_pokemon_id = 4;
+	bool completed_battle = 5;
+	bool received_rewards = 6;
+	bool finished_encounter = 7;
+}

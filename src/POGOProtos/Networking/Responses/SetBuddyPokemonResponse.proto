@@ -13,5 +13,6 @@ message SetBuddyPokemonResponse {
 		ERROR_POKEMON_DEPLOYED = 2;
 		ERROR_POKEMON_NOT_OWNED = 3;
 		ERROR_POKEMON_IS_EGG = 4;
+		ERROR_INVALID_POKEMON = 5;
 	}
 }

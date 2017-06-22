@@ -20,4 +20,6 @@ message FortDetailsResponse {
 	double longitude = 11;
 	string description = 12;
 	repeated .POGOProtos.Map.Fort.FortModifier modifiers = 13;
+	bool close_soon = 14;
+	string checkin_image_url = 15;
 }

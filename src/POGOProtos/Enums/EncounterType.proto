@@ -5,4 +5,5 @@ enum EncounterType {
 	SPAWN_POINT = 0;
 	INCENSE = 1;
 	DISK = 2;
+	POST_RAID = 3;
 }

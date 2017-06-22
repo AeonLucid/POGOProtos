@@ -6,6 +6,7 @@ import "POGOProtos/Inventory/AppliedItems.proto";
 import "POGOProtos/Inventory/EggIncubators.proto";
 import "POGOProtos/Inventory/Candy.proto";
 import "POGOProtos/Inventory/InventoryUpgrades.proto";
+import "POGOProtos/Inventory/RaidTickets.proto";
 import "POGOProtos/Data/Avatar/AvatarItem.proto";
 import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Data/PokedexEntry.proto";
@@ -27,4 +28,5 @@ message InventoryItemData {
 	.POGOProtos.Inventory.Candy candy = 10;
 	.POGOProtos.Data.Quests.Quest quest = 11;
 	.POGOProtos.Data.Avatar.AvatarItem avatar_item = 12;
+	.POGOProtos.Inventory.RaidTickets raid_tickets = 13;
 }

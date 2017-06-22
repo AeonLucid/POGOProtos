@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+import "POGOProtos/Map/Fort/GymEvent.proto";
+
+message GymDisplay {
+	repeated .POGOProtos.Map.Fort.GymEvent gym_event = 1;
+	int32 total_gym_cp = 2;
+	double lowest_pokemon_motivation = 3;
+	int32 slots_available = 4;
+	int64 occupied_millis = 5;
+}

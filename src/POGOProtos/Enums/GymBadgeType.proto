@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum GymBadgeType {
+	GYM_BADGE_UNSET = 0;
+	GYM_BADGE_VANILLA = 1;
+	GYM_BADGE_BRONZE = 2;
+	GYM_BADGE_SILVER = 3;
+	GYM_BADGE_GOLD = 4;
+}

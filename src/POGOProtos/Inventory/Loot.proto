@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Inventory;
+
+import "POGOProtos/Inventory/LootItem.proto";
+
+message Loot {
+	repeated .POGOProtos.Inventory.LootItem loot_item = 1;
+}

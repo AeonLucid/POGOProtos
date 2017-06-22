@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Map.Pokemon;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message LobbyPokemon {
+	int64 id = 1;
+	.POGOProtos.Enums.PokemonId pokedex_id = 2;
+	int32 cp = 3;
+	float percent_health = 4;
+}
