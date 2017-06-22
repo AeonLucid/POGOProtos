@@ -4,11 +4,11 @@ package POGOProtos.Networking.Responses;
 import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
 import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
 
-message GetGymDetailsResponse {
+message GetGymInfoResponse {
 	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status_and_defenders = 1;
 	string name = 2;
 	string url = 3;
-	.POGOProtos.Networking.Responses.GetGymDetailsResponse.Result result = 4;
+	.POGOProtos.Networking.Responses.GetGymInfoResponse.Result result = 4;
 	string description = 5;
 	string secondary_url = 6;
 	.POGOProtos.Data.Badge.AwardedGymBadge awarded_gym_badge = 7;
