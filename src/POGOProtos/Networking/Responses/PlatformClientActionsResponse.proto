@@ -15,6 +15,11 @@ message UpdateNotificationStatusResponse {
 	repeated string notification_ids = 1;
 	repeated int64 create_timestamp_ms = 2;
 	NotificationState state = 3;
+
+	enum NotificationState {
+		UNSET_STATE = 0;
+		VIEWED = 1;
+	}
 }
 
 message OptOutPushNotificationCategoryResponse {
