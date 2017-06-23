@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message RegisterPushNotificationResponse {
+	int32 result = 1;
+}
+
+message OptOutPushNotificationCategoryResponse {
+}

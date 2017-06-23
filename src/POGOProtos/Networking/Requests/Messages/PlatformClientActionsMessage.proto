@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message RegisterPushNotificationMessage {
+    DontKnow something = 2;
+    message DontKnow {
+        string token = 1;
+    }
+}
+
+message OptOutPushNotificationCategoryMessage {
+    string category = 1;
+}
