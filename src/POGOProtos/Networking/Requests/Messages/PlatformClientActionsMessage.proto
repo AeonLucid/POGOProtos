@@ -5,7 +5,6 @@ message RegisterPushNotificationMessage {
 	ApnToken apn_token = 1;
 	GcmToken gcm_token = 2;
 
-
 	message ApnToken {
 		string registration_id = 1;
 		string bundle_identifier = 2;
