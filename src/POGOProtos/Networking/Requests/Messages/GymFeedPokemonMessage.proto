@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message GymFeedPokemonMessage {
+	.POGOProtos.Inventory.Item.ItemId item = 1;
+	int32 starting_quantity = 2;
+	string gym_id = 3;
+	fixed64 pokemon_id = 4;
+	double player_lat_degrees = 5;
+	double player_lng_degrees = 6;
+}
