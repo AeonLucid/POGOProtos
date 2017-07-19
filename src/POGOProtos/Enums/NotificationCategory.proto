@@ -6,4 +6,5 @@ enum NotificationCategory {
 	GYM_REMOVAL = 1;
 	POKEMON_HUNGRY = 2;
 	POKEMON_WON = 3;
+	EXCLUSIVE_RAID_INVITE = 4;
 }

@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/Gym/GymState.proto";
+import "POGOProtos/Data/Raid/EventInfo.proto";
 
 message GetGymDetailsResponse {
 	.POGOProtos.Data.Gym.GymState gym_state = 1;
@@ -11,6 +12,7 @@ message GetGymDetailsResponse {
 	string description = 5;
 	repeated string secondary_url = 6;
 	string checkin_image_url = 7;
+	.POGOProtos.Data.Raid.EventInfo event_info = 8;
 
 	enum Result {
 		UNSET = 0;

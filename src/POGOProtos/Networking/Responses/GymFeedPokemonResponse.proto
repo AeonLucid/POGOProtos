@@ -28,5 +28,6 @@ message GymFeedPokemonResponse {
 		ERROR_TOO_FREQUENT = 10;
 		ERROR_GYM_BUSY = 11;
 		ERROR_RAID_ACTIVE = 12;
+		ERROR_GYM_CLOSED = 13;
 	}
 }

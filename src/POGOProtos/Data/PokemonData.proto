@@ -43,4 +43,5 @@ message PokemonData {
 	int32 display_cp = 35;
 	.POGOProtos.Data.PokemonDisplay pokemon_display = 36;
 	bool is_bad = 37;
+	bool hatched_from_egg = 38;
 }

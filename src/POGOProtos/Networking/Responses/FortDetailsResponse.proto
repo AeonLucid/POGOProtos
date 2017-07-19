@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Raid/EventInfo.proto";
 import "POGOProtos/Enums/TeamColor.proto";
 import "POGOProtos/Map/Fort/FortType.proto";
 import "POGOProtos/Map/Fort/FortModifier.proto";
@@ -22,4 +23,5 @@ message FortDetailsResponse {
 	repeated .POGOProtos.Map.Fort.FortModifier modifiers = 13;
 	bool close_soon = 14;
 	string checkin_image_url = 15;
+	.POGOProtos.Data.Raid.EventInfo event_info = 16;
 }

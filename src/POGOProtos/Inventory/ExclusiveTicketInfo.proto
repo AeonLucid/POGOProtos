@@ -4,7 +4,10 @@ package POGOProtos.Inventory;
 message ExclusiveTicketInfo {
 	int64 raid_seed = 1;
 	string fort_id = 2;
-	string description = 3;
 	int64 start_time_ms = 4;
 	int64 end_time_ms = 5;
+	string image_url = 6;
+	double latitude = 7;
+	double longitude = 8;
+	string gym_name = 9;
 }

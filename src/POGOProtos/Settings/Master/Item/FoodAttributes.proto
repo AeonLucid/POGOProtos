@@ -8,4 +8,5 @@ message FoodAttributes {
 	repeated float item_effect_percent = 2;
 	float growth_percent = 3;
 	float berry_multiplier = 4;
+	float remote_berry_multiplier = 5;
 }

@@ -3,6 +3,7 @@ package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
 import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
+import "POGOProtos/Data/Raid/EventInfo.proto";
 
 message GymGetInfoResponse {
 	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status_and_defenders = 1;
@@ -13,6 +14,7 @@ message GymGetInfoResponse {
 	string secondary_url = 6;
 	.POGOProtos.Data.Badge.AwardedGymBadge awarded_gym_badge = 7;
 	string checkin_image_url = 8;
+	.POGOProtos.Data.Raid.EventInfo event_info = 9;
 
 	enum Result {
 		UNSET = 0;

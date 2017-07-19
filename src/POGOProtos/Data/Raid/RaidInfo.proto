@@ -13,4 +13,5 @@ message RaidInfo {
 	.POGOProtos.Enums.RaidLevel raid_level = 6;
 	bool complete = 7;
 	bool is_exclusive = 8;
+	bool is_raid_hidden = 9;
 }
