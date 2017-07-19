@@ -1,0 +1,35 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
+
+message GymDeployResponse {
+	.POGOProtos.Networking.Responses.GymDeployResponse.Result result = 1;
+	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status_and_defenders = 2;
+	.POGOProtos.Data.Badge.AwardedGymBadge awarded_gym_badge = 3;
+	int64 cooldown_complete_timestamp_ms = 4;
+
+	enum Result {
+		NO_RESULT_SET = 0;
+		SUCCESS = 1;
+		ERROR_ALREADY_HAS_POKEMON_ON_FORT = 2;
+		ERROR_OPPOSING_TEAM_OWNS_FORT = 3;
+		ERROR_FORT_IS_FULL = 4;
+		ERROR_NOT_IN_RANGE = 5;
+		ERROR_PLAYER_HAS_NO_TEAM = 6;
+		ERROR_POKEMON_NOT_FULL_HP = 7;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 8;
+		ERROR_POKEMON_IS_BUDDY = 9;
+		ERROR_FORT_DEPLOY_LOCKOUT = 10;
+		ERROR_PLAYER_HAS_NO_NICKNAME = 11;
+		ERROR_POI_INACCESSIBLE = 12;
+		ERROR_NOT_A_POKEMON = 13;
+		ERROR_TOO_MANY_OF_SAME_KIND = 14;
+		ERROR_TOO_MANY_DEPLOYED = 15;
+		ERROR_TEAM_DEPLOY_LOCKOUT = 16;
+		ERROR_LEGENDARY_POKEMON = 17;
+		ERROR_INVALID_POKEMON = 18;
+		ERROR_RAID_ACTIVE = 19;
+	}
+}

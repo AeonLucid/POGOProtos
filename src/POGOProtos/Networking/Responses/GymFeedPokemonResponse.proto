@@ -1,0 +1,32 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
+import "POGOProtos/Enums/PokemonFamilyId.proto";
+import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
+
+message GymFeedPokemonResponse {
+	.POGOProtos.Networking.Responses.GymFeedPokemonResponse.Result result = 1;
+	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status_and_defenders = 2;
+	.POGOProtos.Data.Badge.AwardedGymBadge awarded_gym_badge = 3;
+	int32 stardust_awarded = 4;
+	int32 xp_awarded = 5;
+	int32 num_candy_awarded = 6;
+	.POGOProtos.Enums.PokemonFamilyId family_candy_id = 7;
+	int64 cooldown_complete = 8;
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_CANNOT_USE = 2;
+		ERROR_NOT_IN_RANGE = 3;
+		ERROR_POKEMON_NOT_THERE = 4;
+		ERROR_POKEMON_FULL = 5;
+		ERROR_NO_BERRIES_LEFT = 6;
+		ERROR_WRONG_TEAM = 7;
+		ERROR_WRONG_COUNT = 8;
+		ERROR_TOO_FAST = 9;
+		ERROR_TOO_FREQUENT = 10;
+		ERROR_GYM_BUSY = 11;
+		ERROR_RAID_ACTIVE = 12;
+	}
+}
