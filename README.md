@@ -13,6 +13,7 @@ We are following [semantic versioning](http://semver.org/) for POGOProtos.  Ever
 
 | Version      | Android       | iOS           | Extra                     |
 |--------------|---------------|---------------|---------------------------|
+| 2.12.0       | 0.69.0        | 1.39.0        |                           |
 | 2.11.0       | 0.67.2        | 1.37.2        |                           |
 | 2.11.0-beta  | 0.67.1        | 1.37.1        |                           |
 | 2.10.x       | 0.63.1        | 1.33.1        |                           |
