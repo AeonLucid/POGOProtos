@@ -38,4 +38,5 @@ message FortData {
 	int64 same_team_deploy_lockout_end_ms = 23;
 	bool allow_checkin = 24;
 	string image_url = 25;
+	bool in_event = 26;
 }
