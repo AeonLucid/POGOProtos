@@ -1,11 +1,11 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Enums/PokemonId.proto";
 
 message UseItemRareCandyResponse {
 	.POGOProtos.Networking.Responses.UseItemRareCandyResponse.Result result = 1;
-	.POGOProtos.Data.PokemonData upgraded_pokemon = 2;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
 	int32 updated_candy_count = 3;
 
 	enum Result {
