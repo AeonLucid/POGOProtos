@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message UseItemRareCandyResponse {
+	.POGOProtos.Networking.Responses.UseItemRareCandyResponse.Result result = 1;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
+	int32 updated_candy_count = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		INVALID_POKEMON_ID = 2;
+		NO_PLAYER = 3;
+		WRONG_ITEM_TYPE = 4;
+		ITEM_NOT_IN_INVENTORY = 5;
+	}
+}

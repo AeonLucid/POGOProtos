@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message UseItemRareCandyMessage {
+	.POGOProtos.Inventory.Item.ItemId item_id = 1;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
+}
