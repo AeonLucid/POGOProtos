@@ -9,5 +9,5 @@ enum PlatformRequestType {
 	GET_STORE_ITEMS = 5;
 	SEND_ENCRYPTED_SIGNATURE = 6;
 	UNKNOWN_PTR_8 = 8;
-    JOIN_EVENT = 9;
+	JOIN_EVENT = 9;
 }
