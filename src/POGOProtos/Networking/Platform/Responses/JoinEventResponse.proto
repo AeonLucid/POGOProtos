@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+message JoinEventResponse {
+    Status status = 1;
+    string qrcode = 4;
+
+	enum Status {
+		UNDEFINED = 0;
+        SUCCESS = 1;
+		INVALID = 2;
+	}
+}
