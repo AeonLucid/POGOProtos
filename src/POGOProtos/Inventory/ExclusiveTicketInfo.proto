@@ -10,4 +10,5 @@ message ExclusiveTicketInfo {
 	double latitude = 7;
 	double longitude = 8;
 	string gym_name = 9;
+	int64 spawn_time_ms = 10;
 }
