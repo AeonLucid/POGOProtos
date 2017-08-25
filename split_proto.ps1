@@ -165,11 +165,13 @@ ForEach ($ProtoLine in $SourceData) {
         $ProtoDB = Get-Content -Path "$($ProtoIndexFile)"
         $ProtoFile = "";
         $ProtoFileFound = 0;
+        $ProtoMissing = 1;
         
         ForEach ($ProtoDBLine in $ProtoDB) {
           If ($ProtoFileFound -eq 1) {  
             #We found the correct file to update
                 $ProtoFile = $ProtoDBLine;
+                $ProtoMissing = 0;
                 break
           }Else {}
           If ($ProtoDBLine -eq $ProtoLine) {  
@@ -194,6 +196,7 @@ ForEach ($ProtoLine in $SourceData) {
               If ($ProtoFileFound -eq 1) {  
                 #We found the correct file to update
                     $ProtoFile = $ProtoDBLine;
+                    $ProtoMissing = 0;
                     break
               }Else {}
               If ($ProtoDBLine -eq $ProtoLine) {  
@@ -229,6 +232,7 @@ ForEach ($ProtoLine in $SourceData) {
               If ($ProtoFileFound -eq 1) {  
                 #We found the correct file to update
                     $ProtoFile = $ProtoDBLine;
+                    $ProtoMissing = 0;
                     break
               }Else {}
               If ($ProtoDBLine -eq $ProtoLine) {  
@@ -258,6 +262,7 @@ ForEach ($ProtoLine in $SourceData) {
               If ($ProtoFileFound -eq 1) {  
                 #We found the correct file to update
                     $ProtoFile = $ProtoDBLine;
+                    $ProtoMissing = 0;
                     break
               }Else {}
               If ($ProtoDBLine -eq $ProtoLine) {  
@@ -287,6 +292,7 @@ ForEach ($ProtoLine in $SourceData) {
               If ($ProtoFileFound -eq 1) {  
                 #We found the correct file to update
                     $ProtoFile = $ProtoDBLine;
+                    $ProtoMissing = 0;
                     break
               }Else {}
               If ($ProtoDBLine -eq $ProtoLine) {  
@@ -308,7 +314,10 @@ ForEach ($ProtoLine in $SourceData) {
             echo "We think the file is:" $ProtoLine
             if ($ProtoFileFound -eq 0) {
                 write-host "Did not find:" $OrigLine " - Skipping"
-                Add-Content -Path "$MissingFile" -Value $OrigLine 
+                if ($ProtoMissing -eq 1) {
+                    Add-Content -Path "$MissingFile" -Value "$($OrigLine)-->$($ProtoLine)" 
+                } else {}
+                
 
                 
                 #This command writes the output for table above
