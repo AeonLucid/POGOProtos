@@ -11,4 +11,5 @@ message Raid {
 	bool completed_battle = 5;
 	bool received_rewards = 6;
 	bool finished_encounter = 7;
+	bool received_default_rewards = 8;
 }
