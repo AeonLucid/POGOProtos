@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+message Participation {
+	int32 individual_damage_pokeballs = 1;
+	int32 team_damage_pokeballs = 2;
+	int32 gym_ownership_pokeballs = 3;
+	int32 base_pokeballs = 4;
+	double blue_percentage = 5;
+	double red_percentage = 6;
+	double yellow_percentage = 7;
+	float bonus_item_multiplier = 8;
+}
