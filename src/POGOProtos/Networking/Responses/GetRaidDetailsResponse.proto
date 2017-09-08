@@ -1,0 +1,30 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Raid/Lobby.proto";
+import "POGOProtos/Data/Battle/Battle.proto";
+import "POGOProtos/Data/Raid/RaidInfo.proto";
+
+message GetRaidDetailsResponse {
+	.POGOProtos.Data.Raid.Lobby lobby = 1;
+	.POGOProtos.Data.Battle.Battle raid_battle = 2;
+	bool player_can_join_lobby = 3;
+	Result result = 4;
+	.POGOProtos.Data.Raid.RaidInfo raid_info = 5;
+	bool ticket_used = 6;
+	bool free_ticket_available = 7;
+	int32 throws_remaining = 8;
+	bool received_rewards = 9;
+	int32 num_players_in_lobby = 10;
+
+	enum Result
+	{
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NOT_IN_RANGE = 2;
+		ERROR_RAID_COMPLETED = 3;
+		ERROR_RAID_UNAVAILABLE = 4;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 5;
+		ERROR_POI_INACCESSIBLE = 6;
+	}
+}
