@@ -3,7 +3,7 @@ package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Inventory/InventoryDelta.proto";
 
-message GetInventoryResponse {
+message GetHoloInventoryResponse {
 	bool success = 1;
 	.POGOProtos.Inventory.InventoryDelta inventory_delta = 2;
 }
