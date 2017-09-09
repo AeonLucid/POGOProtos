@@ -60,7 +60,7 @@ enum RequestType {
 	LEAVE_LOBBY = 160;                   // Not yet released.
 	SET_LOBBY_VISIBILITY = 161;          // Not yet released.
 	SET_LOBBY_POKEMON = 162;             // Not yet released.
-	GET_RAID_DETAILS = 163;              // Implemented [R & M]
+	GET_RAID_DETAILS = 163;              // Not yet released.
 	GYM_FEED_POKEMON = 164;              // Implemented [R & M]
 	START_RAID_BATTLE = 165;             // Not yet released.
 	ATTACK_RAID = 166;                   // Not yet released.
@@ -87,7 +87,7 @@ enum RequestType {
 	GET_GYM_BADGE_DETAILS = 812;         // Implemented [R & M]
 	USE_ITEM_MOVE_REROLL = 813;          // Implemented [R & M]
 	USE_ITEM_RARE_CANDY = 814;           // Implemented [R & M]
-	AWARD_FREE_RAID_TICKET = 815;		 // Implemented [R & M]
+	AWARD_FREE_RAID_TICKET = 815;		 // Not yet released.
 	REGISTER_PUSH_NOTIFICATION = 5000;
 	UNREGISTER_PUSH_NOTIFICATION = 5001;
 	UPDATE_NOTIFICATION_STATUS = 5002;
