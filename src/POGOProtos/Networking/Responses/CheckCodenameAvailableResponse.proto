@@ -7,6 +7,7 @@ message CheckCodenameAvailableResponse {
 	string user_message = 2;
 	bool is_assignable = 3;
 	.POGOProtos.Networking.Responses.CheckCodenameAvailableResponse.Status status = 4;
+	.POGOProtos.Data.PlayerData updated_player = 5;
 
 	enum Status {
 		UNSET = 0;

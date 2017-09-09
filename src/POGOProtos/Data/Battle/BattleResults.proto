@@ -10,4 +10,10 @@ message BattleResults {
 	repeated int32 player_experience_awarded = 3;
 	int64 next_defender_pokemon_id = 4;
 	int32 gym_points_delta = 5;
+	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status = 6;
+	repeated ParticipationProto participation = 7;
+	repeated LootProto raid_item_rewards = 8;
+	repeated RaidEncounterProto post_raid_encounter = 9;
+	repeated .POGOProtos.Data.Badge.AwardedGymBadge gym_badge = 10;
+	repeated LootProto default_raid_item_rewards = 11;
 }
