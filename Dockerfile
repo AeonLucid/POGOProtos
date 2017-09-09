@@ -92,7 +92,7 @@ RUN set -ex \
 WORKDIR /defs
 
 
-RUN git clone -b dev https://github.com/goedzo/POGOProtos /src/pogoprotos/
+RUN git clone -b $BUILD_BRANCH https://github.com/goedzo/POGOProtos /src/pogoprotos/
 RUN git clone https://github.com/goedzo/pgoapi /src/pgoapi/
 RUN cp /src/pogoprotos/run.sh /src/run.sh
 RUN chmod +x /src/run.sh
