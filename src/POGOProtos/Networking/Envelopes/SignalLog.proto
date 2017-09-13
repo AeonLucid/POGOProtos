@@ -1,0 +1,154 @@
+syntax = "proto3";
+package POGOProtos.Networking.Envelopes;
+
+message SignalLog {
+	repeated bytes field1 = 1;
+
+	int64 timestamp_ms_since_start = 2;
+
+	string device_id = 3;  // nia.hardware.SignalLog.device_id
+
+	repeated LocationUpdate location_updates = 4;  // Multiple location updates at a time. This is all the updates since the last time we sent a request
+	repeated AndroidGpsInfo android_gps_info = 5;
+	repeated Activity activities = 6;
+	repeated SensorUpdate sensor_updates = 7;  // All the sensor updates since the last time we sent a request. (Seems to actually be throttled to 1-3 at a time)
+	DeviceInformation device_info = 8;  // device info - need to find this still to verify everything
+	IOSDeviceInfo ios_device_info = 9;  // iOS only - likely device capabilities? (Or even simpler being iOS device version flags)
+	int32 location_hash_by_token_seed = 10;  // Hashed location using the auth token as the seed (hashed auth token -> location hash seed)
+
+	bool field11 = 11;
+	bool field12 = 12;
+	int32 field13 = 13;
+	int32 field14 = 14;
+	string build_version = 15;  // nia.hardware.SignalLog.build_version
+	int32 field16 = 16;
+	string auth_token = 17;  // nia.hardware.SignalLog.auth_token
+	string package_name = 18;  // nia.hardware.SignalLog.package_name
+	bool field19 = 19;
+	int32 location_hash = 20;
+	bool field21 = 21;
+	bytes field22 = 22;  // 32 random bytes, unique per session.
+
+	int64 epoch_timestamp_ms = 23;
+	repeated int64 request_hashes = 24;  // hashes of each request message in a hashArray signed based on the auth_token or auth_info
+	int64 version_hash = 25;  // Grover_c13 claims this is a xxHash64 of a SHA1 for the current version of the game? Yet to be confirmed, but possible.
+}
+
+message Activity {
+	int64 start_time_ms = 1;
+	int32 unknown = 2;
+	int32 walking = 3;
+	int32 running = 4;
+	int32 stationary = 5;
+	int32 automotive = 6;
+	int32 tilting = 7;
+	int32 cycling = 8;
+
+	Status status = 9;
+
+	enum Status {
+		STATUS_UNK = 0;
+	}
+}
+
+// 100% - Reference iOS lib "LocationUpdate" structure for bridge
+message SensorUpdate {
+	int64 timestamp = 1;  // in ms since start
+	double acceleration_x = 3;
+	double acceleration_y = 4;
+	double acceleration_z = 5;
+	double magnetic_field_x = 6;
+	double magnetic_field_y = 7;
+	double magnetic_field_z = 8;
+	int32 magnetic_field_accuracy = 9;
+	double attitude_pitch = 10;
+	double attitude_yaw = 11;
+	double attitude_roll = 12;
+	double rotation_rate_x = 13;
+	double rotation_rate_y = 14;
+	double rotation_rate_z = 15;
+	double gravity_x = 16;
+	double gravity_y = 17;
+	double gravity_z = 18;
+	Status status = 19;
+
+	enum Status {
+		STATUS_UNK = 0;
+		NORMAL = 3;
+	}
+}
+
+message LocationUpdate {
+	string name = 1;  // "network", "gps", "fused" - only these 3 values (com.nianticlabs.location.NianticLocationManager.class)
+	int64 timestamp_ms = 2;  // in ms since start
+	float altitude = 4;
+
+	float latitude = 13;
+	float longitude = 14;
+
+	float device_speed = 18;  // iOS only (-1 for no reading available, speed in m/s)
+
+	float device_course = 20;  // iOS only (range seems to be -1 for not reading, and 0 to 360 for reading) confirmed by @marcel
+	float horizontal_accuracy = 21;  // in meters, both on Android and iOS
+	float vertical_accuracy = 22;  // iOS only
+
+	ServiceStatus provider_status = 26;  // Usually 3
+	int64 floor = 27;  // The floor of the building this person is on
+	LocationType location_type = 28;  // Always 1 (if there is data at all)
+
+	enum ServiceStatus {
+		FAILED = 0;
+		INITIALIZED = 1;
+		PERMISSION_DENIED = 2;
+		RUNNING = 3;
+		STOPPED = 4;
+		UNDEFINED = 5;
+	}
+
+	enum LocationType {
+		NONE = 0;
+		NORMAL_PROVIDER = 1;
+		MOCK_PROVIDER = 2;
+	}
+}
+
+message DeviceInformation {
+	string device_id = 1;
+	string board = 2;  // android_board_name
+	string bootloader = 3;  // android_bootloader
+	string brand = 4;  // product.brand
+	string device = 5;  // device_model / product.device
+	string display = 6;  // device_model_identifier / build.display.id
+	string hardware = 7;  // device_comms_model / boot.hardware
+	string manufacturer = 8;  // hardware_manufacturer / product.manufacturer
+	string model = 9;  // hardware_model / product.model
+	string product = 10;  // firmware_brand / On iOS: "iPhone OS", product.name
+	string tags = 12;  // firmware_tags / Android only, build.tags
+	string version = 13;  // firmware_type / iOS version or Android build.type
+	string fingerprint = 14;  // firmware_fingerprint / Android only, build.fingerprint
+}
+
+//  iOS only
+message IOSDeviceInfo {
+	bool bool1 = 1;
+	bool bool2 = 2;
+	bool bool3 = 3;  // 1
+	bool bool4 = 4;
+	bool bool5 = 5;  // 1
+	bool bool6 = 6;  // 1
+	bool bool7 = 7;
+	bool bool8 = 8;
+	bool bool9 = 9;
+	bool bool10 = 10;
+}
+
+message AndroidGpsInfo {
+	int64 time_to_fix = 1;
+	repeated int32 satellites_prn = 2;
+	repeated float azimuth = 3;
+	repeated float elevation = 4;
+	repeated float snr = 5;
+	repeated bool has_almanac = 6;
+	repeated bool has_ephemeris = 7;
+	repeated bool used_in_fix = 8;
+}

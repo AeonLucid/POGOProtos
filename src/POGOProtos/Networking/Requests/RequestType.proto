@@ -54,8 +54,8 @@ enum RequestType {
 	USE_ITEM_ENCOUNTER = 154;            // Implemented [R & M]
 	GYM_DEPLOY = 155;                    // Implemented [R & M]
 	GYM_GET_INFO = 156;                  // Implemented [R & M]
-	GYM_START_SESSION = 157;             // Not yet released.
-	GYM_BATTLE_ATTACK = 158;             // Not yet released.
+	GYM_START_SESSION = 157;             // Implemented [R & M]
+	GYM_BATTLE_ATTACK = 158;             // Implemented [R & M]
 	JOIN_LOBBY = 159;                    // Not yet released.
 	LEAVE_LOBBY = 160;                   // Not yet released.
 	SET_LOBBY_VISIBILITY = 161;          // Not yet released.
