@@ -3,8 +3,8 @@ package POGOProtos.Networking.Requests.Messages;
 
 message GymStartSessionMessage {
 	string gym_id = 1;
-	repeated int64 attacking_pokemon_id = 2;
-	int64 defending_pokemon_id = 3;
+	repeated fixed64 attacking_pokemon_id = 2;
+	fixed64 defending_pokemon_id = 3;
 	double player_lat_degrees = 4;
 	double player_lng_degrees = 5;
 }
