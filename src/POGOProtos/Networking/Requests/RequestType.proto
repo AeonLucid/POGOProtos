@@ -7,7 +7,7 @@ package POGOProtos.Networking.Requests;
 enum RequestType {
 	METHOD_UNSET = 0;                    // No implementation required
 	GET_PLAYER = 2;                      // Implemented [R & M]
-	GET_INVENTORY = 4;                   // Implemented [R & M]
+	GET_HOLO_INVENTORY = 4;              // Implemented [R & M]
 	DOWNLOAD_SETTINGS = 5;               // Implemented [R & M]
 	DOWNLOAD_ITEM_TEMPLATES = 6;         // Implemented [R & M]
 	DOWNLOAD_REMOTE_CONFIG_VERSION = 7;  // Implemented [R & M]
@@ -60,7 +60,7 @@ enum RequestType {
 	LEAVE_LOBBY = 160;                   // Not yet released.
 	SET_LOBBY_VISIBILITY = 161;          // Not yet released.
 	SET_LOBBY_POKEMON = 162;             // Not yet released.
-	GET_RAID_DETAILS = 163;              // Not yet released.
+	GET_RAID_DETAILS = 163;              // Implemented [R & M]
 	GYM_FEED_POKEMON = 164;              // Implemented [R & M]
 	START_RAID_BATTLE = 165;             // Not yet released.
 	ATTACK_RAID = 166;                   // Not yet released.
@@ -87,9 +87,11 @@ enum RequestType {
 	GET_GYM_BADGE_DETAILS = 812;         // Implemented [R & M]
 	USE_ITEM_MOVE_REROLL = 813;          // Implemented [R & M]
 	USE_ITEM_RARE_CANDY = 814;           // Implemented [R & M]
-	AWARD_FREE_RAID_TICKET = 815;
+	AWARD_FREE_RAID_TICKET = 815;		 // Implemented [R & M]
 	REGISTER_PUSH_NOTIFICATION = 5000;
 	UNREGISTER_PUSH_NOTIFICATION = 5001;
 	UPDATE_NOTIFICATION_STATUS = 5002;
 	OPT_OUT_PUSH_NOTIFICATION_CATEGORY = 5003;
+	DOWNLOAD_GAME_MASTER_TEMPLATES = 5004;
+	GET_INVENTORY = 5005;
 }

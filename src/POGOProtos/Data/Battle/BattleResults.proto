@@ -3,11 +3,22 @@ package POGOProtos.Data.Battle;
 
 import "POGOProtos/Data/Gym/GymState.proto";
 import "POGOProtos/Data/Battle/BattleParticipant.proto";
+import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
+import "POGOProtos/Data/Raid/Participation.proto";
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/Raid/RaidEncounter.proto";
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
 
 message BattleResults {
 	.POGOProtos.Data.Gym.GymState gym_state = 1;
 	repeated .POGOProtos.Data.Battle.BattleParticipant attackers = 2;
-	repeated int32 player_experience_awarded = 3;
+	repeated int32 player_xp_awarded = 3;
 	int64 next_defender_pokemon_id = 4;
 	int32 gym_points_delta = 5;
+	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status = 6;
+	repeated .POGOProtos.Data.Raid.Participation participation = 7;
+	repeated .POGOProtos.Inventory.Loot raid_item_rewards = 8;
+	repeated .POGOProtos.Data.Raid.RaidEncounter post_raid_encounter = 9;
+	repeated .POGOProtos.Data.Badge.AwardedGymBadge gym_badge = 10;
+	repeated .POGOProtos.Inventory.Loot default_raid_item_rewards = 11;
 }
