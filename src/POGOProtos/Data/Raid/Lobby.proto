@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Data/Battle/BattleParticipant.proto";
+
+message Lobby {
+	repeated int32 lobby_id = 1;
+	repeated .POGOProtos.Data.Battle.BattleParticipant players = 2;
+	int64 player_join_end_ms = 3;
+	int64 pokemon_selection_end_ms = 4;
+	int64 raid_battle_start_ms = 5;
+	int64 raid_battle_end_ms = 6;
+	string raid_battle_id = 8;
+	string owner_nickname = 9;
+	bool private = 10;
+	int64 creation_ms = 11;
+}

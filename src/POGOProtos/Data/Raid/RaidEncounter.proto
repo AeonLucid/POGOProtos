@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Capture/CaptureProbability.proto";
+import "POGOProtos/Enums/RaidLevel.proto";
+
+message RaidEncounter {
+	.POGOProtos.Data.PokemonData pokemon = 1;
+	int64 encounter_id = 2;
+	string spawnpoint_id = 3;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probabilities = 4;
+	int32 throws_remaining = 5;
+	.POGOProtos.Enums.RaidLevel raid_level = 6;
+	string fort_id = 7;
+}
