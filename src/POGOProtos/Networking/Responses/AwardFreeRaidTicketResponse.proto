@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message AwardFreeRaidTicketResponse {
+	Result result = 1;
+
+	enum Result {
+		NO_RESULT_SET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_DOES_NOT_MEET_MIN_LEVEL = 2;
+		ERROR_DAILY_TICKET_ALREADY_AWARDED = 3;
+		ERROR_PLAYER_OUT_OF_RANGE = 4;
+	}
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message GetRaidDetailsMessage {
+	int64 raid_seed = 1;
+	string gym_id = 2;
+	repeated int32 lobby_id = 3;
+	double player_lat_degrees = 4;
+	double player_lng_degrees = 5;
+}
