@@ -3,6 +3,7 @@ package POGOProtos.Data.Logs;
 
 import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Inventory/Item/ItemData.proto";
+import "POGOProtos/Map/Fort/FortType.proto";
 
 message FortSearchLogEntry {
 	.POGOProtos.Data.Logs.FortSearchLogEntry.Result result = 1;
@@ -10,6 +11,10 @@ message FortSearchLogEntry {
 	repeated .POGOProtos.Inventory.Item.ItemData items = 3;
 	int32 eggs = 4;
 	repeated .POGOProtos.Data.PokemonData pokemon_eggs = 5;
+	.POGOProtos.Map.Fort.FortType fort_type = 6;
+	repeated .POGOProtos.Inventory.Item.ItemData awarded_items = 7;
+	repeated .POGOProtos.Inventory.Item.ItemData bonus_items = 8;
+	repeated .POGOProtos.Inventory.Item.ItemData team_bonus_items = 9;
 
 	enum Result {
 		UNSET = 0;

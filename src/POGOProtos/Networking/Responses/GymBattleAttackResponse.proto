@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Battle/BattleUpdate.proto";
+import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
+
+message GymBattleAttackResponse {
+	.POGOProtos.Networking.Responses.GymBattleAttackResponse.Result result = 1;
+	.POGOProtos.Data.Battle.BattleUpdate battle_update = 2;
+	.POGOProtos.Data.Badge.AwardedGymBadge gym_badge = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_ATTACK_ACTIONS = 2;
+		ERROR_NOT_IN_RANGE = 3;
+		ERROR_WRONG_BATTLE_TYPE = 4;
+		ERROR_RAID_ACTIVE = 5;
+	}
+}

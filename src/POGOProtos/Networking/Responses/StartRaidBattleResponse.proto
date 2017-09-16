@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Battle/Battle.proto";
+
+message StartRaidBattleResponse {
+	.POGOProtos.Networking.Responses.StartRaidBattleResponse.Result result = 1;
+	.POGOProtos.Data.Battle.Battle battle = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_GYM_NOT_FOUND = 2;
+		ERROR_RAID_UNAVAILABLE = 3;
+		ERROR_RAID_COMPLETED = 4;
+		ERROR_INVALID_ATTACKERS = 5;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 6;
+		ERROR_NOT_IN_RANGE = 7;
+		ERROR_POI_INACCESSIBLE = 8;
+		ERROR_LOBBY_NOT_FOUND = 9;
+		ERROR_NO_TICKET = 10;
+	}
+}

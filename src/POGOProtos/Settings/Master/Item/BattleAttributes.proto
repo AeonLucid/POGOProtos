@@ -3,4 +3,7 @@ package POGOProtos.Settings.Master.Item;
 
 message BattleAttributes {
 	float sta_percent = 1;
+	float atk_percent = 2;
+	float def_percent = 3;
+	float duration_s = 4;
 }

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message DownloadGmTemplatesResponse {
+	Result result = 1;
+	repeated ClientGameMasterTemplate template = 2;
+	repeated string deleted_template = 3;
+	fixed64 batch_id = 4;
+	int32 page_offset = 5;
+
+	enum Result {
+		UNSET = 0;
+		COMPLETE = 1;
+		MORE_RESULTS = 2;
+		BATCH_ID_NOT_LIVE = 3;
+		INVALID_BASIS_BATCH_ID = 4;
+	}
+
+	message ClientGameMasterTemplate {
+		string template_id = 1;
+		bytes data = 2;
+	}
+}
