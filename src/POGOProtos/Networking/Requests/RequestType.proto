@@ -91,7 +91,7 @@ enum RequestType {
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented [R & M]
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // Not yet released.
 	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented [R & M]
-	OPT_OUT_PUSH_NOTIFICATION_CATEGORY = 5003;  // Not yet released.
+	OPT_OUT_PUSH_NOTIFICATION_CATEGORY = 5003;  // Implemented [R & M]
 	DOWNLOAD_GAME_MASTER_TEMPLATES = 5004;      // Implemented [R & M]
 	GET_INVENTORY = 5005;                       // Implemented [R & M]
 }
