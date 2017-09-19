@@ -23,4 +23,5 @@ message UpdateNotificationStatusResponse {
 }
 
 message OptOutPushNotificationCategoryResponse {
+	repeated string categories = 1;
 }
