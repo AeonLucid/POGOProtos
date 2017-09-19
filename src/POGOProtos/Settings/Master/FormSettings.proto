@@ -6,7 +6,7 @@ import "POGOProtos/Enums/PokemonId.proto";
 
 message FormSettings {
 	.POGOProtos.Enums.PokemonId pokemon = 1;
-	repeated Form forms = 2;
+	repeated .POGOProtos.Settings.Master.FormSettings.Form forms = 2;
 
 	message Form {
 		.POGOProtos.Enums.Form form = 1;

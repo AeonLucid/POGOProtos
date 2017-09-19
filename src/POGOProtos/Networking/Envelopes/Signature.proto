@@ -84,10 +84,10 @@ message Signature {
 	repeated UnknownMessage field1 = 1;
 	uint64 timestamp_since_start = 2;  // in ms
 	string field3 = 3;
-	repeated LocationFix location_fix = 4;
-	repeated AndroidGpsInfo gps_info = 5;
-	repeated UnknownMessage field6 = 6;
-	repeated SensorInfo sensor_info = 7;
+	repeated .POGOProtos.Networking.Envelopes.Signature.LocationFix location_fix = 4;
+	repeated  .POGOProtos.Networking.Envelopes.Signature.AndroidGpsInfo gps_info = 5;
+	repeated  .POGOProtos.Networking.Envelopes.UnknownMessage field6 = 6;
+	repeated  .POGOProtos.Networking.Envelopes.Signature.SensorInfo sensor_info = 7;
 	DeviceInfo device_info = 8;
 	ActivityStatus activity_status = 9;
 	int32 location_hash1 = 10;

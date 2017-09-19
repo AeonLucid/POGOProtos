@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Platform.Responses;
 
 message JoinEventResponse {
-	Status status = 1;
+	.POGOProtos.Networking.Platform.Responses.JoinEventResponse.Status status = 1;
 	string qrcode = 4;
 
 	enum Status {

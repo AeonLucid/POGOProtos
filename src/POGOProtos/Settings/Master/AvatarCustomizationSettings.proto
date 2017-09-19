@@ -13,8 +13,8 @@ message AvatarCustomizationSettings {
 	string asset_name = 5;
 	string group_name = 6;
 	int32 sort_order = 7;
-	AvatarCustomizationUnlockType unlock_type = 8;
-	repeated AvatarCustomizationPromoType promo_type = 9;
+	.POGOProtos.Settings.Master.AvatarCustomizationSettings.AvatarCustomizationUnlockType unlock_type = 8;
+	repeated .POGOProtos.Settings.Master.AvatarCustomizationSettings.AvatarCustomizationPromoType promo_type = 9;
 	.POGOProtos.Enums.BadgeType unlock_badge_type = 10;
 	string iap_sku = 11;
 	int32 unlock_badge_level = 12;
