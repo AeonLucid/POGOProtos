@@ -9,7 +9,7 @@ message GetRaidDetailsResponse {
 	.POGOProtos.Data.Raid.Lobby lobby = 1;
 	.POGOProtos.Data.Battle.Battle raid_battle = 2;
 	bool player_can_join_lobby = 3;
-	Result result = 4;
+	.POGOProtos.Networking.Responses.GetRaidDetailsResponse.Result result = 4;
 	.POGOProtos.Data.Raid.RaidInfo raid_info = 5;
 	bool ticket_used = 6;
 	bool free_ticket_available = 7;

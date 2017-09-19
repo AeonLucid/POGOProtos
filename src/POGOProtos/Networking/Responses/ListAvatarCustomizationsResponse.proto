@@ -4,7 +4,7 @@ package POGOProtos.Networking.Responses;
 import "POGOProtos/Data/Avatar/AvatarCustomization.proto";
 
 message ListAvatarCustomizationsResponse {
-	Result result = 1;
+	.POGOProtos.Networking.Responses.ListAvatarCustomizationsResponse.Result result = 1;
 	repeated .POGOProtos.Data.Avatar.AvatarCustomization avatar_customizations = 2;
 
 	enum Result {

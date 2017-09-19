@@ -23,7 +23,7 @@ import "POGOProtos/Settings/Master/GenderSettings.proto";
 import "POGOProtos/Settings/Master/GymBadgeGmtSettings.proto";
 
 message DownloadItemTemplatesResponse {
-	Result result = 1;
+	.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.Result result = 1;
 	repeated .POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.ItemTemplate item_templates = 2;
 	uint64 timestamp_ms = 3;
 	int32 page_offset = 4;

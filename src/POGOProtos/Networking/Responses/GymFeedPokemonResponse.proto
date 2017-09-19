@@ -14,6 +14,7 @@ message GymFeedPokemonResponse {
 	int32 num_candy_awarded = 6;
 	.POGOProtos.Enums.PokemonFamilyId family_candy_id = 7;
 	int64 cooldown_complete = 8;
+
 	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;

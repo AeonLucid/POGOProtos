@@ -2,8 +2,8 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 message DownloadGmTemplatesResponse {
-	Result result = 1;
-	repeated ClientGameMasterTemplate template = 2;
+	.POGOProtos.Networking.Responses.DownloadGmTemplatesResponse.Result result = 1;
+	repeated .POGOProtos.Networking.Responses.DownloadGmTemplatesResponse.ClientGameMasterTemplate template = 2;
 	repeated string deleted_template = 3;
 	fixed64 batch_id = 4;
 	int32 page_offset = 5;

@@ -6,7 +6,7 @@ import "POGOProtos/Data/AssetDigestEntry.proto";
 message GetAssetDigestResponse {
 	repeated .POGOProtos.Data.AssetDigestEntry digest = 1;
 	uint64 timestamp_ms = 2;
-	Result result = 3;
+	.POGOProtos.Networking.Responses.GetAssetDigestResponse.Result result = 3;
 	int32 page_offset = 4;
 
 	enum Result {

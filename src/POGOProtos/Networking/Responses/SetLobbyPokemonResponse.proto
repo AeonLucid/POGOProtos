@@ -4,7 +4,7 @@ package POGOProtos.Networking.Responses;
 import "POGOProtos/Data/Raid/Lobby.proto";
 
 message SetLobbyPokemonResponse {
-	Result result = 1;
+	.POGOProtos.Networking.Responses.SetLobbyPokemonResponse.Result result = 1;
 	.POGOProtos.Data.Raid.Lobby lobby = 2;
 
 	enum Result {
