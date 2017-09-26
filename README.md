@@ -43,7 +43,7 @@ https://raw.githubusercontent.com/AeonLucid/POGOProtos/master/.current-version
 
 ## Preparation
 
-Current recommended protoc version: "Protocol Buffers v3.4.0".
+Current recommended protoc version: "Protocol Buffers v3.4.1".
 
 You can find download links [here](https://github.com/google/protobuf/releases).
 
