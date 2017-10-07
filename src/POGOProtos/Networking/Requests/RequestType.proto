@@ -64,6 +64,7 @@ enum RequestType {
 	GYM_FEED_POKEMON = 164;                     // Implemented [R & M]
 	START_RAID_BATTLE = 165;                    // Implemented [R & M]
 	ATTACK_RAID = 166;                          // Implemented [R & M]
+	AWARD_POKECOIN = 167;                       // ???
 	GET_ASSET_DIGEST = 300;                     // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;                    // Implemented [R & M]
 	CLAIM_CODENAME = 403;                       // Implemented [R & M]
