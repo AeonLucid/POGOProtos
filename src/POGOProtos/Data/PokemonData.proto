@@ -44,4 +44,7 @@ message PokemonData {
 	.POGOProtos.Data.PokemonDisplay pokemon_display = 36;
 	bool is_bad = 37;
 	bool hatched_from_egg = 38;
+	int32 coins_returned = 39;
+	int64 deployed_duration_ms = 40;
+	int64 deployed_returned_timestamp_ms = 41;
 }

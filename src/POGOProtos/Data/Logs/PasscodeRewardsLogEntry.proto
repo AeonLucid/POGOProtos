@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Data/RedeemPasscodeReward.proto";
+
+message PasscodeRewardsLogEntry {
+	Result result = 1;
+	string passcode = 2;
+	.POGOProtos.Data.RedeemPasscodeReward rewards = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}
