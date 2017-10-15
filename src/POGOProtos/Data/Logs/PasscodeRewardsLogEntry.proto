@@ -4,7 +4,7 @@ package POGOProtos.Data.Logs;
 import "POGOProtos/Data/RedeemPasscodeReward.proto";
 
 message PasscodeRewardsLogEntry {
-	Result result = 1;
+	.POGOProtos.Data.Logs.PasscodeRewardsLogEntry.Result result = 1;
 	string passcode = 2;
 	.POGOProtos.Data.RedeemPasscodeReward rewards = 3;
 
