@@ -1,4 +1,4 @@
-POGOProtos [![Build Status](https://travis-ci.org/AeonLucid/POGOProtos.svg?branch=master)](https://travis-ci.org/AeonLucid/POGOProtos) [![Code Climate](https://codeclimate.com/github/Furtif/POGOProtos/badges/gpa.svg)](https://codeclimate.com/github/Furtif/POGOProtos) [![Issue Count](https://codeclimate.com/github/Furtif/POGOProtos/badges/issue_count.svg)](https://codeclimate.com/github/Furtif/POGOProtos)
+POGOProtos [![Build Status](https://travis-ci.org/Furtif/POGOProtos.svg?branch=master)](https://travis-ci.org/AeonLucid/POGOProtos) [![Maintainability](https://api.codeclimate.com/v1/badges/f4fbd03daa49a667d1b7/maintainability)](https://codeclimate.com/github/Furtif/POGOProtos/maintainability)
 ===================
 
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the PokémonGo RPC.
