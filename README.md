@@ -40,7 +40,7 @@ We are following [semantic versioning](http://semver.org/) for POGOProtos.  Ever
 
 If you want to figure out the current version in an automated system, use this file.
 
-https://raw.githubusercontent.com/AeonLucid/POGOProtos/master/.current-version
+https://raw.githubusercontent.com/Furtif/POGOProtos/master/.current-version
 
 *Note: This file will contain pre-release versions too.*
 
