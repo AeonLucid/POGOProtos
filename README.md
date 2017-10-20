@@ -111,11 +111,9 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 
 | Language         | Source                                                  |
 |------------------|---------------------------------------------------------|
-| NodeJS           | https://github.com/rastapasta/node-pokemongo-protobuf   |
-| NodeJS (pure JS) | https://github.com/cyraxx/node-pogo-protos              |
-| .NET             | https://github.com/AeonLucid/POGOProtos.NetStandard1    |
+| NodeJS           | https://github.com/pogosandbox/node-pogo-protos         |
+| .NET             | https://github.com/Furtif/POGOProtos.Core               |
 | .NET             | https://github.com/Necrobot-Private/POGOProtos          |
-| .NET             | https://github.com/johnduhart/POGOProtos-dotnet         |
 | PHP              | https://github.com/jaspervdm/pogoprotos-php             |
 | Go               | https://github.com/pkmngo-odi/pogo-protos               |
 | Haskell          | https://github.com/relrod/pokemon-go-protobuf-types     |
