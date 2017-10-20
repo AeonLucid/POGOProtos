@@ -11,12 +11,12 @@ message RequestEnvelope {
 	uint64 request_id = 3;
 	repeated .POGOProtos.Networking.Requests.Request requests = 4;
 
-	repeated PlatformRequest platform_requests = 6;
+	repeated .POGOProtos.Networking.Envelopes.RequestEnvelope.PlatformRequest platform_requests = 6;
 	double latitude = 7;
 	double longitude = 8;
 	double accuracy = 9;
 
-	AuthInfo auth_info = 10;
+	.POGOProtos.Networking.Envelopes.RequestEnvelope.AuthInfo auth_info = 10;
 	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 11;
 	int64 ms_since_last_locationfix = 12;
 

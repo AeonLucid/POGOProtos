@@ -2,19 +2,19 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 message GetInboxResponse {
-	Result result = 1;
-	ClientInbox inbox = 2;
+	.POGOProtos.Networking.Responses.GetInboxResponse.Result result = 1;
+	.POGOProtos.Networking.Responses.GetInboxResponse.ClientInbox inbox = 2;
 
 	message ClientInbox {
-		repeated Notification notifications = 1;
-		repeated TemplateVariable builtin_variables = 2;
+		repeated .POGOProtos.Networking.Responses.GetInboxResponse.ClientInbox.Notification notifications = 1;
+		repeated .POGOProtos.Networking.Responses.GetInboxResponse.ClientInbox.TemplateVariable builtin_variables = 2;
 
 		message Notification {
 			string notification_id = 1;
 			string title_key = 2;
 			string category = 3;
 			int64 create_timestamp_ms = 4;
-			repeated TemplateVariable variables = 5;
+			repeated .POGOProtos.Networking.Responses.GetInboxResponse.ClientInbox.TemplateVariable variables = 5;
 			repeated Label labels = 6;
 			int64 expire_time_ms = 7;
 

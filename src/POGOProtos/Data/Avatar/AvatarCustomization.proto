@@ -3,7 +3,7 @@ package POGOProtos.Data.Avatar;
 
 message AvatarCustomization {
 	string avatar_template_id = 1;
-	repeated Label labels = 2;
+	repeated .POGOProtos.Data.Avatar.AvatarCustomization.Label labels = 2;
 
 	enum Label {
 		UNSET_LABEL = 0;

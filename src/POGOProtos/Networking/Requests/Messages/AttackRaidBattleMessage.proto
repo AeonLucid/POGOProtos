@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message AttackRaidBattleMessage {
+	string gym_id = 1;
+	int64 raid_seed = 2;
+	repeated int32 lobby_id = 4;
+	repeated fixed64 attacking_pokemon_id = 5;
+	double player_lat_degrees = 6;
+	double player_lng_degrees = 7;
+}

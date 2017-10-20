@@ -29,4 +29,5 @@ message GlobalSettings {
 	.POGOProtos.Settings.TranslationSettings translation_settings = 13;
 	.POGOProtos.Settings.PasscodeSettings passcode_settings = 14;
 	.POGOProtos.Settings.NotificationSettings notification_settings = 15;
+	repeated string client_app_blacklist = 16;
 }

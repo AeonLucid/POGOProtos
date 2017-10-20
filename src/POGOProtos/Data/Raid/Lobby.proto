@@ -14,4 +14,5 @@ message Lobby {
 	string owner_nickname = 9;
 	bool private = 10;
 	int64 creation_ms = 11;
+	int32 battle_plfe_instance = 12;
 }

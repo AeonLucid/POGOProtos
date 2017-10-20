@@ -1,0 +1,28 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Battle/Battle.proto";
+
+message GymStartSessionResponse {
+	.POGOProtos.Networking.Responses.GymStartSessionResponse.Result result = 1;
+	.POGOProtos.Data.Battle.Battle battle = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_GYM_NOT_FOUND = 2;
+		ERROR_GYM_NEUTRAL = 3;
+		ERROR_GYM_WRONG_TEAM = 4;
+		ERROR_GYM_EMPTY = 5;
+		ERROR_INVALID_DEFENDER = 6;
+		ERROR_TRAINING_INVALID_ATTACKER_COUNT = 7;
+		ERROR_ALL_POKEMON_FAINTED = 8;
+		ERROR_TOO_MANY_BATTLES = 9;
+		ERROR_TOO_MANY_PLAYERS = 10;
+		ERROR_GYM_BATTLE_LOCKOUT = 11;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 12;
+		ERROR_NOT_IN_RANGE = 13;
+		ERROR_POI_INACCESSIBLE = 14;
+		ERROR_RAID_ACTIVE = 15;
+	}
+}

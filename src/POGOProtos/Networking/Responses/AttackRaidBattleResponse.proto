@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Battle/BattleUpdate.proto";
+
+message AttackRaidBattleResponse {
+	.POGOProtos.Networking.Responses.AttackRaidBattleResponse.Result result = 1;
+	.POGOProtos.Data.Battle.BattleUpdate battle_update = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_GYM_NOT_FOUND = 2;
+		ERROR_BATTLE_NOT_FOUND = 3;
+		ERROR_INVALID_ATTACK_ACTIONS = 4;
+		ERROR_NOT_PART_OF_BATTLE = 5;
+		ERROR_BATTLE_ID_NOT_RAID = 6;
+	}
+}

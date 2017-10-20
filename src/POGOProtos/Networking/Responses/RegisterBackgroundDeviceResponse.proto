@@ -4,7 +4,7 @@ package POGOProtos.Networking.Responses;
 import "POGOProtos/Data/BackgroundToken.proto";
 
 message RegisterBackgroundDeviceResponse {
-	Status status = 1;
+	.POGOProtos.Networking.Responses.RegisterBackgroundDeviceResponse.Status status = 1;
 	.POGOProtos.Data.BackgroundToken token = 2;
 
 	enum Status {

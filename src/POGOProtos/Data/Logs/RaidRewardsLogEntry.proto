@@ -4,7 +4,7 @@ package POGOProtos.Data.Logs;
 import "POGOProtos/Inventory/Item/ItemData.proto";
 
 message RaidRewardsLogEntry {
-	Result result = 1;
+	.POGOProtos.Data.Logs.RaidRewardsLogEntry.Result result = 1;
 	bool is_exclusive = 2;
 	repeated .POGOProtos.Inventory.Item.ItemData items = 3;
 	repeated .POGOProtos.Inventory.Item.ItemData default_rewards = 4;

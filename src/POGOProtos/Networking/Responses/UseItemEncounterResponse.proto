@@ -5,7 +5,7 @@ import "POGOProtos/Data/Capture/CaptureProbability.proto";
 import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message UseItemEncounterResponse {
-	Status status = 1;
+	.POGOProtos.Networking.Responses.UseItemEncounterResponse.Status status = 1;
 	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 2;
 	.POGOProtos.Inventory.Item.ItemId active_item = 3;
 

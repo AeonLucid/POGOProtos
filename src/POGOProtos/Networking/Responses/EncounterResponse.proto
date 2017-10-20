@@ -7,8 +7,8 @@ import "POGOProtos/Map/Pokemon/WildPokemon.proto";
 
 message EncounterResponse {
 	.POGOProtos.Map.Pokemon.WildPokemon wild_pokemon = 1;
-	Background background = 2;
-	Status status = 3;
+	.POGOProtos.Networking.Responses.EncounterResponse.Background background = 2;
+	.POGOProtos.Networking.Responses.EncounterResponse.Status status = 3;
 	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 4;
 	.POGOProtos.Inventory.Item.ItemId active_item = 5;
 
