@@ -8,4 +8,5 @@ message EvolutionBranch {
 	.POGOProtos.Enums.PokemonId evolution = 1;
 	.POGOProtos.Inventory.Item.ItemId evolution_item_requirement = 2;
 	int32 candy_cost = 3;
+	float km_buddy_distance_requirement = 4;
 }
