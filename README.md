@@ -1,4 +1,4 @@
-POGOProtos [![Build Status](https://travis-ci.org/Furtif/POGOProtos.svg?branch=master)](https://travis-ci.org/Furtif/POGOProtos) [![Maintainability](https://api.codeclimate.com/v1/badges/f4fbd03daa49a667d1b7/maintainability)](https://codeclimate.com/github/Furtif/POGOProtos/maintainability)
+POGOProtos [![Build Status](https://travis-ci.org/AeonLucid/POGOProtos.svg?branch=master)](https://travis-ci.org/AeonLucid/POGOProtos) [![Code Climate](https://codeclimate.com/github/AeonLucid/POGOProtos/badges/gpa.svg)](https://codeclimate.com/github/AeonLucid/POGOProtos) [![Issue Count](https://codeclimate.com/github/AeonLucid/POGOProtos/badges/issue_count.svg)](https://codeclimate.com/github/AeonLucid/POGOProtos)
 ===================
 
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the PokémonGo RPC.
@@ -13,7 +13,8 @@ We are following [semantic versioning](http://semver.org/) for POGOProtos.  Ever
 
 | Version      | Android       | iOS           | Extra                     |
 |--------------|---------------|---------------|---------------------------|
-| 2.19.0       | 0.81.1        | 1.51.1        |                           |
+| 2.19.0       | 0.83.1        | 1.53.2        |                           |
+| 2.18.2       | 0.79.4        | 1.49.4        |                           |
 | 2.18.1       | 0.79.3        | 1.49.3        |                           |
 | 2.18.0       | 0.79.2        | 1.49.2        |                           |
 | 2.17.0       | 0.77.1        | 1.47.1        |                           |
@@ -41,7 +42,7 @@ We are following [semantic versioning](http://semver.org/) for POGOProtos.  Ever
 
 If you want to figure out the current version in an automated system, use this file.
 
-https://raw.githubusercontent.com/Furtif/POGOProtos/master/.current-version
+https://raw.githubusercontent.com/AeonLucid/POGOProtos/master/.current-version
 
 *Note: This file will contain pre-release versions too.*
 
@@ -112,9 +113,11 @@ If you don't want to compile POGOProtos but instead use it directly, check out t
 
 | Language         | Source                                                  |
 |------------------|---------------------------------------------------------|
-| NodeJS           | https://github.com/pogosandbox/node-pogo-protos         |
-| .NET             | https://github.com/Furtif/POGOProtos.Core               |
+| NodeJS           | https://github.com/rastapasta/node-pokemongo-protobuf   |
+| NodeJS (pure JS) | https://github.com/cyraxx/node-pogo-protos              |
+| .NET             | https://github.com/AeonLucid/POGOProtos.NetStandard1    |
 | .NET             | https://github.com/Necrobot-Private/POGOProtos          |
+| .NET             | https://github.com/johnduhart/POGOProtos-dotnet         |
 | PHP              | https://github.com/jaspervdm/pogoprotos-php             |
 | Go               | https://github.com/pkmngo-odi/pogo-protos               |
 | Haskell          | https://github.com/relrod/pokemon-go-protobuf-types     |
