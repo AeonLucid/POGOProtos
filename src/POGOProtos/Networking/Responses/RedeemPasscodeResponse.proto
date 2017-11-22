@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message RedeemPasscodeResponse {
+	Result result = 1;
+	repeated AcquiredItem acquired_item = 2;
+	bytes acquired_items_proto = 3;
+	string passcode = 4;
+
+	message AcquiredItem {
+		string item = 1;
+		int64 count = 2;
+	}
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		NOT_AVAILABLE = 2;
+		OVER_INVENTORY_LIMIT = 3;
+		ALREADY_REDEEMED = 4;
+	}
+}

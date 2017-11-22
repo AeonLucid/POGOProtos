@@ -19,6 +19,7 @@ message FortSearchResponse {
 	.POGOProtos.Inventory.Loot bonus_loot = 10;
 	int32 raid_tickets = 11;
 	.POGOProtos.Inventory.Loot team_bonus_loot = 12;
+	string fort_id = 13;
 
 	enum Result {
 		NO_RESULT_SET = 0;

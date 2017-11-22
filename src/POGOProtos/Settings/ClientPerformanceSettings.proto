@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message ClientPerformanceSettings {
+	bool enable_local_disk_caching = 1;
+	int32 max_number_local_battle_parties = 2;
+}
