@@ -1,6 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Inventory;
 
+import "POGOProtos/Data/PokemonData.proto";
+
 message ExclusiveTicketInfo {
 	int64 raid_seed = 1;
 	string fort_id = 2;
@@ -12,4 +14,5 @@ message ExclusiveTicketInfo {
 	string gym_name = 9;
 	int64 spawn_time_ms = 10;
 	bool is_cancelled = 11;
+	.POGOProtos.Data.PokemonData raid_pokemon = 12;
 }
