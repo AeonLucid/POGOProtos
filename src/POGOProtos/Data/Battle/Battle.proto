@@ -3,6 +3,7 @@ package POGOProtos.Data.Battle;
 
 import "POGOProtos/Data/Battle/BattleParticipant.proto";
 import "POGOProtos/Data/Battle/BattleLog.proto";
+import "POGOProtos/Enums/WeatherCondition.proto";
 
 message Battle {
 	int64 battle_start_ms = 1;
@@ -11,4 +12,5 @@ message Battle {
 	.POGOProtos.Data.Battle.BattleParticipant defender = 4;
 	.POGOProtos.Data.Battle.BattleLog battle_log = 5;
 	.POGOProtos.Data.Battle.BattleParticipant attacker = 6;
+	.POGOProtos.Enums.WeatherCondition weather_condition = 7;
 }

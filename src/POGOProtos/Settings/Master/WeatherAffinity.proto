@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/WeatherCondition.proto";
+
+message WeatherAffinity {
+	.POGOProtos.Enums.WeatherCondition weather_condition = 1;
+	repeated .POGOProtos.Enums.PokemonType pokemon_type = 2;
+}

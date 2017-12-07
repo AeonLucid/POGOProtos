@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Map.Weather;
+
+message WeatherAlert {
+	Severity severity = 1;
+	bool warn_weather = 2;
+
+	enum Severity {
+		NONE = 0;
+		MODERATE = 1;
+		EXTREME = 2;
+	}
+}
