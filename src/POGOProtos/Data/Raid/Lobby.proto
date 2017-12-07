@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Data.Raid;
 
 import "POGOProtos/Data/Battle/BattleParticipant.proto";
+import "POGOProtos/Enums/WeatherCondition.proto";
 
 message Lobby {
 	repeated int32 lobby_id = 1;
@@ -15,4 +16,5 @@ message Lobby {
 	bool private = 10;
 	int64 creation_ms = 11;
 	int32 battle_plfe_instance = 12;
+	.POGOProtos.Enums.WeatherCondition weather_condition = 13;
 }

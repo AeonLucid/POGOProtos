@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message WeatherBonus {
+	int32 cp_base_level_bonus = 1;
+	int32 guaranteed_individual_values = 2;
+	double stardust_bonus_multiplier = 3;
+	double attack_bonus_multiplier = 4;
+	int32 raid_encounter_cp_base_level_bonus = 5;
+	int32 raid_encounter_guaranteed_individual_values = 6;
+}

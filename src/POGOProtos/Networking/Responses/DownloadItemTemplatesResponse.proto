@@ -21,6 +21,8 @@ import "POGOProtos/Settings/Master/QuestSettings.proto";
 import "POGOProtos/Settings/Master/TypeEffectiveSettings.proto";
 import "POGOProtos/Settings/Master/GenderSettings.proto";
 import "POGOProtos/Settings/Master/GymBadgeGmtSettings.proto";
+import "POGOProtos/Settings/Master/WeatherAffinity.proto";
+import "POGOProtos/Settings/Master/WeatherBonus.proto";
 
 message DownloadItemTemplatesResponse {
 	.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.Result result = 1;
@@ -50,6 +52,8 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.FormSettings form_settings = 22;
 		.POGOProtos.Settings.Master.GenderSettings gender_settings = 23;
 		.POGOProtos.Settings.Master.GymBadgeGmtSettings gym_badge_settings = 24;
+		.POGOProtos.Settings.Master.WeatherAffinity weather_affinities = 25;
+		.POGOProtos.Settings.Master.WeatherBonus weather_bonus_settings = 26;
 	}
 
 	enum Result {
