@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Settings.Master;
 
 message PokemonScaleSetting {
-	PokemonScaleMode pokemon_scale_mode = 1;
+	.POGOProtos.Settings.Master.PokemonScaleSetting.PokemonScaleMode pokemon_scale_mode = 1;
 	float min_height = 2;
 	float max_height = 3;
 

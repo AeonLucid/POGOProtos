@@ -23,6 +23,7 @@ import "POGOProtos/Settings/Master/GenderSettings.proto";
 import "POGOProtos/Settings/Master/GymBadgeGmtSettings.proto";
 import "POGOProtos/Settings/Master/WeatherAffinity.proto";
 import "POGOProtos/Settings/Master/WeatherBonus.proto";
+import "POGOProtos/Settings/Master/PokemonScaleSetting.proto";
 
 message DownloadItemTemplatesResponse {
 	.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.Result result = 1;
