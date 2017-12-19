@@ -37,6 +37,7 @@ message PokemonSettings {
 	.POGOProtos.Settings.Master.PokemonSettings.BuddySize buddy_size = 24;
 	float model_height = 25;
 	repeated .POGOProtos.Settings.Master.Pokemon.EvolutionBranch evolution_branch = 26;
+	float model_scale_v2 = 27;
 
 	enum BuddySize {
 		BUDDY_MEDIUM = 0;

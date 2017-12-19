@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
 import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Data/ARPlusEncounterValues.proto";
 
 message CatchPokemonMessage {
 	fixed64 encounter_id = 1;
@@ -11,4 +12,5 @@ message CatchPokemonMessage {
 	bool hit_pokemon = 5;
 	double spin_modifier = 6;
 	double normalized_hit_position = 7;
+	.POGOProtos.Data.ARPlusEncounterValues ar_plus_values = 8;
 }

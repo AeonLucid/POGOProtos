@@ -6,4 +6,6 @@ message DiskEncounterMessage {
 	string fort_id = 2;
 	double player_latitude = 3;
 	double player_longitude = 4;
+	double gym_lat_degrees = 5;
+	double gym_lng_degrees = 6;
 }

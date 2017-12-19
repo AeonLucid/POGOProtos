@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message PokemonScaleSetting {
+	PokemonScaleMode pokemon_scale_mode = 1;
+	float min_height = 2;
+	float max_height = 3;
+
+	enum PokemonScaleMode {
+		NaturalScale = 0;
+		GuiScale = 1;
+		BattlePokemonScale = 2;
+		RaidBossScale = 3;
+		GymTopperScale = 4;
+		MapPokemonScale = 5;
+	}
+}

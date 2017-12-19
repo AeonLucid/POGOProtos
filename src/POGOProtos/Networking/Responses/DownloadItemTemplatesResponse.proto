@@ -54,6 +54,7 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.GymBadgeGmtSettings gym_badge_settings = 24;
 		.POGOProtos.Settings.Master.WeatherAffinity weather_affinities = 25;
 		.POGOProtos.Settings.Master.WeatherBonus weather_bonus_settings = 26;
+		.POGOProtos.Settings.Master.PokemonScaleSetting pokemon_scale_settings = 27;
 	}
 
 	enum Result {

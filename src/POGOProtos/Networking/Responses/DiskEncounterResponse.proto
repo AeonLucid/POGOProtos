@@ -10,6 +10,7 @@ message DiskEncounterResponse {
 	.POGOProtos.Data.PokemonData pokemon_data = 2;
 	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
 	.POGOProtos.Inventory.Item.ItemId active_item = 4;
+	int32 arplus_attempts_until_flee = 5;
 
 	enum Result {
 		UNKNOWN = 0;
