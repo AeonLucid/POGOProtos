@@ -8,7 +8,7 @@ import "POGOProtos/Map/Weather/ClientWeather.proto";
 message GetMapObjectsResponse {
 	repeated .POGOProtos.Map.MapCell map_cells = 1;
 	.POGOProtos.Map.MapObjectsStatus status = 2;
-	TimeOfDay time_of_day = 3;
+	.POGOProtos.Networking.Responses.GetMapObjectsResponse.TimeOfDay time_of_day = 3;
 	repeated .POGOProtos.Map.Weather.ClientWeather client_weather = 4;
 
 	enum TimeOfDay {

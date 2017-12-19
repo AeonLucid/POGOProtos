@@ -11,6 +11,7 @@ message EncounterResponse {
 	.POGOProtos.Networking.Responses.EncounterResponse.Status status = 3;
 	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 4;
 	.POGOProtos.Inventory.Item.ItemId active_item = 5;
+	int32 arplus_attempts_until_flee = 6;
 
 	enum Background {
 		PARK = 0;

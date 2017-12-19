@@ -4,6 +4,7 @@ package POGOProtos.Networking.Responses;
 import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
 import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
 import "POGOProtos/Data/Raid/EventInfo.proto";
+import "POGOProtos/Map/Weather/DisplayWeather.proto";
 
 message GymGetInfoResponse {
 	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status_and_defenders = 1;
@@ -15,6 +16,7 @@ message GymGetInfoResponse {
 	.POGOProtos.Data.Badge.AwardedGymBadge awarded_gym_badge = 7;
 	string checkin_image_url = 8;
 	.POGOProtos.Data.Raid.EventInfo event_info = 9;
+	.POGOProtos.Map.Weather.DisplayWeather display_weather = 10;
 
 	enum Result {
 		UNSET = 0;
