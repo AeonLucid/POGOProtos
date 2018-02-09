@@ -3,7 +3,7 @@ package POGOProtos.Data.Quests;
 
 import "POGOProtos/Enums/QuestType.proto";
 import "POGOProtos/Data/Quests/DailyQuest.proto";
-import "POGOProtos/Data/Quests/MultiPartQuest.proto";
+//import "POGOProtos/Data/Quests/MultiPartQuest.proto";
 import "POGOProtos/Data/Quests/CatchPokemonQuest.proto";
 import "POGOProtos/Data/Quests/QuestReward.proto";
 import "POGOProtos/Data/Quests/QuestGoal.proto";
@@ -11,7 +11,7 @@ import "POGOProtos/Data/Quests/QuestGoal.proto";
 message Quest {
 	.POGOProtos.Enums.QuestType quest_type = 1;
 	.POGOProtos.Data.Quests.DailyQuest daily_quest = 2;
-	.POGOProtos.Data.Quests.MultiPartQuest multi_part = 3;
+	.POGOProtos.Data.Quests.Quest.MultiPartQuest multi_part = 3;
 	.POGOProtos.Data.Quests.CatchPokemonQuest catch_pokemon = 4;
 	int64 quest_seed = 5;
 	.POGOProtos.Data.Quests.Quest.Context quest_context = 6;
@@ -25,7 +25,7 @@ message Quest {
 	int64 compeletion_timestamp_ms = 14;
 
 	message MultiPartQuest {
-		repeated .POGOProtos.Data.Quests.MultiPartQuest sub_quests = 1;
+		repeated .POGOProtos.Data.Quests.Quest sub_quests = 1;
 	}
 
 	enum Context {
