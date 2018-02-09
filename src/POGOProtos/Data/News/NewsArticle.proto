@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Data.News;
+
+message NewsArticle {
+	string id = 1;
+	repeated string image_url = 2;
+	string header_key = 3;
+	string subheader_key = 4;
+	string main_text_key = 5;
+	int64 timestamp = 6;
+	.POGOProtos.Data.News.NewsArticle.NewsTemplate template = 7;
+	bool enabled = 8;
+	bool article_read = 9;
+
+	enum NewsTemplate {
+		UNSET = 0;
+		DEFAULT_TEMPLATE = 1;
+	}
+}

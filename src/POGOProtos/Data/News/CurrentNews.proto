@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.News;
+
+import "POGOProtos/Data/News/NewsArticle.proto";
+
+message CurrentNews {
+	repeated .POGOProtos.Data.News.NewsArticle news_articles = 1;
+	string news_strings_url = 2;
+	int64 last_updated_timestamp = 3;
+}

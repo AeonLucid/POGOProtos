@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/Capture/CaptureAward.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
 
 message CatchPokemonResponse {
 	.POGOProtos.Networking.Responses.CatchPokemonResponse.CatchStatus status = 1;
@@ -11,6 +12,7 @@ message CatchPokemonResponse {
 	.POGOProtos.Networking.Responses.CatchPokemonResponse.CaptureReason capture_reason = 5;
 	int32 display_pokedex_id = 6;
 	int32 throws_remaining = 7;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 8;
 
 	enum CatchStatus {
 		CATCH_ERROR = 0;
