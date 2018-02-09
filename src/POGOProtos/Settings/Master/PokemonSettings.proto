@@ -1,6 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Settings.Master;
 
+import "POGOProtos/Enums/Form.proto";
 import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Enums/PokemonRarity.proto";
 import "POGOProtos/Enums/PokemonType.proto";
@@ -38,6 +39,7 @@ message PokemonSettings {
 	float model_height = 25;
 	repeated .POGOProtos.Settings.Master.Pokemon.EvolutionBranch evolution_branch = 26;
 	float model_scale_v2 = 27;
+	.POGOProtos.Enums.Form form = 28;
 
 	enum BuddySize {
 		BUDDY_MEDIUM = 0;

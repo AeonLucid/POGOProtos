@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/News/CurrentNews.proto";
+
+message FetchAllNewsResponse {
+	.POGOProtos.Networking.Responses.FetchAllNewsResponse.Result result = 1;
+	.POGOProtos.Data.News.CurrentNews current_news = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		NO_NEWS_FOUND = 2;
+	}
+}

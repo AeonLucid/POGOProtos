@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+message QuestReward {
+	.POGOProtos.Data.Quests.QuestReward.Type type = 1;
+	int32 amount = 2;
+	int32 pokemon_index = 3;
+	int32 item_id = 4;
+	string quest_template_id = 5;
+
+	enum Type {
+		EXPERIENCE = 0;
+		ITEM = 1;
+		POKEMON_ENCOUNTER = 2;
+		STARDUST = 3;
+		CANDY = 4;
+		AVATAR_CLOTHING = 5;
+		QUEST = 6;
+	}
+}
