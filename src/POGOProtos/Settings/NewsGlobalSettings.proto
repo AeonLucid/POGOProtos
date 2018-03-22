@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message NewsGlobalSettings {
+	bool enable_news = 1;
+}

@@ -16,4 +16,8 @@ message EncounterSettings {
 	float ar_high_awareness_min_penalty_multiplier = 12;
 	int32 ar_plus_attempts_until_flee_max = 13;
 	int32 ar_plus_attempts_until_flee_infinite = 14;
+	float escaped_bonus_multiplier_max = 15;
+	float escaped_bonus_multiplier_by_excellent_throw = 16;
+	float escaped_bonus_multiplier_by_great_throw = 17;
+	float escaped_bonus_multiplier_by_nice_throw = 18;
 }

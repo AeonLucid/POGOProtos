@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/IapItemCategory.proto";
+
+message IapItemCategoryDisplay {
+	.POGOProtos.Enums.HoloIapItemCategory category = 1;
+	string name = 2;
+	bool hidden = 3;
+	int32 sort_order = 4;
+	bool banner_enabled = 5;
+	string banner_title = 6;
+	string image_url = 7;
+	string description = 8;
+}

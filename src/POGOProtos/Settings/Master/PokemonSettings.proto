@@ -40,6 +40,11 @@ message PokemonSettings {
 	repeated .POGOProtos.Settings.Master.Pokemon.EvolutionBranch evolution_branch = 26;
 	float model_scale_v2 = 27;
 	.POGOProtos.Enums.Form form = 28;
+	.POGOProtos.Enums.PokemonMove event_quick_move = 29;
+	.POGOProtos.Enums.PokemonMove event_cinematic_move = 30;
+	repeated float buddy_offset_male = 31;
+	repeated float buddy_offset_female = 32;
+	float buddy_scale = 33;
 
 	enum BuddySize {
 		BUDDY_MEDIUM = 0;

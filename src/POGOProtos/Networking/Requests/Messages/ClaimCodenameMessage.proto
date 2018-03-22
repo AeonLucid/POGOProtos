@@ -4,4 +4,5 @@ package POGOProtos.Networking.Requests.Messages;
 message ClaimCodenameMessage {
 	string codename = 1;
 	bool force = 2;
+	bool generate_suggested_codenames = 3;
 }
