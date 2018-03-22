@@ -36,4 +36,5 @@ message PlayerStats {
 	int32 num_berries_fed = 30;
 	int64 total_defended_ms = 31;
 	repeated .POGOProtos.Enums.GymBadgeType event_badges = 32;
+	float km_walked_past_active_day = 33;
 }

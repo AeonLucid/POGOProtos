@@ -72,6 +72,7 @@ enum RequestType {
 	SET_AVATAR = 404;                           // Implemented [R & M]
 	SET_PLAYER_TEAM = 405;                      // Implemented [R & M]
 	MARK_TUTORIAL_COMPLETE = 406;               // Implemented [R & M]
+	UPDATE_PERFORMANCE_METRICS = 407;           // ???
 	CHECK_CHALLENGE = 600;                      // Implemented [R & M]
 	VERIFY_CHALLENGE = 601;                     // Implemented [R & M]
 	ECHO = 666;                                 // Implemented [R & M]
@@ -92,6 +93,7 @@ enum RequestType {
 	AWARD_FREE_RAID_TICKET = 815;               // Implemented [R & M]
 	FETCH_ALL_NEWS = 816;                       // Implemented [R & M]
 	MARK_READ_NEWS_ARTICLE = 817;               // Implemented [R & M]
+	GET_PLAYER_DISPLAY_INFO = 818;              // ???
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented [R & M]
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // Not yet released.
 	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented [R & M]

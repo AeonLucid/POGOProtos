@@ -24,6 +24,7 @@ import "POGOProtos/Settings/Master/GymBadgeGmtSettings.proto";
 import "POGOProtos/Settings/Master/WeatherAffinity.proto";
 import "POGOProtos/Settings/Master/WeatherBonus.proto";
 import "POGOProtos/Settings/Master/PokemonScaleSetting.proto";
+import "POGOProtos/Settings/Master/IapItemCategoryDisplay.proto";
 
 message DownloadItemTemplatesResponse {
 	.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.Result result = 1;
@@ -56,6 +57,7 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.WeatherAffinity weather_affinities = 25;
 		.POGOProtos.Settings.Master.WeatherBonus weather_bonus_settings = 26;
 		.POGOProtos.Settings.Master.PokemonScaleSetting pokemon_scale_settings = 27;
+		.POGOProtos.Settings.Master.IapItemCategoryDisplay iap_category_display = 28;
 	}
 
 	enum Result {

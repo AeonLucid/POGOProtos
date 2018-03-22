@@ -14,6 +14,9 @@ import "POGOProtos/Settings/PasscodeSettings.proto";
 import "POGOProtos/Settings/SfidaSettings.proto";
 import "POGOProtos/Settings/TranslationSettings.proto";
 import "POGOProtos/Settings/ClientPerformanceSettings.proto";
+import "POGOProtos/Settings/NewsGlobalSettings.proto";
+import "POGOProtos/Settings/MetricsGlobalSettings.proto";
+import "POGOProtos/Settings/LoginSettings.proto";
 
 message GlobalSettings {
 	.POGOProtos.Settings.FortSettings fort_settings = 2;
@@ -32,4 +35,7 @@ message GlobalSettings {
 	.POGOProtos.Settings.NotificationSettings notification_settings = 15;
 	repeated string client_app_blacklist = 16;
 	.POGOProtos.Settings.ClientPerformanceSettings client_perf_settings = 17;
+	.POGOProtos.Settings.NewsGlobalSettings news_global_settings = 18;
+	.POGOProtos.Settings.MetricsGlobalSettings metrics_global_settings = 21;
+	.POGOProtos.Settings.LoginSettings login_settings = 22;
 }

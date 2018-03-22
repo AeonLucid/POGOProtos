@@ -40,4 +40,5 @@ message FortData {
 	string image_url = 25;
 	bool in_event = 26;
 	string banner_url = 27;
+	string partner_id = 28;
 }
