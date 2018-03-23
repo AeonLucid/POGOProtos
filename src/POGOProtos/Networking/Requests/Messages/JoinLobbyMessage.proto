@@ -8,4 +8,6 @@ message JoinLobbyMessage {
 	bool private = 4;
 	double player_lat_degrees = 5;
 	double player_lng_degrees = 6;
+	double gym_lat_degrees = 7;
+	double gym_lng_degrees = 8;
 }
