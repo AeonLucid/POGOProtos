@@ -8,4 +8,6 @@ message StartRaidBattleMessage {
 	repeated fixed64 attacking_pokemon_id = 5;
 	double player_lat_degrees = 6;
 	double player_lng_degrees = 7;
+	double gym_lat_degrees = 8;
+	double gym_lng_degrees = 9;
 }
