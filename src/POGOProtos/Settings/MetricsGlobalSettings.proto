@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message MetricsGlobalSettings {
+	bool enabled = 1;
+}

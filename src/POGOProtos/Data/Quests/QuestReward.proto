@@ -1,0 +1,44 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message QuestReward {
+	.POGOProtos.Data.Quests.QuestReward.Type type = 1;
+	int32 exp = 2;
+	.POGOProtos.Data.Quests.QuestReward.ItemReward item = 3;
+	int32 stardust = 4;
+	.POGOProtos.Data.Quests.QuestReward.PokemonCandyReward candy = 5;
+	string avatar_template_id = 6;
+	string quest_template_id = 7;
+	.POGOProtos.Data.Quests.QuestReward.PokemonEncounterReward pokemon_encounter = 8;
+
+	enum Type {
+		UNSET = 0;
+		EXPERIENCE = 1;
+		ITEM = 2;
+		STARDUST = 3;
+		CANDY = 4;
+		AVATAR_CLOTHING = 5;
+		QUEST = 6;
+		POKEMON_ENCOUNTER = 7;
+	}
+
+	message ItemReward {
+		.POGOProtos.Inventory.Item.ItemId item = 1;
+		int32 amount = 2;
+	}
+
+	message PokemonCandyReward {
+		.POGOProtos.Enums.PokemonId pokemon_id = 1;
+		int32 amount = 2;
+	}
+
+	message PokemonEncounterReward {
+		.POGOProtos.Enums.PokemonId pokemon_id = 1;
+		bool use_quest_pokemon_encounter_distribuition = 2;
+		.POGOProtos.Data.PokemonDisplay pokemon_display = 3;
+	}
+}

@@ -15,6 +15,7 @@ import "POGOProtos/Settings/Master/Item/FortModifierAttributes.proto";
 import "POGOProtos/Settings/Master/Item/EggIncubatorAttributes.proto";
 import "POGOProtos/Settings/Master/Item/ExperienceBoostAttributes.proto";
 import "POGOProtos/Settings/Master/Item/InventoryUpgradeAttributes.proto";
+import "POGOProtos/Settings/Master/Item/StardustBoostAttributes.proto";
 
 message ItemSettings {
 	.POGOProtos.Inventory.Item.ItemId item_id = 1;
@@ -35,4 +36,5 @@ message ItemSettings {
 	.POGOProtos.Settings.Master.Item.IncenseAttributes incense = 13;
 	.POGOProtos.Settings.Master.Item.EggIncubatorAttributes egg_incubator = 14;
 	.POGOProtos.Settings.Master.Item.FortModifierAttributes fort_modifier = 15;
+	.POGOProtos.Settings.Master.Item.StardustBoostAttributes stardust_boost = 16;
 }

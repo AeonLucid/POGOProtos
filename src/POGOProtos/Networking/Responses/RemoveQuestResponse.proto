@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message RemoveQuestResponse {
+	.POGOProtos.Networking.Responses.RemoveQuestResponse.Status status = 1;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_QUEST_NOT_FOUND = 2;
+		ERROR_STORY_QUEST_NOT_REMOVABLE = 3;
+	}
+}

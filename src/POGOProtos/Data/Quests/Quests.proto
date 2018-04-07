@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Data/Quests/Quest.proto";
+import "POGOProtos/Data/Quests/QuestPokemonEncounter.proto";
+import "POGOProtos/Data/Quests/QuestStampCard.proto";
+
+message Quests {
+	repeated .POGOProtos.Data.Quests.Quest quest = 1;
+	repeated string completed_story_quest = 2;
+	repeated .POGOProtos.Data.Quests.QuestPokemonEncounter quest_pokemon_encounter = 3;
+	.POGOProtos.Data.Quests.QuestStampCard stamp_card = 4;
+}

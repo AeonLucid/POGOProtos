@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Battle/BattleAction.proto";
+
+message AttackRaidBattleMessage {
+	//string gym_id = 1;
+	//int64 raid_seed = 2;
+	//repeated int32 lobby_id = 4;
+	//repeated fixed64 attacking_pokemon_id = 5;
+	//double player_lat_degrees = 6;
+	//double player_lng_degrees = 7;
+	string gym_id = 1;
+	string battle_id = 2;
+	repeated .POGOProtos.Data.Battle.BattleAction attacker_actions = 3;
+	.POGOProtos.Data.Battle.BattleAction last_retrieved_action = 4;
+	int64 timestamp_ms = 5;
+}

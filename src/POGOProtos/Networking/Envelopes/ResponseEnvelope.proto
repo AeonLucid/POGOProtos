@@ -5,11 +5,11 @@ import "POGOProtos/Networking/Envelopes/AuthTicket.proto";
 import "POGOProtos/Networking/Platform/PlatformRequestType.proto";
 
 message ResponseEnvelope {
-	StatusCode status_code = 1;
+	.POGOProtos.Networking.Envelopes.ResponseEnvelope.StatusCode status_code = 1;
 	uint64 request_id = 2;
 	string api_url = 3;
 
-	repeated PlatformResponse platform_returns = 6;
+	repeated .POGOProtos.Networking.Envelopes.ResponseEnvelope.PlatformResponse platform_returns = 6;
 	.POGOProtos.Networking.Envelopes.AuthTicket auth_ticket = 7;
 
 	repeated bytes returns = 100;

@@ -2,12 +2,17 @@ syntax = "proto3";
 package POGOProtos.Settings.Master;
 
 import "POGOProtos/Enums/IapItemCategory.proto";
-import "POGOProtos/Inventory/Item/ItemId.proto";
+// import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message IapItemDisplay {
 	string sku = 1;
 	.POGOProtos.Enums.HoloIapItemCategory category = 2;
 	int32 sort_order = 3;
-	repeated .POGOProtos.Inventory.Item.ItemId item_ids = 4;
-	repeated int32 counts = 5;
+	// repeated .POGOProtos.Inventory.Item.ItemId item_ids = 4;
+	// repeated int32 counts = 5;
+	bool hidden = 6;
+	bool sale = 7;
+	string sprite_id = 8;
+	string title = 9;
+	string description = 10;
 }

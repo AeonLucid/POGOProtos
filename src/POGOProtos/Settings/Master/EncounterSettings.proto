@@ -7,4 +7,17 @@ message EncounterSettings {
 	float great_throw_threshold = 3;
 	float nice_throw_threshold = 4;
 	int32 milestone_threshold = 5;
+	bool ar_plus_mode_enabled = 6;
+	float ar_close_proximity_threshold = 7;
+	float ar_low_awareness_threshold = 8;
+	float ar_close_proximity_multiplier = 9;
+	float ar_awareness_penalty_threshold = 10;
+	float ar_low_awareness_max_multiplier = 11;
+	float ar_high_awareness_min_penalty_multiplier = 12;
+	int32 ar_plus_attempts_until_flee_max = 13;
+	int32 ar_plus_attempts_until_flee_infinite = 14;
+	float escaped_bonus_multiplier_max = 15;
+	float escaped_bonus_multiplier_by_excellent_throw = 16;
+	float escaped_bonus_multiplier_by_great_throw = 17;
+	float escaped_bonus_multiplier_by_nice_throw = 18;
 }

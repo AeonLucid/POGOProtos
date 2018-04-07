@@ -10,4 +10,5 @@ message LootItem {
 	bool pokecoin = 3;
 	.POGOProtos.Enums.PokemonId pokemon_candy = 4;
 	int32 count = 5;
+	bool experience = 6;
 }

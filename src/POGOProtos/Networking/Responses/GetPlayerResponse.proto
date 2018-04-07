@@ -8,4 +8,5 @@ message GetPlayerResponse {
 	.POGOProtos.Data.PlayerData player_data = 2;
 	bool banned = 3;
 	bool warn = 4;
+	bool was_created = 5;
 }

@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Data/Quests/QuestReward.proto";
+
+message CompleteQuestStampCardLogEntry {
+	.POGOProtos.Data.Logs.CompleteQuestStampCardLogEntry.Result result = 1;
+	repeated .POGOProtos.Data.Quests.QuestReward reward = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

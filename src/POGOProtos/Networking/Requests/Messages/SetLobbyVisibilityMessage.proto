@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message SetLobbyVisibilityMessage {
+	int64 raid_seed = 1;
+	string gym_id = 2;
+	repeated int32 lobby_id = 3;
+}

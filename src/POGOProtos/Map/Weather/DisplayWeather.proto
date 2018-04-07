@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Map.Weather;
+
+message DisplayWeather {
+	DisplayLevel cloud_level = 1;
+	DisplayLevel rain_level = 2;
+	DisplayLevel wind_level = 3;
+	DisplayLevel snow_level = 4;
+	DisplayLevel fog_level = 5;
+	int32 wind_direction = 6;
+
+	enum DisplayLevel {
+		LEVEL_0 = 0;
+		LEVEL_1 = 1;
+		LEVEL_2 = 2;
+		LEVEL_3 = 3;
+	}
+}

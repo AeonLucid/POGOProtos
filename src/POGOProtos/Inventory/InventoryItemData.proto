@@ -14,6 +14,7 @@ import "POGOProtos/Data/Player/PlayerStats.proto";
 import "POGOProtos/Data/Player/PlayerCurrency.proto";
 import "POGOProtos/Data/Player/PlayerCamera.proto";
 import "POGOProtos/Data/Quests/Quest.proto";
+import "POGOProtos/Data/Quests/Quests.proto";
 
 message InventoryItemData {
 	.POGOProtos.Data.PokemonData pokemon_data = 1;
@@ -29,4 +30,5 @@ message InventoryItemData {
 	.POGOProtos.Data.Quests.Quest quest = 11;
 	.POGOProtos.Data.Avatar.AvatarItem avatar_item = 12;
 	.POGOProtos.Inventory.RaidTickets raid_tickets = 13;
+	.POGOProtos.Data.Quests.Quests quests = 14;
 }

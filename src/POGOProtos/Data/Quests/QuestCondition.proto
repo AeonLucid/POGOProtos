@@ -1,0 +1,115 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Enums/ActivityType.proto";
+import "POGOProtos/Enums/BadgeType.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/RaidLevel.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message QuestCondition {
+	.POGOProtos.Data.Quests.QuestCondition.ConditionType type = 1;
+	.POGOProtos.Data.Quests.QuestCondition.WithPokemonType with_pokemon_type = 2;
+	.POGOProtos.Data.Quests.QuestCondition.WithPokemonCategory with_pokemon_category = 3;
+	.POGOProtos.Data.Quests.QuestCondition.WithWeatherBoost with_weather_boost = 4;
+	.POGOProtos.Data.Quests.QuestCondition.WithDailyCaptureBonus with_daily_capture_bonus = 5;
+	.POGOProtos.Data.Quests.QuestCondition.WithDailySpinBonus with_daily_spin_bonus = 6;
+	.POGOProtos.Data.Quests.QuestCondition.WithWinRaidStatus with_win_raid_status = 7;
+	.POGOProtos.Data.Quests.QuestCondition.WithRaidLevel with_raid_level = 8;
+	.POGOProtos.Data.Quests.QuestCondition.WithThrowType with_throw_type = 9;
+	.POGOProtos.Data.Quests.QuestCondition.WithWinGymBattleStatus with_win_gym_battle_status = 10;
+	.POGOProtos.Data.Quests.QuestCondition.WithSuperEffectiveChargeMove with_super_effective_charge_move = 11;
+	.POGOProtos.Data.Quests.QuestCondition.WithItem with_item = 12;
+	.POGOProtos.Data.Quests.QuestCondition.WithUniquePokestop with_unique_pokestop = 13;
+	.POGOProtos.Data.Quests.QuestCondition.WithQuestContext with_quest_context = 14;
+	.POGOProtos.Data.Quests.QuestCondition.WithBadgeType with_badge_type = 15;
+	.POGOProtos.Data.Quests.QuestCondition.WithPlayerLevel with_player_level = 16;
+
+	enum ConditionType {
+		UNSET = 0;
+		WITH_POKEMON_TYPE = 1;
+		WITH_POKEMON_CATEGORY = 2;
+		WITH_WEATHER_BOOST = 3;
+		WITH_DAILY_CAPTURE_BONUS = 4;
+		WITH_DAILY_SPIN_BONUS = 5;
+		WITH_WIN_RAID_STATUS = 6;
+		WITH_RAID_LEVEL = 7;
+		WITH_THROW_TYPE = 8;
+		WITH_WIN_GYM_BATTLE_STATUS = 9;
+		WITH_SUPER_EFFECTIVE_CHARGE = 10;
+		WITH_ITEM = 11;
+		WITH_UNIQUE_POKESTOP = 12;
+		WITH_QUEST_CONTEXT = 13;
+		WITH_THROW_TYPE_IN_A_ROW = 14;
+		WITH_CURVE_BALL = 15;
+		WITH_BADGE_TYPE = 16;
+		WITH_PLAYER_LEVEL = 17;
+	}
+
+	message WithPokemonType {
+		repeated .POGOProtos.Enums.PokemonType pokemon_type = 1;
+	}
+
+	message WithWeatherBoost {
+	}
+
+	message WithPokemonCategory {
+		string category_name = 1;
+		repeated .POGOProtos.Enums.PokemonId pokemon_ids = 2;
+	}
+
+	message WithDailyCaptureBonus {
+	}
+
+	message WithDailySpinBonus {
+	}
+
+	message WithWinRaidStatus {
+	}
+
+	message WithRaidLevel {
+		repeated .POGOProtos.Enums.RaidLevel raid_level = 1;
+	}
+
+	message WithThrowType {
+		.POGOProtos.Enums.ActivityType throw_type = 1;
+		bool hit = 2;
+	}
+
+	message WithCurveBall {
+	}
+
+	message WithWinGymBattleStatus {
+	}
+
+	message WithSuperEffectiveChargeMove {
+	}
+
+	message WithItem {
+		.POGOProtos.Inventory.Item.ItemId item = 1;
+	}
+
+	message WithUniquePokestop {
+	}
+
+	message WithQuestContext {
+		Context context = 1;
+
+		enum Context {
+			UNSET = 0;
+			STORY_QUEST = 1;
+			CHALLENGE_QUEST = 2;
+		}
+	}
+
+	message WithBadgeType {
+		repeated .POGOProtos.Enums.BadgeType badge_type = 1;
+		int32 badge_rank = 2;
+		int32 amount = 3;
+	}
+
+	message WithPlayerLevel {
+		int32 level = 1;
+	}
+}

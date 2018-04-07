@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Data/Quests/QuestCondition.proto";
+
+message QuestGoal {
+	repeated .POGOProtos.Data.Quests.QuestCondition condition = 1;
+	int32 target = 2;
+}

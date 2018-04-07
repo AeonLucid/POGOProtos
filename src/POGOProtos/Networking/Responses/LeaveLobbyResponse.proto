@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Raid/Lobby.proto";
+
+message LeaveLobbyResponse {
+	.POGOProtos.Networking.Responses.LeaveLobbyResponse.Result result = 1;
+	.POGOProtos.Data.Raid.Lobby lobby = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_RAID_UNAVAILABLE = 2;
+		ERROR_LOBBY_NOT_FOUND = 3;
+	}
+}

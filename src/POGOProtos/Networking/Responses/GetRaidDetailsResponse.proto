@@ -9,13 +9,14 @@ message GetRaidDetailsResponse {
 	.POGOProtos.Data.Raid.Lobby lobby = 1;
 	.POGOProtos.Data.Battle.Battle raid_battle = 2;
 	bool player_can_join_lobby = 3;
-	Result result = 4;
+	.POGOProtos.Networking.Responses.GetRaidDetailsResponse.Result result = 4;
 	.POGOProtos.Data.Raid.RaidInfo raid_info = 5;
 	bool ticket_used = 6;
 	bool free_ticket_available = 7;
 	int32 throws_remaining = 8;
 	bool received_rewards = 9;
 	int32 num_players_in_lobby = 10;
+	int64 server_ms = 11;
 
 	enum Result {
 		UNSET = 0;

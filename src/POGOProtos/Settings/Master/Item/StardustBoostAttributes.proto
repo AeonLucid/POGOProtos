@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Item;
+
+message StardustBoostAttributes {
+	float stardust_multiplier = 1;
+	int32 boost_duration_ms = 2;
+}

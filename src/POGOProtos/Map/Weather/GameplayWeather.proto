@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Map.Weather;
+
+message GameplayWeather {
+	WeatherCondition gameplay_condition = 1;
+
+	enum WeatherCondition {
+		NONE = 0;
+		CLEAR = 1;
+		RAINY = 2;
+		PARTLY_CLOUDY = 3;
+		OVERCAST = 4;
+		WINDY = 5;
+		SNOW = 6;
+		FOG = 7;
+	}
+}

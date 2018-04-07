@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message OnboardingSettings {
+	bool skip_avatar_customization = 1;
+	bool disable_initial_ar_prompt = 2;
+}

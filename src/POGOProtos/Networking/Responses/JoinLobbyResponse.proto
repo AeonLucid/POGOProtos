@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Raid/Lobby.proto";
+
+message JoinLobbyResponse {
+	.POGOProtos.Networking.Responses.JoinLobbyResponse.Result result = 1;
+	.POGOProtos.Data.Raid.Lobby lobby = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NOT_IN_RANGE = 2;
+		ERROR_RAID_UNAVAILABLE = 3;
+		ERROR_RAID_COMPLETED = 4;
+		ERROR_NO_AVAILABLE_LOBBIES = 5;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 6;
+		ERROR_POI_INACCESSIBLE = 7;
+		ERROR_GYM_LOCKOUT = 8;
+		ERROR_NO_TICKET = 9;
+	}
+}
