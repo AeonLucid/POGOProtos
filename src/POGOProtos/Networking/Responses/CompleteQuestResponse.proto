@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Quests/ClientQuest.proto";
+import "POGOProtos/Data/Quests/QuestStamp.proto";
+
+message CompleteQuestResponse {
+	.POGOProtos.Networking.Responses.CompleteQuestResponse.Status status = 1;
+	.POGOProtos.Data.Quests.ClientQuest quest = 2;
+	repeated .POGOProtos.Data.Quests.QuestStamp stamp = 3;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_QUEST_NOT_FOUND = 2;
+		ERROR_QUEST_STILL_IN_PROGRESS = 3;
+		ERROR_QUEST_ALREADY_COMPLETED = 4;
+		ERROR_SUBQUEST_NOT_FOUND = 5;
+		ERROR_SUBQUEST_STILL_IN_PROGRESS = 6;
+		ERROR_SUBQUEST_ALREADY_COMPLETED = 7;
+		ERROR_MULTIPART_STILL_IN_PROGRESS = 8;
+		ERROR_MULTIPART_ALREADY_COMPLETED = 9;
+		ERROR_REDEEM_COMPLETED_QUEST_STAMP_CARD_FIRST = 10;
+	}
+}

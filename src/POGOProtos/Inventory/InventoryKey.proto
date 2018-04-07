@@ -21,5 +21,5 @@ message InventoryKey {
 	.POGOProtos.Enums.QuestType quest_type = 11;
 	string avatar_template_id = 12;
 	bool raid_tickets = 13;
-	// string quest_id = 14;
+	bool quests = 14;
 }

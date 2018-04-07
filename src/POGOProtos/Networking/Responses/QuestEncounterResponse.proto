@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Capture/CaptureProbability.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Map/Pokemon/WildPokemon.proto";
+
+message QuestEncounterResponse {
+	.POGOProtos.Networking.Responses.QuestEncounterResponse.Result result = 1;
+	.POGOProtos.Map.Pokemon.WildPokemon pokemon = 2;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
+	.POGOProtos.Inventory.Item.ItemId active_item = 4;
+
+	enum Result {
+		QUEST_ENCOUNTER_UNKNOWN = 0;
+		QUEST_ENCOUNTER_SUCCESS = 1;
+		QUEST_ENCOUNTER_NOT_AVAILABLE = 2;
+		QUEST_ENCOUNTER_ALREADY_FINISHED = 3;
+		POKEMON_INVENTORY_FULL = 4;
+	}
+}

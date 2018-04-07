@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+message QuestDialog {
+	string text = 1;
+	.POGOProtos.Data.Quests.QuestDialog.CharacterExpression expression = 2;
+	string image_uri = 3;
+	.POGOProtos.Data.Quests.QuestDialog.Character character = 4;
+
+	enum CharacterExpression {
+		EXPRESSION_UNSET = 0;
+		HAPPY = 1;
+		SYMPATHETIC = 2;
+		ENERGETIC = 3;
+		PUSHY = 4;
+		IMPATIENT = 5;
+		ADMIRATION = 6;
+	}
+
+	enum Character {
+		CHARACTER_UNSET = 0;
+		PROFESSOR_WILLOW = 1;
+	}
+}

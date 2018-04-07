@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Data/Quests/QuestStamp.proto";
+
+message QuestStampCard {
+	repeated .POGOProtos.Data.Quests.QuestStamp stamp = 1;
+	int32 target = 2;
+	int32 remaining_daily_stamps = 3;
+	string id = 4;
+}

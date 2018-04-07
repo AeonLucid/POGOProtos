@@ -2,7 +2,7 @@ syntax = "proto3";
 package POGOProtos.Settings.Master;
 
 import "POGOProtos/Enums/IapItemCategory.proto";
-//import "POGOProtos/Inventory/Item/ItemId.proto";
+// import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message IapItemDisplay {
 	string sku = 1;

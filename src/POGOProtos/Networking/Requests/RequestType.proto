@@ -64,7 +64,7 @@ enum RequestType {
 	GYM_FEED_POKEMON = 164;                     // Implemented [R & M]
 	START_RAID_BATTLE = 165;                    // Implemented [R & M]
 	ATTACK_RAID = 166;                          // Implemented [R & M]
-	AWARD_POKECOIN = 167;                       // ???
+	AWARD_POKECOIN = 167;                       // Not yet released.
 	USE_ITEM_STARDUST_BOOST = 168;              // Implemented [R & M]
 	GET_ASSET_DIGEST = 300;                     // Implemented [R & M]
 	GET_DOWNLOAD_URLS = 301;                    // Implemented [R & M]
@@ -72,7 +72,7 @@ enum RequestType {
 	SET_AVATAR = 404;                           // Implemented [R & M]
 	SET_PLAYER_TEAM = 405;                      // Implemented [R & M]
 	MARK_TUTORIAL_COMPLETE = 406;               // Implemented [R & M]
-	UPDATE_PERFORMANCE_METRICS = 407;           // ???
+	UPDATE_PERFORMANCE_METRICS = 407;           // Not yet released.
 	CHECK_CHALLENGE = 600;                      // Implemented [R & M]
 	VERIFY_CHALLENGE = 601;                     // Implemented [R & M]
 	ECHO = 666;                                 // Implemented [R & M]
@@ -93,7 +93,13 @@ enum RequestType {
 	AWARD_FREE_RAID_TICKET = 815;               // Implemented [R & M]
 	FETCH_ALL_NEWS = 816;                       // Implemented [R & M]
 	MARK_READ_NEWS_ARTICLE = 817;               // Implemented [R & M]
-	GET_PLAYER_DISPLAY_INFO = 818;              // ???
+	GET_PLAYER_DISPLAY_INFO = 818;              // Not yet released.
+	GET_NEW_QUESTS = 900;                       // Implemented [R & M]
+	GET_QUEST_DETAILS = 901;                    // Implemented [R & M]
+	COMPLETE_QUEST = 902;                       // Implemented [R & M]
+	REMOVE_QUEST = 903;                         // Implemented [R & M]
+	QUEST_ENCOUNTER = 904;                      // Implemented [R & M]
+	COMPLETE_QUEST_STAMP_CARD = 905;            // Implemented [R & M]
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented [R & M]
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // Not yet released.
 	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented [R & M]

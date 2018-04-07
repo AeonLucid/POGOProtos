@@ -6,6 +6,9 @@ import "POGOProtos/Data/Logs/FortSearchLogEntry.proto";
 import "POGOProtos/Data/Logs/BuddyPokemonLogEntry.proto";
 import "POGOProtos/Data/Logs/RaidRewardsLogEntry.proto";
 import "POGOProtos/Data/Logs/PasscodeRewardsLogEntry.proto";
+import "POGOProtos/Data/Logs/CompleteQuestLogEntry.proto";
+import "POGOProtos/Data/Logs/CompleteQuestStampCardLogEntry.proto";
+import "POGOProtos/Data/Logs/CompleteQuestPokemonEncounterLogEntry.proto";
 
 message ActionLogEntry {
 	int64 timestamp_ms = 1;
@@ -17,5 +20,8 @@ message ActionLogEntry {
 		.POGOProtos.Data.Logs.BuddyPokemonLogEntry buddy_pokemon = 5;
 		.POGOProtos.Data.Logs.RaidRewardsLogEntry raid_rewards = 6;
 		.POGOProtos.Data.Logs.PasscodeRewardsLogEntry passcode_rewards = 7;
+		.POGOProtos.Data.Logs.CompleteQuestLogEntry complete_quest = 8;
+		.POGOProtos.Data.Logs.CompleteQuestStampCardLogEntry complete_quest_stamp_card = 9;
+		.POGOProtos.Data.Logs.CompleteQuestPokemonEncounterLogEntry complete_quest_pokemon_encounter = 10;
 	}
 }

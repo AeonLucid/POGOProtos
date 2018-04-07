@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message CompleteQuestMessage {
+	string quest_id = 1;
+	string sub_quest_id = 2;
+}
