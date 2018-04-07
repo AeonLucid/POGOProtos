@@ -6,4 +6,7 @@ enum EncounterType {
 	INCENSE = 1;
 	DISK = 2;
 	POST_RAID = 3;
+	STORY_QUEST = 4;
+	QUEST_STAMP_CARD = 5;
+	CHALLENGE_QUEST = 6;
 }

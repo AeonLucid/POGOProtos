@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Data/Quests/Quest.proto";
+import "POGOProtos/Data/Quests/QuestDialog.proto";
+
+message ClientQuest {
+	.POGOProtos.Data.Quests.Quest quest = 1;
+	.POGOProtos.Data.Quests.ClientQuest.QuestDisplay quest_display = 2;
+
+	message QuestDisplay {
+		string quest_id = 1;
+		repeated .POGOProtos.Data.Quests.QuestDialog dialog = 2;
+		string description = 3;
+		string title = 4;
+		int32 slot = 5;
+		repeated QuestDisplay subdisplay = 6;
+		bool story_ending_quest = 7;
+		string story_ending_description = 8;
+	}
+}

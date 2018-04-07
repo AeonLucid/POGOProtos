@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Enums/EncounterType.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message QuestPokemonEncounter {
+	string quest_id = 1;
+	.POGOProtos.Enums.PokemonId pokemon = 2;
+	.POGOProtos.Enums.EncounterType encounter_type = 3;
+}

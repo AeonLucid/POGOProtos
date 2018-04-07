@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+message QuestStamp {
+	.POGOProtos.Data.Quests.QuestStamp.Context context = 1;
+	uint64 timestamp_ms = 2;
+
+	enum Context {
+		UNSET = 0;
+		STORY_QUEST = 1;
+		CHALLENGE_QUEST = 2;
+	}
+}

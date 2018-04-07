@@ -1,12 +1,9 @@
 syntax = "proto3";
 package POGOProtos.Data.Quests;
 
-message QuestGoal {
-	.POGOProtos.Data.Quests.QuestGoal.OptionType option_type = 1;
-	int32 target = 2;
+import "POGOProtos/Data/Quests/QuestCondition.proto";
 
-	enum OptionType {
-		UNSET = 0;
-		OF_POKEMON_TYPE = 1;
-	}
+message QuestGoal {
+	repeated .POGOProtos.Data.Quests.QuestCondition condition = 1;
+	int32 target = 2;
 }

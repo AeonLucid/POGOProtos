@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Quests/QuestReward.proto";
+
+message CompleteQuestStampCardResponse {
+	.POGOProtos.Networking.Responses.CompleteQuestStampCardResponse.Status status = 1;
+	repeated .POGOProtos.Data.Quests.QuestReward reward = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_STILL_IN_PROGRESS = 2;
+	}
+}

@@ -41,4 +41,5 @@ message FortData {
 	bool in_event = 26;
 	string banner_url = 27;
 	string partner_id = 28;
+	bool challenge_quest_completed = 30;
 }

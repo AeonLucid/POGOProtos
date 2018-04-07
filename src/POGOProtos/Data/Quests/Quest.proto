@@ -3,7 +3,6 @@ package POGOProtos.Data.Quests;
 
 import "POGOProtos/Enums/QuestType.proto";
 import "POGOProtos/Data/Quests/DailyQuest.proto";
-//import "POGOProtos/Data/Quests/MultiPartQuest.proto";
 import "POGOProtos/Data/Quests/CatchPokemonQuest.proto";
 import "POGOProtos/Data/Quests/QuestReward.proto";
 import "POGOProtos/Data/Quests/QuestGoal.proto";
@@ -13,24 +12,31 @@ message Quest {
 	.POGOProtos.Data.Quests.DailyQuest daily_quest = 2;
 	.POGOProtos.Data.Quests.Quest.MultiPartQuest multi_part = 3;
 	.POGOProtos.Data.Quests.CatchPokemonQuest catch_pokemon = 4;
-	int64 quest_seed = 5;
-	.POGOProtos.Data.Quests.Quest.Context quest_context = 6;
-	string template_id = 7;
-	int32 progress = 8;
-	.POGOProtos.Data.Quests.QuestGoal goal = 9;
-	.POGOProtos.Data.Quests.Quest.Status status = 10;
-	.POGOProtos.Data.Quests.QuestReward quest_rewards = 11;
-	int64 creation_timestamp_ms = 12;
-	int64 last_update_timestamp_ms = 13;
-	int64 compeletion_timestamp_ms = 14;
+	string quest_id = 100;
+	int64 quest_seed = 101;
+	.POGOProtos.Data.Quests.Quest.Context quest_context = 102;
+	string template_id = 103;
+	int32 progress = 104;
+	.POGOProtos.Data.Quests.QuestGoal goal = 105;
+	.POGOProtos.Data.Quests.Quest.Status status = 106;
+	repeated .POGOProtos.Data.Quests.QuestReward quest_rewards = 107;
+	int64 creation_timestamp_ms = 108;
+	int64 last_update_timestamp_ms = 109;
+	int64 compeletion_timestamp_ms = 110;
+	string fort_id = 111;
+	bool admin_generated = 112;
+	bool stamp_count_override_enabled = 113;
+	int32 stamp_count_override = 114;
+	int64 s2_cell_id = 115;
 
 	message MultiPartQuest {
 		repeated .POGOProtos.Data.Quests.Quest sub_quests = 1;
 	}
 
 	enum Context {
-		STORY_QUEST = 0;
-		CHALLENGE_QUEST = 1;
+		UNSET = 0;
+		STORY_QUEST = 1;
+		CHALLENGE_QUEST = 2;
 	}
 
 	enum Status {

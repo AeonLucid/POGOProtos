@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Quests/ClientQuest.proto";
 import "POGOProtos/Inventory/Item/ItemAward.proto";
 import "POGOProtos/Inventory/Loot.proto";
 import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
@@ -20,6 +21,7 @@ message FortSearchResponse {
 	int32 raid_tickets = 11;
 	.POGOProtos.Inventory.Loot team_bonus_loot = 12;
 	string fort_id = 13;
+	.POGOProtos.Data.Quests.ClientQuest challenge_quest = 14;
 
 	enum Result {
 		NO_RESULT_SET = 0;

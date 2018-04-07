@@ -37,4 +37,5 @@ message PlayerStats {
 	int64 total_defended_ms = 31;
 	repeated .POGOProtos.Enums.GymBadgeType event_badges = 32;
 	float km_walked_past_active_day = 33;
+	int32 num_challenge_quests_completed = 34;
 }

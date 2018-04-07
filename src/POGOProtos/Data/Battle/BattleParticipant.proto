@@ -12,4 +12,6 @@ message BattleParticipant {
 	repeated .POGOProtos.Data.Battle.BattlePokemonInfo defeated_pokemon = 4;
 	repeated .POGOProtos.Map.Pokemon.LobbyPokemon lobby_pokemon = 5;
 	int32 damage_dealt = 6;
+	bool super_effective_charge_move = 7;
+	bool weather_boosted = 8;
 }
